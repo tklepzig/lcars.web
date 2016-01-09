@@ -16,7 +16,7 @@ gulp.task('sass', function() {
         }))
         .pipe(plugins.cssnano())
         .pipe(plugins.rename('lcars.web.min.css'))
-        .pipe(gulp.dest('./dest'));
+        .pipe(gulp.dest('./dist'));
 });
 
 
@@ -27,7 +27,7 @@ gulp.task('sass:dev', function() {
             cascade: false
         }))
         .pipe(plugins.rename('lcars.web.css'))
-        .pipe(gulp.dest('./dest'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('default', function() {

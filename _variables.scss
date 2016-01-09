@@ -4,18 +4,18 @@ $radiusInner: 20px;
 
 
 
-$colors: (Gray: #9e9993,
-          Orange: #ff9c00,
-          Red: #f00,
-          Tan: #dfaf71, //old: #b1957a,
-          GrayBrown: #aca98a,
-          Yellow: #fc3,
-          SeaBlue: #009cce,
-          Blue: #3786ff
+$colors: (grey: #9e9993,
+          orange: #ff9c00,
+          red: #f00,
+          tan: #dfaf71, //old: #b1957a,
+          grey-brown: #aca98a,
+          yellow: #fc3,
+          sea-blue: #009cce,
+          blue: #3786ff
         );
 
 $bgDefault: #0d0d0d;
-$fgDefault: map-get($colors, Gray);
+$fgDefault: map-get($colors, grey);
 
 $areaPadding: (v: 4px, h: 6px);
 $areaMargin: 4px;
