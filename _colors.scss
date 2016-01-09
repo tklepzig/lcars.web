@@ -1,0 +1,63 @@
+@import "variables";
+
+.area.bgDefault,
+.button.bgDefault,
+.bgDefault {
+    background-color: $bgDefault;
+    color: $fgDefault;
+}
+
+.area.fgDefault,
+.button.fgDefault,
+.fgDefault {
+    color: $fgDefault;
+}
+//explicity named .area and .button to ensure that the default background
+//and foreground of .area and .button are overridden
+@each $colorname,
+$color in $colors {
+    .area.bg#{$colorname},
+    .button.bg#{$colorname},
+    .bg#{$colorname} {
+        background-color: $color;
+        color: $bgDefault;
+
+        &.button:active {
+            background-color: lighten($color, 10%);
+        }
+    }
+
+    .area.fg#{$colorname},
+    .button.fg#{$colorname},
+    .fg#{$colorname} {
+        color: $color;
+
+        > sub {
+            color: fade-out($color, 0.2);
+        }
+    }
+
+    @each $tone,
+    $baseColor in (Light: white, Dim: gray, Dark: black) {
+        .area.bg#{$tone}#{$colorname},
+        .button.bg#{$tone}#{$colorname},
+        .bg#{$tone}#{$colorname} {
+            background-color: mix($baseColor, $color, 40%);
+            color: $bgDefault;
+
+            &.button:active {
+                background-color: lighten(mix($baseColor, $color, 40%), 10%);
+            }
+        }
+
+        .area.fg#{$tone}#{$colorname},
+        .button.fg#{$tone}#{$colorname},
+        .fg#{$tone}#{$colorname} {
+            color: mix($baseColor, $color, 40%);
+
+            > sub {
+                color: fade-out(mix($baseColor, $color, 40%), 0.2);
+            }
+        }
+    }
+}

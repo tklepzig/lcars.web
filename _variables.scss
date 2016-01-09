@@ -19,7 +19,6 @@ $fgDefault: map-get($colors, Gray);
 
 $areaPadding: (v: 4px, h: 6px);
 $areaMargin: 4px;
-$areaInPanelMargin: 2px;
 
 
 @function defineAreaSizes($baseWidth, $baseHeight)

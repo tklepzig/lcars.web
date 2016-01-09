@@ -22,7 +22,7 @@ gulp.task('sass', function() {
 
 gulp.task('sass:dev', function() {
     return gulp.src('lcars.web.scss')
-        .pipe(plugins.sass())
+        .pipe(plugins.sass().on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer({
             cascade: false
         }))

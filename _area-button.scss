@@ -1,0 +1,162 @@
+@import "variables";
+
+%areaButtonCommon {
+    border: none;
+    text-decoration: none;
+    cursor: default;
+    margin: $areaMargin;
+    -moz-outline: none;
+    outline: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    font-family: inherit;
+    font-weight: normal;
+    padding: map-get($areaPadding, v) map-get($areaPadding, h);
+    font-size: 1.1em;
+    overflow: hidden;
+    position: relative;
+    white-space: normal;
+    vertical-align: top;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+    background-color: $fgDefault;
+    color: $bgDefault;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border-color: transparent;
+    }
+
+    &.label {
+        background-color: $bgDefault;
+        color: $fgDefault;
+        padding: 0 4px;
+        font-weight: 500;
+        text-transform: uppercase;
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+
+    &.stretch {
+        display: block;
+    }
+}
+
+.area {
+    @extend %areaButtonCommon;
+}
+
+.button {
+    @extend %areaButtonCommon;
+
+    > span {
+        position: absolute;
+        top: map-get($areaPadding, v);
+        left: map-get($areaPadding, h);
+        right: map-get($areaPadding, h);
+        bottom: map-get($areaPadding, v);
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    &.disabled,
+    &[disabled] {
+        background-color: map-get($colors, Gray) !important;
+        color: fade-out($bgDefault, 0.4) !important;
+    }
+
+    &:active {
+        background-color: lighten($fgDefault, 10%);
+    }
+}
+
+@mixin areaSizeDefinition($size) {
+    @each $prop,
+    $value in $size {
+        #{$prop}: $value;
+    }
+
+    &.label {
+        width: auto;
+    }
+
+    @if (map-has-key($size, height)) {
+        $height: map-get($size, height);
+        $roundPadding: $height / 3;
+
+        &.label {
+            font-size: $height + 2;
+            line-height: $height;
+        }
+
+        &.left-rounded {
+            border-top-left-radius: $height;
+            border-bottom-left-radius: $height;
+            padding-left: $roundPadding;
+
+            > span {
+                left: $roundPadding;
+            }
+        }
+
+        &.right-rounded {
+            border-top-right-radius: $height;
+            border-bottom-right-radius: $height;
+            padding-right: $roundPadding;
+
+            > span {
+                right: $roundPadding;
+            }
+        }
+    }
+}
+
+@each $name,
+$size in $areaSizes {
+    .area#{$name},
+    .button#{$name} {
+        @include areaSizeDefinition($size);
+    }
+}
+
+@include tablet {
+    @each $name,
+    $size in $areaSizes_tablet {
+        .area#{$name},
+        .button#{$name} {
+            @include areaSizeDefinition($size);
+        }
+    }
+}
+
+@include phone {
+    @each $name,
+    $size in $areaSizes_phone {
+        .area#{$name},
+        .button#{$name} {
+            @include areaSizeDefinition($size);
+        }
+    }
+}
