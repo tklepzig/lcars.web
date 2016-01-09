@@ -25,15 +25,15 @@ $areaMargin: 4px;
 {
     @return ("":              (width: $baseWidth, height: $baseHeight),
 
-             ".h-xs":         (height: $baseHeight / 4 - $areaMargin * 1.5, padding: 0),
-             ".h-sm":         (height: $baseHeight / 2 - $areaMargin),
-             ".h-lg":         (height: $baseHeight * 2 + $areaMargin * 2),
-             ".h-xl":         (height: $baseHeight * 4 + $areaMargin * 6),
+             ".v-xs":         (height: $baseHeight / 4 - $areaMargin * 1.5, padding: 0),
+             ".v-sm":         (height: $baseHeight / 2 - $areaMargin),
+             ".v-lg":         (height: $baseHeight * 2 + $areaMargin * 2),
+             ".v-xl":         (height: $baseHeight * 4 + $areaMargin * 6),
 
-             ".v-xs":         (width: $baseWidth / 4 - $areaMargin * 1.5),
-             ".v-sm":         (width: $baseWidth / 2 - $areaMargin),
-             ".v-lg":         (width: $baseWidth * 2 + $areaMargin * 2),
-             ".v-xl":         (width: $baseWidth * 4 + $areaMargin * 6))
+             ".h-xs":         (width: $baseWidth / 4 - $areaMargin * 1.5),
+             ".h-sm":         (width: $baseWidth / 2 - $areaMargin),
+             ".h-lg":         (width: $baseWidth * 2 + $areaMargin * 2),
+             ".h-xl":         (width: $baseWidth * 4 + $areaMargin * 6))
 }
 
 $areaSizes: defineAreaSizes(168px, 56px);
