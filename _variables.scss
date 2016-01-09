@@ -23,89 +23,24 @@ $areaMargin: 4px;
 
 @function defineAreaSizes($baseWidth, $baseHeight)
 {
-    @return ("":               (width: $baseWidth,
-                               height: $baseHeight),
+    @return ("":              (width: $baseWidth, height: $baseHeight),
 
-             ".large":         (height: $baseHeight * 2 + $areaMargin * 2),
-             ".xlarge":        (height: $baseHeight * 3 + $areaMargin * 4),
-             ".xxlarge":       (height: $baseHeight * 4 + $areaMargin * 6),
+             ".h-xs":         (height: $baseHeight / 4 - $areaMargin * 1.5, padding: 0),
+             ".h-sm":         (height: $baseHeight / 2 - $areaMargin),
+             ".h-lg":         (height: $baseHeight * 2 + $areaMargin * 2),
+             ".h-xl":         (height: $baseHeight * 4 + $areaMargin * 6),
 
-             ".wide":          (width: $baseWidth + $baseWidth / 2 + $areaMargin),
-             ".xwide":         (width: $baseWidth * 2 + $areaMargin * 2),
-             ".xxwide":        (width: $baseWidth * 2 + $baseWidth / 2 + $areaMargin * 3),
-
-             ".small":         (width: $baseWidth / 2 - $areaMargin),
-             ".xsmall":        (width: $baseWidth / 4 - $areaMargin * 1.5),
-             ".xxsmall":       (width: $baseWidth / 8 - $areaMargin * 1.75));
+             ".v-xs":         (width: $baseWidth / 4 - $areaMargin * 1.5),
+             ".v-sm":         (width: $baseWidth / 2 - $areaMargin),
+             ".v-lg":         (width: $baseWidth * 2 + $areaMargin * 2),
+             ".v-xl":         (width: $baseWidth * 4 + $areaMargin * 6))
 }
 
-$areaSizes: defineAreaSizes(170px, 54px);
-$areaSizes_tablet: defineAreaSizes(144px, 46px);
-$areaSizes_phone: defineAreaSizes(120px, 38px);
+$areaSizes: defineAreaSizes(168px, 56px);
+$areaSizes_mobile: defineAreaSizes(124px, 40px);
 
 
-
-
-@mixin mediaQueryDebug($text)
-{
-    body::before
-    {
-        content: $text;
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        background: rgba(255, 117, 0, 0.75);
-        color: black;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 99;
-    }
-}
-
-//media queries
-@mixin largeScreen
-{
-    @media only screen and (min-width: 1824px) { @content; }
-}
-
-@mixin desktopAndLarger
-{
-    @media only screen and (min-width: 1224px) { @content; }
-}
-
-@mixin desktop
-{
-    @media only screen and (min-width: 1224px) and (max-width: 1823px) { @content; }
-}
-
-@mixin tablet
-{
-    @media only screen and (min-width: 768px) and (max-width: 1223px)  { @content; }
-}
-
-@mixin tablet-portrait
-{
-    @media only screen and (min-width: 768px) and (max-width: 1223px) and (orientation: portrait)  { @content; }
-}
-
-@mixin tablet-landscape
-{
-    @media only screen and (min-width: 768px) and (max-width: 1223px) and (orientation: landscape)  { @content; }
-}
-
-@mixin phone
+@mixin mobile
 {
     @media only screen and (max-width: 767px)  { @content; }
-}
-
-@mixin phone-portrait
-{
-    @media only screen and (max-width: 767px) and (orientation: portrait)  { @content; }
-}
-
-@mixin phone-landscape
-{
-    @media only screen and (max-width: 767px) and (orientation: landscape)  { @content; }
 }

@@ -18,11 +18,13 @@
     display: block;
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 300px;
     background-color: $fgDefault;
+    margin: $areaMargin * 2;
 
     &.inline {
         display: inline-block;
+        margin: $areaMargin / 2;
     }
 
     &:before {

@@ -141,19 +141,9 @@ $size in $areaSizes {
     }
 }
 
-@include tablet {
+@include mobile {
     @each $name,
-    $size in $areaSizes_tablet {
-        .area#{$name},
-        .button#{$name} {
-            @include areaSizeDefinition($size);
-        }
-    }
-}
-
-@include phone {
-    @each $name,
-    $size in $areaSizes_phone {
+    $size in $areaSizes_mobile {
         .area#{$name},
         .button#{$name} {
             @include areaSizeDefinition($size);
