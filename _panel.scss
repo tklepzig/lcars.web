@@ -1,0 +1,158 @@
+@import "variables";
+
+%panel-child {
+    background: #0d0d0d;
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    top: $zero;
+    left: $zero;
+    right: $zero;
+    bottom: $zero;
+    margin: 0;
+}
+.panel {
+    height: 400px;
+    background: #f90;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        background: #0d0d0d;
+        top: $zero;
+        right: $zero;
+        bottom: $zero;
+        left: $zero;
+    }
+    > .content {
+        @extend %panel-child;
+        margin: 16px;
+    }
+    > .column {
+        @extend %panel-child;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
+    > .row {
+        @extend %panel-child;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        align-items: stretch;       
+    }
+
+    }
+    &.top {
+        > .column {
+            margin-top: 40px;
+        }
+        > .row {
+            bottom: auto;
+        }
+    }
+    &.left {
+        > .column {
+            right: auto;
+        }
+        > .row {
+            margin-left: 40px;
+        }
+    }
+    &.bottom {
+        > .column {
+            margin-bottom: 40px;
+        }
+        > .row {
+            top: auto;
+        }
+    }
+    &.right {
+        > .column {
+            left: auto;
+        }
+        > .row {
+            margin-right: 40px;
+        }
+    }
+    &.top.left {
+        border-top-left-radius: $radiusOuter;
+        &:before {
+            border-top-left-radius: $radiusInner;
+        }
+    }
+    &.top.right {
+        border-top-right-radius: $radiusOuter;
+        &:before {
+            border-top-right-radius: $radiusInner;
+        }
+    }
+    &.bottom.left {
+        border-bottom-left-radius: $radiusOuter;
+        &:before {
+            border-bottom-left-radius: $radiusInner;
+        }
+    }
+    &.bottom.right {
+        border-bottom-right-radius: $radiusOuter;
+        &:before {
+            border-bottom-right-radius: $radiusInner;
+        }
+    }
+}
+
+
+$width: 180px;
+$height: 25px;
+
+//size specific
+.panel.top {
+    &:before,
+    > .content,
+    > .column {
+        top: $height;
+    }
+    > .row {
+        height: $height;
+    }
+}
+.panel.bottom {
+    &:before,
+    > .content,
+    > .column {
+        bottom: $height;
+    }
+    > .row {
+        height: $height;
+    }
+}
+.panel.left {
+    &:before,
+    > .content,
+    > .row {
+        left: $width;
+    }
+    > .column {
+        width: $width;
+    }
+}
+.panel.right {
+    &:before,
+    > .content,
+    > .row {
+        right: $width;
+    }
+    > .column {
+        width: $width;
+    }
+}
