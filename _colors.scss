@@ -24,11 +24,11 @@ $color in $colors {
             color: $color;
         }
 
-        @each $tone,
+        @each $toneName,
         $baseColor in (light: white, dim: gray, dark: black) {
             $toneColor: mix($baseColor, $color, 40%);
 
-            &.#{$tone} {
+            &.#{$toneName} {
                 background-color: $toneColor;
 
                 &.button:active {
