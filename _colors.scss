@@ -19,7 +19,8 @@ $color in $colors {
             background-color: lighten($color, 10%);
         }
 
-        &.area.label {
+        &.area.label,
+        &.text {
             background-color: $bgDefault;
             color: $color;
         }
@@ -35,7 +36,8 @@ $color in $colors {
                     background-color: lighten($toneColor, 10%);
                 }
 
-                &.area.label {
+                &.area.label,
+                &.text {
                     color: $toneColor;
                 }
             }
