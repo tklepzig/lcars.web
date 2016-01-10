@@ -38,6 +38,7 @@ $color in $colors {
 
                 &.area.label,
                 &.text {
+                    background-color: $bgDefault;
                     color: $toneColor;
                 }
             }
