@@ -2,10 +2,7 @@
 
 body {
     -webkit-tap-highlight-color: transparent;
-    //disable scrolling the whole page
-    //has this any effect?
-    //-ms-touch-action: none;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: $font;
     font-size: 12pt;
     color: $fgDefault;
     background: $bgDefault;
@@ -17,77 +14,8 @@ body {
     }
 }
 
-h1 {
-    font-size: 3em;
-    font-weight: lighter;
-}
-
-h1 > sub {
-    color: fade-out($fgDefault, 0.2);
-    font-size: 0.5em;
-    margin-left: 14px;
-    vertical-align: baseline;
-}
-
-h2 {
-    font-size: 2em;
-    font-weight: lighter;
-}
-
-h3 {
-    font-size: 1.43em;
-    font-weight: normal;
-}
-
-h4 {
-    font-size: 1.14em;
-    font-weight: normal;
-}
-
-%group {
-    display: -webkit-inline-flex;
-    display: -moz-inline-flex;
-    display: -ms-inline-flex;
-    display: -o-inline-flex;
-    display: inline-flex;
-    margin: 36px 12px 12px;
-    vertical-align: top;
-
-    @include mobile {
-        margin: 18px 6px 6px;
-    }
-    //> header {
-    //    margin-top: -36px;
-    //    height: 24px;
-    //    line-height: 24px;
-    //    font-size: 16pt;
-    //    padding-left: 3px;
-    //    padding-top: 8px;
-    //    padding-bottom: 4px;
-    //    opacity: 0.7;
-    //    cursor: default;
-    //}
-    %group {
-        margin: 0;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-    }
-}
-
-.group-v {
-    @extend %group;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-}
-
-.group-h {
-    @extend %group;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-}
+@import "typography";
+@import "group";
 @import "area-button";
 @import "panel";
 @import "colors";
