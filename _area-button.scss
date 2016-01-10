@@ -50,6 +50,7 @@
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         display: inline-block;
+        width: auto;
     }
 
     &.stretch {
@@ -83,7 +84,7 @@
 
     &.disabled,
     &[disabled] {
-        background-color: map-get($colors, Gray) !important;
+        background-color: map-get($colors, grey) !important;
         color: fade-out($bgDefault, 0.4) !important;
     }
 
@@ -96,10 +97,6 @@
     @each $prop,
     $value in $size {
         #{$prop}: $value;
-    }
-
-    &.label {
-        width: auto;
     }
 
     @if (map-has-key($size, height)) {

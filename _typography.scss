@@ -3,13 +3,6 @@ h1 {
     font-weight: lighter;
 }
 
-h1 > sub {
-    color: fade-out($fgDefault, 0.2);
-    font-size: 0.5em;
-    margin-left: 14px;
-    vertical-align: baseline;
-}
-
 h2 {
     font-size: 2em;
     font-weight: lighter;
