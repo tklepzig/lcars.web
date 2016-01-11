@@ -39,11 +39,8 @@
         -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
 
-        .area,
-        .button {
-            &.stretch {
-                height: 1px;
-            }
+        .stretch {
+            height: 1px;
         }
     }
 
@@ -51,11 +48,8 @@
         -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
 
-        .area,
-        .button {
-            &.stretch {
-                width: 1px;
-            }
+        .stretch {
+            width: 1px;
         }
     }
 
@@ -103,10 +97,10 @@
     .button {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
+    }
 
-        &.stretch {
-            -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-        }
+    .stretch {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
     }
 }
