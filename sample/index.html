@@ -17,7 +17,7 @@
         </div>
         <div class="column">
             <div class="area dim orange"></div>
-            <div class="area dim orange stretch"></div>
+            <button class="button dim orange stretch"></button>
             <div class="area dim orange"></div>
         </div>
         <div class="content">
@@ -29,7 +29,7 @@
                 <div class="area v-xl"></div>
                 <div class="area label">Test</div>
             </div>
-            <div class="group-v">
+            <div class="group orient-v">
                 <div class="area h-xs"></div>
                 <div class="area h-sm"></div>
                 <div class="area"></div>
@@ -39,6 +39,11 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" charset="utf-8"></script>
+    <script src="../dist/lcars.web.js" charset="utf-8"></script>
+    <script>
+        lcarsWeb.defineAudioId('myAudioId', '../path/to/file/without/extension', true);
+    </script>
 </body>
 
 </html>

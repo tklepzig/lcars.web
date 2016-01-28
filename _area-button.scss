@@ -64,6 +64,7 @@
 
 .button {
     @extend %areaButtonCommon;
+    cursor: pointer;
 
     > span {
         position: absolute;
