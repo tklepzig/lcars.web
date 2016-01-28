@@ -1,0 +1,27 @@
+{
+  "name": "lcars.web",
+  "description": "CSS Framework for creating LCARS-like websites",
+  "main": [
+    "dist/lcars.web.min.css",
+    "dist/lcars.web.min.js"
+  ],
+  "authors": [
+    "Thomas Klepzig"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "lcars",
+    "css"
+  ],
+  "homepage": "https://github.com/tklepzig/lcars.web",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0"
+  }
+}
