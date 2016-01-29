@@ -39,6 +39,27 @@ $areaSizes: defineAreaSizes(168px, 56px);
 $areaSizes_mobile: defineAreaSizes(124px, 40px);
 
 
+
+// TODO: fixed sizes, no calculation
+@function definePanelSizes($baseColumnWidth, $baseRowHeight)
+{
+    @return ("":              (columnWidth: $baseColumnWidth, rowHeight: $baseRowHeight),
+
+             ".row-xs":         (rowHeight: $baseRowHeight / 4),
+             ".row-sm":         (rowHeight: $baseRowHeight / 2),
+             ".row-lg":         (rowHeight: $baseRowHeight * 2),
+             ".row-xl":         (rowHeight: $baseRowHeight * 3),
+
+             ".col-xs":         (columnWidth: $baseColumnWidth / 4),
+             ".col-sm":         (columnWidth: $baseColumnWidth / 2),
+             ".col-lg":         (columnWidth: $baseColumnWidth * 2),
+             ".col-xl":         (columnWidth: $baseColumnWidth * 3))
+}
+
+$panelSizes: definePanelSizes(180px, 25px);
+$panelSizes_mobile: definePanelSizes(180px, 25px);
+
+
 @mixin mobile
 {
     @media only screen and (max-width: 767px)  { @content; }

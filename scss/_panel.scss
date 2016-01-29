@@ -166,65 +166,90 @@
         }
     }
 }
-$width: 180px;
-$height: 25px;
-//size specific
-.panel.top {
-    &:before,
-    > .content,
-    > .column {
-        top: $height;
+
+
+@mixin panelSizeDefinition($size) {
+    @if (map-has-key($size, rowHeight)) {
+        $rowHeight: map-get($size, rowHeight);
+
+        &.top {
+            &:before,
+            > .content,
+            > .column {
+                top: $rowHeight;
+            }
+
+            > .row {
+                height: $rowHeight;
+
+                > .area.label,
+                > .button.label {
+                    font-size: $rowHeight;
+                    line-height: $rowHeight;
+                }
+            }
+        }
+
+        &.bottom {
+            &:before,
+            > .content,
+            > .column {
+                bottom: $rowHeight;
+            }
+
+            > .row {
+                height: $rowHeight;
+
+                > .area.label,
+                > .button.label {
+                    font-size: $rowHeight;
+                    line-height: $rowHeight;
+                }
+            }
+        }
     }
 
-    > .row {
-        height: $height;
+    @if (map-has-key($size, columnWidth)) {
+        $columnWidth: map-get($size, columnWidth);
 
-        > .area.label,
-        > .button.label {
-            font-size: $height;
-            line-height: $height;
+        &.left {
+            &:before,
+            > .content,
+            > .row {
+                left: $columnWidth;
+            }
+
+            > .column {
+                width: $columnWidth;
+            }
+        }
+
+        &.right {
+            &:before,
+            > .content,
+            > .row {
+                right: $columnWidth;
+            }
+
+            > .column {
+                width: $columnWidth;
+            }
         }
     }
 }
 
-.panel.bottom {
-    &:before,
-    > .content,
-    > .column {
-        bottom: $height;
+@each $name,
+$size in $panelSizes {
+    .panel#{$name} {
+        @include panelSizeDefinition($size);
     }
+}
 
-    > .row {
-        height: $height;
-
-        > .area.label,
-        > .button.label {
-            font-size: $height;
-            line-height: $height;
+@include mobile {
+    @each $name,
+    $size in $panelSizes_mobile {
+        .panel#{$name} {
+            @include panelSizeDefinition($size);
         }
-    }
-}
-
-.panel.left {
-    &:before,
-    > .content,
-    > .row {
-        left: $width;
-    }
-
-    > .column {
-        width: $width;
-    }
-}
-
-.panel.right {
-    &:before,
-    > .content,
-    > .row {
-        right: $width;
-    }
-
-    > .column {
-        width: $width;
     }
 }
