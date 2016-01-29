@@ -1,7 +1,6 @@
 {
   "name": "lcars.web",
   "version": "0.1.0",
-  "main": "lcars.min.css",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",

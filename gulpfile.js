@@ -7,7 +7,7 @@ var plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('sass', function() {
-    return gulp.src('lcars.web.scss')
+    return gulp.src('scss/lcars.web.scss')
         .pipe(plugins.sass().on('error', plugins.util.log))
         .pipe(plugins.autoprefixer({
             cascade: false
@@ -19,19 +19,19 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./dist'));
 });
 gulp.task('watch:sass', function() {
-    gulp.watch('*.scss', ['sass']);
+    gulp.watch('scss/*.scss', ['sass']);
 });
 
 
 gulp.task('js', function() {
-    return gulp.src('lcars.web.js')
+    return gulp.src('js/lcars.web.js')
         .pipe(gulp.dest('./dist'))
         .pipe(plugins.uglify().on('error', plugins.util.log))
         .pipe(plugins.rename('lcars.web.min.js'))
         .pipe(gulp.dest('./dist'));
 });
 gulp.task('watch:js', function() {
-    gulp.watch('lcars.web.js', ['js']);
+    gulp.watch('js/lcars.web.js', ['js']);
 });
 
 gulp.task('dev', ['sass', 'js', 'watch:sass', 'watch:js']);
