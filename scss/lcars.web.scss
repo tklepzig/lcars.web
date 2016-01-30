@@ -3,19 +3,26 @@
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: $font;
-    font-size: 12pt;
+    // font-size: 12pt;
     color: $fgDefault;
     background: $bgDefault;
-    margin: 2px;
+    margin: 0;
     padding: 0;
 
-    @include mobile {
-        font-size: 0.75em;
-    }
+    // @include mobile {
+    //     font-size: 0.75em;
+    // }
+}
+
+select,
+button,
+textarea,
+input {
+    font-size: 1em;
 }
 
 @import "typography";
-@import "group";
+@import "group2";
 @import "area-button";
 @import "panel";
 @import "colors";
