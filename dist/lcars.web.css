@@ -4,7 +4,9 @@ body {
   color: #9e9993;
   background: #0d0d0d;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 100%; }
 
 select,
 button,
@@ -33,10 +35,14 @@ h4 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .group-v .wrap, .group-h .wrap {
+  .wrap.group-v, .wrap.group-h {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+  .margin.group-v, .margin.group-h {
+    margin: 4px; }
+    .margin.group-v .flex, .margin.group-h .flex {
+      margin: 4px; }
   .group-v .flex, .group-h .flex {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -115,6 +121,12 @@ h4 {
     width: auto; }
   .stretch.area, .stretch.button {
     display: block; }
+  .left-rounded.area, .left-rounded.button {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px; }
+  .right-rounded.area, .right-rounded.button {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px; }
 
 .button {
   cursor: pointer; }
@@ -146,275 +158,6 @@ h4 {
     color: rgba(13, 13, 13, 0.6) !important; }
   .button:active {
     background-color: #b6b2ae; }
-
-.area,
-.button {
-  width: 168px;
-  height: 56px; }
-  .area.label,
-  .button.label {
-    font-size: 58px;
-    line-height: 56px; }
-  .area.left-rounded,
-  .button.left-rounded {
-    border-top-left-radius: 56px;
-    border-bottom-left-radius: 56px;
-    padding-left: 18.66667px; }
-    .area.left-rounded > span,
-    .button.left-rounded > span {
-      left: 18.66667px; }
-  .area.right-rounded,
-  .button.right-rounded {
-    border-top-right-radius: 56px;
-    border-bottom-right-radius: 56px;
-    padding-right: 18.66667px; }
-    .area.right-rounded > span,
-    .button.right-rounded > span {
-      right: 18.66667px; }
-
-.area.v-xs,
-.button.v-xs {
-  height: 8px;
-  padding: 0; }
-  .area.v-xs.label,
-  .button.v-xs.label {
-    font-size: 10px;
-    line-height: 8px; }
-  .area.v-xs.left-rounded,
-  .button.v-xs.left-rounded {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding-left: 2.66667px; }
-    .area.v-xs.left-rounded > span,
-    .button.v-xs.left-rounded > span {
-      left: 2.66667px; }
-  .area.v-xs.right-rounded,
-  .button.v-xs.right-rounded {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding-right: 2.66667px; }
-    .area.v-xs.right-rounded > span,
-    .button.v-xs.right-rounded > span {
-      right: 2.66667px; }
-
-.area.v-sm,
-.button.v-sm {
-  height: 24px; }
-  .area.v-sm.label,
-  .button.v-sm.label {
-    font-size: 26px;
-    line-height: 24px; }
-  .area.v-sm.left-rounded,
-  .button.v-sm.left-rounded {
-    border-top-left-radius: 24px;
-    border-bottom-left-radius: 24px;
-    padding-left: 8px; }
-    .area.v-sm.left-rounded > span,
-    .button.v-sm.left-rounded > span {
-      left: 8px; }
-  .area.v-sm.right-rounded,
-  .button.v-sm.right-rounded {
-    border-top-right-radius: 24px;
-    border-bottom-right-radius: 24px;
-    padding-right: 8px; }
-    .area.v-sm.right-rounded > span,
-    .button.v-sm.right-rounded > span {
-      right: 8px; }
-
-.area.v-lg,
-.button.v-lg {
-  height: 120px; }
-  .area.v-lg.label,
-  .button.v-lg.label {
-    font-size: 122px;
-    line-height: 120px; }
-  .area.v-lg.left-rounded,
-  .button.v-lg.left-rounded {
-    border-top-left-radius: 120px;
-    border-bottom-left-radius: 120px;
-    padding-left: 40px; }
-    .area.v-lg.left-rounded > span,
-    .button.v-lg.left-rounded > span {
-      left: 40px; }
-  .area.v-lg.right-rounded,
-  .button.v-lg.right-rounded {
-    border-top-right-radius: 120px;
-    border-bottom-right-radius: 120px;
-    padding-right: 40px; }
-    .area.v-lg.right-rounded > span,
-    .button.v-lg.right-rounded > span {
-      right: 40px; }
-
-.area.v-xl,
-.button.v-xl {
-  height: 184px; }
-  .area.v-xl.label,
-  .button.v-xl.label {
-    font-size: 186px;
-    line-height: 184px; }
-  .area.v-xl.left-rounded,
-  .button.v-xl.left-rounded {
-    border-top-left-radius: 184px;
-    border-bottom-left-radius: 184px;
-    padding-left: 61.33333px; }
-    .area.v-xl.left-rounded > span,
-    .button.v-xl.left-rounded > span {
-      left: 61.33333px; }
-  .area.v-xl.right-rounded,
-  .button.v-xl.right-rounded {
-    border-top-right-radius: 184px;
-    border-bottom-right-radius: 184px;
-    padding-right: 61.33333px; }
-    .area.v-xl.right-rounded > span,
-    .button.v-xl.right-rounded > span {
-      right: 61.33333px; }
-
-.area.h-xs,
-.button.h-xs {
-  width: 36px; }
-
-.area.h-sm,
-.button.h-sm {
-  width: 80px; }
-
-.area.h-lg,
-.button.h-lg {
-  width: 344px; }
-
-.area.h-xl,
-.button.h-xl {
-  width: 520px; }
-
-@media only screen and (max-width: 767px) {
-  .area,
-  .button {
-    width: 124px;
-    height: 40px; }
-    .area.label,
-    .button.label {
-      font-size: 42px;
-      line-height: 40px; }
-    .area.left-rounded,
-    .button.left-rounded {
-      border-top-left-radius: 40px;
-      border-bottom-left-radius: 40px;
-      padding-left: 13.33333px; }
-      .area.left-rounded > span,
-      .button.left-rounded > span {
-        left: 13.33333px; }
-    .area.right-rounded,
-    .button.right-rounded {
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 40px;
-      padding-right: 13.33333px; }
-      .area.right-rounded > span,
-      .button.right-rounded > span {
-        right: 13.33333px; }
-  .area.v-xs,
-  .button.v-xs {
-    height: 4px;
-    padding: 0; }
-    .area.v-xs.label,
-    .button.v-xs.label {
-      font-size: 6px;
-      line-height: 4px; }
-    .area.v-xs.left-rounded,
-    .button.v-xs.left-rounded {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      padding-left: 1.33333px; }
-      .area.v-xs.left-rounded > span,
-      .button.v-xs.left-rounded > span {
-        left: 1.33333px; }
-    .area.v-xs.right-rounded,
-    .button.v-xs.right-rounded {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      padding-right: 1.33333px; }
-      .area.v-xs.right-rounded > span,
-      .button.v-xs.right-rounded > span {
-        right: 1.33333px; }
-  .area.v-sm,
-  .button.v-sm {
-    height: 16px; }
-    .area.v-sm.label,
-    .button.v-sm.label {
-      font-size: 18px;
-      line-height: 16px; }
-    .area.v-sm.left-rounded,
-    .button.v-sm.left-rounded {
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
-      padding-left: 5.33333px; }
-      .area.v-sm.left-rounded > span,
-      .button.v-sm.left-rounded > span {
-        left: 5.33333px; }
-    .area.v-sm.right-rounded,
-    .button.v-sm.right-rounded {
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      padding-right: 5.33333px; }
-      .area.v-sm.right-rounded > span,
-      .button.v-sm.right-rounded > span {
-        right: 5.33333px; }
-  .area.v-lg,
-  .button.v-lg {
-    height: 88px; }
-    .area.v-lg.label,
-    .button.v-lg.label {
-      font-size: 90px;
-      line-height: 88px; }
-    .area.v-lg.left-rounded,
-    .button.v-lg.left-rounded {
-      border-top-left-radius: 88px;
-      border-bottom-left-radius: 88px;
-      padding-left: 29.33333px; }
-      .area.v-lg.left-rounded > span,
-      .button.v-lg.left-rounded > span {
-        left: 29.33333px; }
-    .area.v-lg.right-rounded,
-    .button.v-lg.right-rounded {
-      border-top-right-radius: 88px;
-      border-bottom-right-radius: 88px;
-      padding-right: 29.33333px; }
-      .area.v-lg.right-rounded > span,
-      .button.v-lg.right-rounded > span {
-        right: 29.33333px; }
-  .area.v-xl,
-  .button.v-xl {
-    height: 136px; }
-    .area.v-xl.label,
-    .button.v-xl.label {
-      font-size: 138px;
-      line-height: 136px; }
-    .area.v-xl.left-rounded,
-    .button.v-xl.left-rounded {
-      border-top-left-radius: 136px;
-      border-bottom-left-radius: 136px;
-      padding-left: 45.33333px; }
-      .area.v-xl.left-rounded > span,
-      .button.v-xl.left-rounded > span {
-        left: 45.33333px; }
-    .area.v-xl.right-rounded,
-    .button.v-xl.right-rounded {
-      border-top-right-radius: 136px;
-      border-bottom-right-radius: 136px;
-      padding-right: 45.33333px; }
-      .area.v-xl.right-rounded > span,
-      .button.v-xl.right-rounded > span {
-        right: 45.33333px; }
-  .area.h-xs,
-  .button.h-xs {
-    width: 25px; }
-  .area.h-sm,
-  .button.h-sm {
-    width: 58px; }
-  .area.h-lg,
-  .button.h-lg {
-    width: 256px; }
-  .area.h-xl,
-  .button.h-xl {
-    width: 388px; } }
 
 .panel:before, .panel > .content, .panel > .column, .panel > .row {
   background-color: #0d0d0d;

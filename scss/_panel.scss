@@ -40,25 +40,18 @@
 
     > .column {
         @extend %panel-child;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
         display: flex;
-        -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
         align-items: stretch;
 
         > .area,
         > .button {
             margin: $areaMargin 0;
-            -ms-flex: 0 1 auto;
             flex: 0 1 auto;
             width: 100%;
 
             &.stretch {
                 height: 1px;
-                -ms-flex: 1 1 auto;
                 flex: 1 1 auto;
             }
         }
@@ -66,12 +59,7 @@
 
     > .row {
         @extend %panel-child;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
         display: flex;
-        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
         align-items: stretch;
 
@@ -79,12 +67,10 @@
         > .button {
             margin: 0 $areaMargin;
             height: 100%;
-            -ms-flex: 0 1 auto;
             flex: 0 1 auto;
 
             &.stretch {
                 width: 1px;
-                -ms-flex: 1 1 auto;
                 flex: 1 1 auto;
             }
         }
