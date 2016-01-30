@@ -40,24 +40,23 @@ $areaSizes_mobile: defineAreaSizes(124px, 40px);
 
 
 
-// TODO: fixed sizes, no calculation
-@function definePanelSizes($baseColumnWidth, $baseRowHeight)
+@function definePanelSizes($factor: 1)
 {
-    @return ("":              (columnWidth: $baseColumnWidth, rowHeight: $baseRowHeight),
+    @return ("":              (columnWidth: 210px * $factor, rowHeight: 25px * $factor),
 
-             ".row-xs":         (rowHeight: $baseRowHeight / 4),
-             ".row-sm":         (rowHeight: $baseRowHeight / 2),
-             ".row-lg":         (rowHeight: $baseRowHeight * 2),
-             ".row-xl":         (rowHeight: $baseRowHeight * 3),
+             ".row-xs":       (rowHeight: 8px * $factor),
+             ".row-sm":       (rowHeight: 15px * $factor),
+             ".row-lg":       (rowHeight: 45px * $factor),
+             ".row-xl":       (rowHeight: 65px * $factor),
 
-             ".col-xs":         (columnWidth: $baseColumnWidth / 4),
-             ".col-sm":         (columnWidth: $baseColumnWidth / 2),
-             ".col-lg":         (columnWidth: $baseColumnWidth * 2),
-             ".col-xl":         (columnWidth: $baseColumnWidth * 3))
+             ".col-xs":       (columnWidth: 150px * $factor),
+             ".col-sm":       (columnWidth: 180px * $factor),
+             ".col-lg":       (columnWidth: 240px * $factor),
+             ".col-xl":       (columnWidth: 270px * $factor))
 }
 
-$panelSizes: definePanelSizes(180px, 25px);
-$panelSizes_mobile: definePanelSizes(180px, 25px);
+$panelSizes: definePanelSizes();
+$panelSizes_mobile: definePanelSizes(0.8);
 
 
 @mixin mobile
