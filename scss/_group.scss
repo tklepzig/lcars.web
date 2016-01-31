@@ -12,17 +12,22 @@
         flex-wrap: wrap;
     }
 
-    &.margin {
-        margin: 4px;
+    @each $name,
+    $props in $margins {
+        &.m-#{$name} {
+            margin#{map-get($props, rule)}: map-get($props, value);
 
-        .flex {
-            margin: 4px;
+            > *,
+            > .flex {
+                margin#{map-get($props, rule)}: map-get($props, value);
+            }
         }
     }
 
-    .flex {
+    > .flex {
         flex: 1;
     }
+    
     //use iteration
     .flex-5 {
         flex: 1 1 5%;
@@ -44,7 +49,7 @@
     @extend %group;
     flex-direction: column;
 
-    .flex {
+    > .flex {
         height: auto;
     }
 }
@@ -53,7 +58,7 @@
     @extend %group;
     flex-direction: row;
 
-    .flex {
+    > .flex {
         width: auto;
     }
 }
