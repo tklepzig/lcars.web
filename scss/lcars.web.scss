@@ -3,7 +3,7 @@
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: $font;
-    // font-size: 12pt;
+    font-size: $font-size;
     color: $fgDefault;
     background: $bgDefault;
     margin: 0;

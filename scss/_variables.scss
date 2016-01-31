@@ -1,6 +1,8 @@
 $zero: 0; //only for development
 
 $font: 'Segoe UI', Arial, sans-serif !default;
+$font-size: 12pt !default;
+
 $radiusOuter: 25px;
 $radiusInner: 20px;
 
@@ -19,25 +21,6 @@ $fgDefault: map-get($colors, grey);
 
 $areaPadding: (v: 4px, h: 6px);
 $areaMargin: 4px;
-
-@function defineAreaSizes($baseWidth, $baseHeight)
-{
-    @return ("":              (width: $baseWidth, height: $baseHeight),
-
-             ".v-xs":         (height: $baseHeight / 4 - $areaMargin * 1.5, padding: 0),
-             ".v-sm":         (height: $baseHeight / 2 - $areaMargin),
-             ".v-lg":         (height: $baseHeight * 2 + $areaMargin * 2),
-             ".v-xl":         (height: $baseHeight * 3 + $areaMargin * 4),
-
-             ".h-xs":         (width: $baseWidth / 4 - $areaMargin * 1.5),
-             ".h-sm":         (width: $baseWidth / 2 - $areaMargin),
-             ".h-lg":         (width: $baseWidth * 2 + $areaMargin * 2),
-             ".h-xl":         (width: $baseWidth * 3 + $areaMargin * 4))
-}
-
-$areaSizes: defineAreaSizes(168px, 56px);
-$areaSizes_mobile: defineAreaSizes(124px, 40px);
-
 
 
 @function definePanelSizes($factor: 1)

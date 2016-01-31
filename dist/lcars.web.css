@@ -1,6 +1,7 @@
 body {
   -webkit-tap-highlight-color: transparent;
   font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 12pt;
   color: #9e9993;
   background: #0d0d0d;
   margin: 0;
@@ -40,14 +41,32 @@ h4 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .margin.group-v, .margin.group-h {
-    margin: 4px; }
-    .margin.group-v .flex, .margin.group-h .flex {
-      margin: 4px; }
-  .group-v .flex, .group-h .flex {
+    margin: 2px; }
+    .margin.group-v > *, .margin.group-h > *, .margin.group-v > .flex, .margin.group-h > .flex {
+      margin: 2px; }
+  .group-v > .flex, .group-h > .flex {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
+  .group-v .flex-5, .group-h .flex-5 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 5%;
+    -ms-flex: 1 1 5%;
+    flex: 1 1 5%;
+    max-height: 5%; }
+  .group-v .flex-33, .group-h .flex-33 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 33.33%;
+    -ms-flex: 1 1 33.33%;
+    flex: 1 1 33.33%;
+    max-height: 33.33%; }
+  .group-v .flex-66, .group-h .flex-66 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 66.66%;
+    -ms-flex: 1 1 66.66%;
+    flex: 1 1 66.66%;
+    max-height: 66.66%; }
 
 .group-v {
   -webkit-box-orient: vertical;
@@ -55,7 +74,7 @@ h4 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
-  .group-v .flex {
+  .group-v > .flex {
     height: auto; }
 
 .group-h {
@@ -64,19 +83,18 @@ h4 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
-  .group-h .flex {
+  .group-h > .flex {
     width: auto; }
 
 .area, .button {
-  border: none;
+  border: 2px solid #0d0d0d;
   text-decoration: none;
   cursor: default;
-  margin: 4px;
-  -moz-outline: none;
+  margin: 0;
   outline: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
   -ms-touch-action: none;
   touch-action: none;
@@ -93,14 +111,14 @@ h4 {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   text-align: left;
   background-color: #9e9993;
   color: #0d0d0d; }
@@ -115,7 +133,6 @@ h4 {
     font-weight: 500;
     text-transform: uppercase;
     white-space: nowrap;
-    -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     display: inline-block;
     width: auto; }
@@ -129,30 +146,21 @@ h4 {
     border-bottom-right-radius: 9999px; }
 
 .button {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
   cursor: pointer; }
-  .button > span {
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    right: 6px;
-    bottom: 4px;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
   .button.disabled, .button[disabled] {
     background-color: #9e9993 !important;
     color: rgba(13, 13, 13, 0.6) !important; }
@@ -188,15 +196,12 @@ h4 {
   .panel > .content {
     margin: 16px; }
   .panel > .column {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: column nowrap;
     -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -205,28 +210,25 @@ h4 {
     .panel > .column > .area,
     .panel > .column > .button {
       margin: 4px 0;
-      -ms-flex: 0 1 auto;
       -webkit-box-flex: 0;
       -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
       flex: 0 1 auto;
       width: 100%; }
       .panel > .column > .area.stretch,
       .panel > .column > .button.stretch {
         height: 1px;
-        -ms-flex: 1 1 auto;
         -webkit-box-flex: 1;
         -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
         flex: 1 1 auto; }
   .panel > .row {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -236,16 +238,16 @@ h4 {
     .panel > .row > .button {
       margin: 0 4px;
       height: 100%;
-      -ms-flex: 0 1 auto;
       -webkit-box-flex: 0;
       -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
       flex: 0 1 auto; }
       .panel > .row > .area.stretch,
       .panel > .row > .button.stretch {
         width: 1px;
-        -ms-flex: 1 1 auto;
         -webkit-box-flex: 1;
         -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
         flex: 1 1 auto; }
   .panel.top > .column {
     margin-top: 40px;

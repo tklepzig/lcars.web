@@ -1,10 +1,10 @@
 @import "variables";
 
 %areaButtonCommon {
-    border: none;
+    border: 2px solid $bgDefault;
     text-decoration: none;
     cursor: default;
-    margin: $areaMargin;
+    margin: 0;
     outline: none;
     user-select: none;
     touch-action: none;
@@ -18,8 +18,8 @@
     vertical-align: top;
     box-sizing: border-box;
     display: inline-flex;
-    align-items: flex-end;
     justify-content: flex-start;
+    align-items: flex-end;
     text-align: left;
     background-color: $fgDefault;
     color: $bgDefault;
@@ -42,7 +42,7 @@
         text-overflow: ellipsis;
         display: inline-block;
         width: auto;
-        //set font-size per js
+        // TODO: set font-size per js
     }
 
     &.stretch {
@@ -50,11 +50,13 @@
     }
 
     &.left-rounded {
+        // TODO: set per js
         border-top-left-radius: 9999px;
         border-bottom-left-radius: 9999px;
     }
 
     &.right-rounded {
+        // TODO: set per js
         border-top-right-radius: 9999px;
         border-bottom-right-radius: 9999px;
     }
@@ -66,22 +68,10 @@
 
 .button {
     @extend %areaButtonCommon;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     cursor: pointer;
-
-    > span {
-        position: absolute;
-        top: map-get($areaPadding, v);
-        left: map-get($areaPadding, h);
-        right: map-get($areaPadding, h);
-        bottom: map-get($areaPadding, v);
-        width: auto;
-        height: auto;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: inline-flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-    }
 
     &.disabled,
     &[disabled] {
