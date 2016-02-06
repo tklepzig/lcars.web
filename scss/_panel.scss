@@ -20,12 +20,7 @@
     overflow: hidden;
     height: 300px;
     background-color: $fgDefault;
-    margin: $areaMargin * 2;
-
-    &.inline {
-        display: inline-block;
-        margin: $areaMargin / 2;
-    }
+    margin: $areaBorderWidth * 2;
 
     &:before {
         @extend %panel-child;
@@ -40,46 +35,30 @@
 
     > .column {
         @extend %panel-child;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: stretch;
+        @extend .group-v;
 
         > .area,
         > .button {
-            margin: $areaMargin 0;
-            flex: 0 1 auto;
-            width: 100%;
-
-            &.stretch {
-                height: 1px;
-                flex: 1 1 auto;
-            }
+            border-left-width: 0;
+            border-right-width: 0;
         }
     }
 
     > .row {
         @extend %panel-child;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: stretch;
+        @extend .group-h;
 
         > .area,
         > .button {
-            margin: 0 $areaMargin;
-            height: 100%;
-            flex: 0 1 auto;
-
-            &.stretch {
-                width: 1px;
-                flex: 1 1 auto;
-            }
+            border-top-width: 0;
+            border-bottom-width: 0;
         }
     }
 
     &.top {
         > .column {
             margin-top: 40px;
-            padding-top: $areaMargin;
+            padding-top: $areaBorderWidth;
         }
 
         > .row {
@@ -94,14 +73,14 @@
 
         > .row {
             margin-left: 40px;
-            padding-left: $areaMargin;
+            padding-left: $areaBorderWidth;
         }
     }
 
     &.bottom {
         > .column {
             margin-bottom: 40px;
-            padding-bottom: $areaMargin;
+            padding-bottom: $areaBorderWidth;
         }
 
         > .row {
@@ -116,7 +95,7 @@
 
         > .row {
             margin-right: 40px;
-            padding-right: $areaMargin;
+            padding-right: $areaBorderWidth;
         }
     }
 
@@ -177,12 +156,6 @@
         &.bottom {
             > .row {
                 height: $rowHeight;
-
-                > .area.label,
-                > .button.label {
-                    font-size: $rowHeight;
-                    line-height: $rowHeight;
-                }
             }
         }
     }

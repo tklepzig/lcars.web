@@ -1,7 +1,7 @@
 @import "variables";
 
 %areaButtonCommon {
-    border: 2px solid $bgDefault;
+    border: $areaBorderWidth solid $bgDefault;
     text-decoration: none;
     cursor: default;
     margin: 0;
@@ -43,10 +43,6 @@
         display: inline-block;
         width: auto;
         // TODO: set font-size per js
-    }
-
-    &.stretch {
-        display: block;
     }
 
     &.left-rounded {
