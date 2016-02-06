@@ -417,13 +417,9 @@ h4 {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: inline-block;
-    width: auto; }
-  .left-rounded.area, .left-rounded.button {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px; }
-  .right-rounded.area, .right-rounded.button {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px; }
+    width: auto;
+    font-size: 0;
+    line-height: 0; }
 
 .button {
   -webkit-box-orient: vertical;
