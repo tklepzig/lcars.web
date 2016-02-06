@@ -34,7 +34,14 @@ $i: 0;
             flex: 1 1 #{$i}%;
             box-sizing: border-box;
         }
-$i: $i + 5;
+
+        @if $i < 5 {
+            $i: $i + 1;
+        }
+
+        @else {
+            $i: $i + 5;
+        }
     }
 
     > .flex-33 {
@@ -62,7 +69,14 @@ $i: 0;
             max-width: 100%;
             max-height: #{$i}%;
         }
-$i: $i + 5;
+
+        @if $i < 5 {
+            $i: $i + 1;
+        }
+
+        @else {
+            $i: $i + 5;
+        }
     }
 
     > .flex-33 {
@@ -90,7 +104,14 @@ $i: 0;
             max-width: #{$i}%;
             max-height: 100%;
         }
-$i: $i + 5;
+
+        @if $i < 5 {
+            $i: $i + 1;
+        }
+
+        @else {
+            $i: $i + 5;
+        }
     }
 
     > .flex-33 {
