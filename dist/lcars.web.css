@@ -1,10 +1,13 @@
 body {
   -webkit-tap-highlight-color: transparent;
   font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 12pt;
   color: #9e9993;
   background: #0d0d0d;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 100%; }
 
 select,
 button,
@@ -28,7 +31,7 @@ h4 {
   font-size: 1.14em;
   font-weight: normal; }
 
-.group {
+.group-v, .panel > .column, .group-h, .panel > .row {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -36,39 +39,39 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 36px 12px 12px;
+  .wrap.group-v, .panel > .wrap.column, .wrap.group-h, .panel > .wrap.row {
   vertical-align: top; }
   .group.inline {
     display: -webkit-inline-flex;
-    display: -moz-inline-flex;
-    display: -ms-inline-flex;
-    display: -o-inline-flex;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex; }
-  @media only screen and (max-width: 767px) {
-    .group {
-      margin: 18px 6px 6px; } }
-  .group .group {
-    margin: 0; }
-  .group.orient-v {
-    -ms-flex-flow: column nowrap;
-    -webkit-flex-flow: column nowrap;
-    flex-flow: column nowrap; }
-    .group.orient-v .stretch {
-      height: 1px; }
-  .group.orient-h {
-    -ms-flex-flow: row nowrap;
-    -webkit-flex-flow: row nowrap;
-    flex-flow: row nowrap; }
-    .group.orient-h .stretch {
-      width: 1px; }
-  .group.align-v-start {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    -ms-grid-row-align: flex-start;
-    align-items: flex-start; }
+  .m-a.group-v, .panel > .m-a.column, .m-a.group-h, .panel > .m-a.row {
+    margin: 2px; }
+    .m-a.group-v > *, .panel > .m-a.column > *, .m-a.group-h > *, .panel > .m-a.row > *, .m-a.group-v > .flex, .panel > .m-a.column > .flex, .m-a.group-h > .flex, .panel > .m-a.row > .flex {
+      margin: 2px; }
+  .m-t.group-v, .panel > .m-t.column, .m-t.group-h, .panel > .m-t.row {
+    margin-top: 2px; }
+    .m-t.group-v > *, .panel > .m-t.column > *, .m-t.group-h > *, .panel > .m-t.row > *, .m-t.group-v > .flex, .panel > .m-t.column > .flex, .m-t.group-h > .flex, .panel > .m-t.row > .flex {
+      margin-top: 2px; }
+  .m-l.group-v, .panel > .m-l.column, .m-l.group-h, .panel > .m-l.row {
+    margin-left: 2px; }
+    .m-l.group-v > *, .panel > .m-l.column > *, .m-l.group-h > *, .panel > .m-l.row > *, .m-l.group-v > .flex, .panel > .m-l.column > .flex, .m-l.group-h > .flex, .panel > .m-l.row > .flex {
+      margin-left: 2px; }
+  .m-b.group-v, .panel > .m-b.column, .m-b.group-h, .panel > .m-b.row {
+    margin-bottom: 2px; }
+    .m-b.group-v > *, .panel > .m-b.column > *, .m-b.group-h > *, .panel > .m-b.row > *, .m-b.group-v > .flex, .panel > .m-b.column > .flex, .m-b.group-h > .flex, .panel > .m-b.row > .flex {
+      margin-bottom: 2px; }
+  .m-r.group-v, .panel > .m-r.column, .m-r.group-h, .panel > .m-r.row {
+    margin-right: 2px; }
+    .m-r.group-v > *, .panel > .m-r.column > *, .m-r.group-h > *, .panel > .m-r.row > *, .m-r.group-v > .flex, .panel > .m-r.column > .flex, .m-r.group-h > .flex, .panel > .m-r.row > .flex {
+      margin-right: 2px; }
+  .m-v.group-v, .panel > .m-v.column, .m-v.group-h, .panel > .m-v.row {
+    margin: 2px 0; }
+    .m-v.group-v > *, .panel > .m-v.column > *, .m-v.group-h > *, .panel > .m-v.row > *, .m-v.group-v > .flex, .panel > .m-v.column > .flex, .m-v.group-h > .flex, .panel > .m-v.row > .flex {
+      margin: 2px 0; }
+  .m-h.group-v, .panel > .m-h.column, .m-h.group-h, .panel > .m-h.row {
+    margin: 0 2px; }
+    .m-h.group-v > *, .panel > .m-h.column > *, .m-h.group-h > *, .panel > .m-h.row > *, .m-h.group-v > .flex, .panel > .m-h.column > .flex, .m-h.group-h > .flex, .panel > .m-h.row > .flex {
+      margin: 0 2px; }
+  .group-v > .flex, .panel > .column > .flex, .group-h > .flex, .panel > .row > .flex {
   .group.align-v-center {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -116,17 +119,344 @@ h4 {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto; }
+  .group-v > .flex-0, .panel > .column > .flex-0, .group-h > .flex-0, .panel > .row > .flex-0 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    box-sizing: border-box; }
+  .group-v > .flex-1, .panel > .column > .flex-1, .group-h > .flex-1, .panel > .row > .flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 1%;
+    -ms-flex: 1 1 1%;
+    flex: 1 1 1%;
+    box-sizing: border-box; }
+  .group-v > .flex-2, .panel > .column > .flex-2, .group-h > .flex-2, .panel > .row > .flex-2 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 2%;
+    -ms-flex: 1 1 2%;
+    flex: 1 1 2%;
+    box-sizing: border-box; }
+  .group-v > .flex-3, .panel > .column > .flex-3, .group-h > .flex-3, .panel > .row > .flex-3 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 3%;
+    -ms-flex: 1 1 3%;
+    flex: 1 1 3%;
+    box-sizing: border-box; }
+  .group-v > .flex-4, .panel > .column > .flex-4, .group-h > .flex-4, .panel > .row > .flex-4 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 4%;
+    -ms-flex: 1 1 4%;
+    flex: 1 1 4%;
+    box-sizing: border-box; }
+  .group-v > .flex-5, .panel > .column > .flex-5, .group-h > .flex-5, .panel > .row > .flex-5 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 5%;
+    -ms-flex: 1 1 5%;
+    flex: 1 1 5%;
+    box-sizing: border-box; }
+  .group-v > .flex-10, .panel > .column > .flex-10, .group-h > .flex-10, .panel > .row > .flex-10 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 10%;
+    -ms-flex: 1 1 10%;
+    flex: 1 1 10%;
+    box-sizing: border-box; }
+  .group-v > .flex-15, .panel > .column > .flex-15, .group-h > .flex-15, .panel > .row > .flex-15 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 15%;
+    -ms-flex: 1 1 15%;
+    flex: 1 1 15%;
+    box-sizing: border-box; }
+  .group-v > .flex-20, .panel > .column > .flex-20, .group-h > .flex-20, .panel > .row > .flex-20 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 20%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
+    box-sizing: border-box; }
+  .group-v > .flex-25, .panel > .column > .flex-25, .group-h > .flex-25, .panel > .row > .flex-25 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 25%;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
+    box-sizing: border-box; }
+  .group-v > .flex-30, .panel > .column > .flex-30, .group-h > .flex-30, .panel > .row > .flex-30 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 30%;
+    -ms-flex: 1 1 30%;
+    flex: 1 1 30%;
+    box-sizing: border-box; }
+  .group-v > .flex-35, .panel > .column > .flex-35, .group-h > .flex-35, .panel > .row > .flex-35 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 35%;
+    -ms-flex: 1 1 35%;
+    flex: 1 1 35%;
+    box-sizing: border-box; }
+  .group-v > .flex-40, .panel > .column > .flex-40, .group-h > .flex-40, .panel > .row > .flex-40 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 40%;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
+    box-sizing: border-box; }
+  .group-v > .flex-45, .panel > .column > .flex-45, .group-h > .flex-45, .panel > .row > .flex-45 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 45%;
+    -ms-flex: 1 1 45%;
+    flex: 1 1 45%;
+    box-sizing: border-box; }
+  .group-v > .flex-50, .panel > .column > .flex-50, .group-h > .flex-50, .panel > .row > .flex-50 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    box-sizing: border-box; }
+  .group-v > .flex-55, .panel > .column > .flex-55, .group-h > .flex-55, .panel > .row > .flex-55 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 55%;
+    -ms-flex: 1 1 55%;
+    flex: 1 1 55%;
+    box-sizing: border-box; }
+  .group-v > .flex-60, .panel > .column > .flex-60, .group-h > .flex-60, .panel > .row > .flex-60 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 60%;
+    -ms-flex: 1 1 60%;
+    flex: 1 1 60%;
+    box-sizing: border-box; }
+  .group-v > .flex-65, .panel > .column > .flex-65, .group-h > .flex-65, .panel > .row > .flex-65 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 65%;
+    -ms-flex: 1 1 65%;
+    flex: 1 1 65%;
+    box-sizing: border-box; }
+  .group-v > .flex-70, .panel > .column > .flex-70, .group-h > .flex-70, .panel > .row > .flex-70 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 70%;
+    -ms-flex: 1 1 70%;
+    flex: 1 1 70%;
+    box-sizing: border-box; }
+  .group-v > .flex-75, .panel > .column > .flex-75, .group-h > .flex-75, .panel > .row > .flex-75 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 75%;
+    -ms-flex: 1 1 75%;
+    flex: 1 1 75%;
+    box-sizing: border-box; }
+  .group-v > .flex-80, .panel > .column > .flex-80, .group-h > .flex-80, .panel > .row > .flex-80 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 80%;
+    -ms-flex: 1 1 80%;
+    flex: 1 1 80%;
+    box-sizing: border-box; }
+  .group-v > .flex-85, .panel > .column > .flex-85, .group-h > .flex-85, .panel > .row > .flex-85 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 85%;
+    -ms-flex: 1 1 85%;
+    flex: 1 1 85%;
+    box-sizing: border-box; }
+  .group-v > .flex-90, .panel > .column > .flex-90, .group-h > .flex-90, .panel > .row > .flex-90 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 90%;
+    -ms-flex: 1 1 90%;
+    flex: 1 1 90%;
+    box-sizing: border-box; }
+  .group-v > .flex-95, .panel > .column > .flex-95, .group-h > .flex-95, .panel > .row > .flex-95 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 95%;
+    -ms-flex: 1 1 95%;
+    flex: 1 1 95%;
+    box-sizing: border-box; }
+  .group-v > .flex-100, .panel > .column > .flex-100, .group-h > .flex-100, .panel > .row > .flex-100 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    box-sizing: border-box; }
+  .group-v > .flex-33, .panel > .column > .flex-33, .group-h > .flex-33, .panel > .row > .flex-33 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 33.33%;
+    -ms-flex: 1 1 33.33%;
+    flex: 1 1 33.33%;
+    box-sizing: border-box; }
+  .group-v > .flex-66, .panel > .column > .flex-66, .group-h > .flex-66, .panel > .row > .flex-66 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 66.66%;
+    -ms-flex: 1 1 66.66%;
+    flex: 1 1 66.66%;
+    box-sizing: border-box; }
+.group-v, .panel > .column {
+  .group-v > .flex, .panel > .column > .flex {
+  .group-v > .flex-0, .panel > .column > .flex-0 {
+    max-width: 100%;
+    max-height: 0%; }
+  .group-v > .flex-1, .panel > .column > .flex-1 {
+    max-width: 100%;
+    max-height: 1%; }
+  .group-v > .flex-2, .panel > .column > .flex-2 {
+    max-width: 100%;
+    max-height: 2%; }
+  .group-v > .flex-3, .panel > .column > .flex-3 {
+    max-width: 100%;
+    max-height: 3%; }
+  .group-v > .flex-4, .panel > .column > .flex-4 {
+    max-width: 100%;
+    max-height: 4%; }
+  .group-v > .flex-5, .panel > .column > .flex-5 {
+    max-width: 100%;
+    max-height: 5%; }
+  .group-v > .flex-10, .panel > .column > .flex-10 {
+    max-width: 100%;
+    max-height: 10%; }
+  .group-v > .flex-15, .panel > .column > .flex-15 {
+    max-width: 100%;
+    max-height: 15%; }
+  .group-v > .flex-20, .panel > .column > .flex-20 {
+    max-width: 100%;
+    max-height: 20%; }
+  .group-v > .flex-25, .panel > .column > .flex-25 {
+    max-width: 100%;
+    max-height: 25%; }
+  .group-v > .flex-30, .panel > .column > .flex-30 {
+    max-width: 100%;
+    max-height: 30%; }
+  .group-v > .flex-35, .panel > .column > .flex-35 {
+    max-width: 100%;
+    max-height: 35%; }
+  .group-v > .flex-40, .panel > .column > .flex-40 {
+    max-width: 100%;
+    max-height: 40%; }
+  .group-v > .flex-45, .panel > .column > .flex-45 {
+    max-width: 100%;
+    max-height: 45%; }
+  .group-v > .flex-50, .panel > .column > .flex-50 {
+    max-width: 100%;
+    max-height: 50%; }
+  .group-v > .flex-55, .panel > .column > .flex-55 {
+    max-width: 100%;
+    max-height: 55%; }
+  .group-v > .flex-60, .panel > .column > .flex-60 {
+    max-width: 100%;
+    max-height: 60%; }
+  .group-v > .flex-65, .panel > .column > .flex-65 {
+    max-width: 100%;
+    max-height: 65%; }
+  .group-v > .flex-70, .panel > .column > .flex-70 {
+    max-width: 100%;
+    max-height: 70%; }
+  .group-v > .flex-75, .panel > .column > .flex-75 {
+    max-width: 100%;
+    max-height: 75%; }
+  .group-v > .flex-80, .panel > .column > .flex-80 {
+    max-width: 100%;
+    max-height: 80%; }
+  .group-v > .flex-85, .panel > .column > .flex-85 {
+    max-width: 100%;
+    max-height: 85%; }
+  .group-v > .flex-90, .panel > .column > .flex-90 {
+    max-width: 100%;
+    max-height: 90%; }
+  .group-v > .flex-95, .panel > .column > .flex-95 {
+    max-width: 100%;
+    max-height: 95%; }
+  .group-v > .flex-100, .panel > .column > .flex-100 {
+    max-width: 100%;
+    max-height: 100%; }
+  .group-v > .flex-33, .panel > .column > .flex-33 {
+    max-width: 100%;
+    max-height: 33.33%; }
+  .group-v > .flex-66, .panel > .column > .flex-66 {
+    max-width: 100%;
+    max-height: 66.66%; }
+.group-h, .panel > .row {
+  .group-h > .flex, .panel > .row > .flex {
+  .group-h > .flex-0, .panel > .row > .flex-0 {
+    max-width: 0%;
+    max-height: 100%; }
+  .group-h > .flex-1, .panel > .row > .flex-1 {
+    max-width: 1%;
+    max-height: 100%; }
+  .group-h > .flex-2, .panel > .row > .flex-2 {
+    max-width: 2%;
+    max-height: 100%; }
+  .group-h > .flex-3, .panel > .row > .flex-3 {
+    max-width: 3%;
+    max-height: 100%; }
+  .group-h > .flex-4, .panel > .row > .flex-4 {
+    max-width: 4%;
+    max-height: 100%; }
+  .group-h > .flex-5, .panel > .row > .flex-5 {
+    max-width: 5%;
+    max-height: 100%; }
+  .group-h > .flex-10, .panel > .row > .flex-10 {
+    max-width: 10%;
+    max-height: 100%; }
+  .group-h > .flex-15, .panel > .row > .flex-15 {
+    max-width: 15%;
+    max-height: 100%; }
+  .group-h > .flex-20, .panel > .row > .flex-20 {
+    max-width: 20%;
+    max-height: 100%; }
+  .group-h > .flex-25, .panel > .row > .flex-25 {
+    max-width: 25%;
+    max-height: 100%; }
+  .group-h > .flex-30, .panel > .row > .flex-30 {
+    max-width: 30%;
+    max-height: 100%; }
+  .group-h > .flex-35, .panel > .row > .flex-35 {
+    max-width: 35%;
+    max-height: 100%; }
+  .group-h > .flex-40, .panel > .row > .flex-40 {
+    max-width: 40%;
+    max-height: 100%; }
+  .group-h > .flex-45, .panel > .row > .flex-45 {
+    max-width: 45%;
+    max-height: 100%; }
+  .group-h > .flex-50, .panel > .row > .flex-50 {
+    max-width: 50%;
+    max-height: 100%; }
+  .group-h > .flex-55, .panel > .row > .flex-55 {
+    max-width: 55%;
+    max-height: 100%; }
+  .group-h > .flex-60, .panel > .row > .flex-60 {
+    max-width: 60%;
+    max-height: 100%; }
+  .group-h > .flex-65, .panel > .row > .flex-65 {
+    max-width: 65%;
+    max-height: 100%; }
+  .group-h > .flex-70, .panel > .row > .flex-70 {
+    max-width: 70%;
+    max-height: 100%; }
+  .group-h > .flex-75, .panel > .row > .flex-75 {
+    max-width: 75%;
+    max-height: 100%; }
+  .group-h > .flex-80, .panel > .row > .flex-80 {
+    max-width: 80%;
+    max-height: 100%; }
+  .group-h > .flex-85, .panel > .row > .flex-85 {
+    max-width: 85%;
+    max-height: 100%; }
+  .group-h > .flex-90, .panel > .row > .flex-90 {
+    max-width: 90%;
+    max-height: 100%; }
+  .group-h > .flex-95, .panel > .row > .flex-95 {
+    max-width: 95%;
+    max-height: 100%; }
+  .group-h > .flex-100, .panel > .row > .flex-100 {
+    max-width: 100%;
+    max-height: 100%; }
+  .group-h > .flex-33, .panel > .row > .flex-33 {
+    max-width: 33.33%;
+    max-height: 100%; }
+  .group-h > .flex-66, .panel > .row > .flex-66 {
+    max-width: 66.66%;
+    max-height: 100%; }
 
 .area, .button {
-  border: none;
+  border: 2px solid #0d0d0d;
   text-decoration: none;
   cursor: default;
-  margin: 4px;
-  -moz-outline: none;
+  margin: 0;
   outline: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
   -ms-touch-action: none;
   touch-action: none;
@@ -143,14 +473,14 @@ h4 {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   text-align: left;
   background-color: #9e9993;
   color: #0d0d0d; }
@@ -165,312 +495,33 @@ h4 {
     font-weight: 500;
     text-transform: uppercase;
     white-space: nowrap;
-    -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     display: inline-block;
-    width: auto; }
-  .stretch.area, .stretch.button {
-    display: block; }
+    width: auto;
+    font-size: 0;
+    line-height: 0; }
 
 .button {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
   cursor: pointer; }
-  .button > span {
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    right: 6px;
-    bottom: 4px;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
   .button.disabled, .button[disabled] {
     background-color: #9e9993 !important;
     color: rgba(13, 13, 13, 0.6) !important; }
   .button:active {
     background-color: #b6b2ae; }
-
-.area,
-.button {
-  width: 168px;
-  height: 56px; }
-  .area.label,
-  .button.label {
-    font-size: 58px;
-    line-height: 56px; }
-  .area.left-rounded,
-  .button.left-rounded {
-    border-top-left-radius: 56px;
-    border-bottom-left-radius: 56px;
-    padding-left: 18.66667px; }
-    .area.left-rounded > span,
-    .button.left-rounded > span {
-      left: 18.66667px; }
-  .area.right-rounded,
-  .button.right-rounded {
-    border-top-right-radius: 56px;
-    border-bottom-right-radius: 56px;
-    padding-right: 18.66667px; }
-    .area.right-rounded > span,
-    .button.right-rounded > span {
-      right: 18.66667px; }
-
-.area.v-xs,
-.button.v-xs {
-  height: 8px;
-  padding: 0; }
-  .area.v-xs.label,
-  .button.v-xs.label {
-    font-size: 10px;
-    line-height: 8px; }
-  .area.v-xs.left-rounded,
-  .button.v-xs.left-rounded {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding-left: 2.66667px; }
-    .area.v-xs.left-rounded > span,
-    .button.v-xs.left-rounded > span {
-      left: 2.66667px; }
-  .area.v-xs.right-rounded,
-  .button.v-xs.right-rounded {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding-right: 2.66667px; }
-    .area.v-xs.right-rounded > span,
-    .button.v-xs.right-rounded > span {
-      right: 2.66667px; }
-
-.area.v-sm,
-.button.v-sm {
-  height: 24px; }
-  .area.v-sm.label,
-  .button.v-sm.label {
-    font-size: 26px;
-    line-height: 24px; }
-  .area.v-sm.left-rounded,
-  .button.v-sm.left-rounded {
-    border-top-left-radius: 24px;
-    border-bottom-left-radius: 24px;
-    padding-left: 8px; }
-    .area.v-sm.left-rounded > span,
-    .button.v-sm.left-rounded > span {
-      left: 8px; }
-  .area.v-sm.right-rounded,
-  .button.v-sm.right-rounded {
-    border-top-right-radius: 24px;
-    border-bottom-right-radius: 24px;
-    padding-right: 8px; }
-    .area.v-sm.right-rounded > span,
-    .button.v-sm.right-rounded > span {
-      right: 8px; }
-
-.area.v-lg,
-.button.v-lg {
-  height: 120px; }
-  .area.v-lg.label,
-  .button.v-lg.label {
-    font-size: 122px;
-    line-height: 120px; }
-  .area.v-lg.left-rounded,
-  .button.v-lg.left-rounded {
-    border-top-left-radius: 120px;
-    border-bottom-left-radius: 120px;
-    padding-left: 40px; }
-    .area.v-lg.left-rounded > span,
-    .button.v-lg.left-rounded > span {
-      left: 40px; }
-  .area.v-lg.right-rounded,
-  .button.v-lg.right-rounded {
-    border-top-right-radius: 120px;
-    border-bottom-right-radius: 120px;
-    padding-right: 40px; }
-    .area.v-lg.right-rounded > span,
-    .button.v-lg.right-rounded > span {
-      right: 40px; }
-
-.area.v-xl,
-.button.v-xl {
-  height: 184px; }
-  .area.v-xl.label,
-  .button.v-xl.label {
-    font-size: 186px;
-    line-height: 184px; }
-  .area.v-xl.left-rounded,
-  .button.v-xl.left-rounded {
-    border-top-left-radius: 184px;
-    border-bottom-left-radius: 184px;
-    padding-left: 61.33333px; }
-    .area.v-xl.left-rounded > span,
-    .button.v-xl.left-rounded > span {
-      left: 61.33333px; }
-  .area.v-xl.right-rounded,
-  .button.v-xl.right-rounded {
-    border-top-right-radius: 184px;
-    border-bottom-right-radius: 184px;
-    padding-right: 61.33333px; }
-    .area.v-xl.right-rounded > span,
-    .button.v-xl.right-rounded > span {
-      right: 61.33333px; }
-
-.area.h-xs,
-.button.h-xs {
-  width: 36px; }
-
-.area.h-sm,
-.button.h-sm {
-  width: 80px; }
-
-.area.h-lg,
-.button.h-lg {
-  width: 344px; }
-
-.area.h-xl,
-.button.h-xl {
-  width: 520px; }
-
-@media only screen and (max-width: 767px) {
-  .area,
-  .button {
-    width: 124px;
-    height: 40px; }
-    .area.label,
-    .button.label {
-      font-size: 42px;
-      line-height: 40px; }
-    .area.left-rounded,
-    .button.left-rounded {
-      border-top-left-radius: 40px;
-      border-bottom-left-radius: 40px;
-      padding-left: 13.33333px; }
-      .area.left-rounded > span,
-      .button.left-rounded > span {
-        left: 13.33333px; }
-    .area.right-rounded,
-    .button.right-rounded {
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 40px;
-      padding-right: 13.33333px; }
-      .area.right-rounded > span,
-      .button.right-rounded > span {
-        right: 13.33333px; }
-  .area.v-xs,
-  .button.v-xs {
-    height: 4px;
-    padding: 0; }
-    .area.v-xs.label,
-    .button.v-xs.label {
-      font-size: 6px;
-      line-height: 4px; }
-    .area.v-xs.left-rounded,
-    .button.v-xs.left-rounded {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      padding-left: 1.33333px; }
-      .area.v-xs.left-rounded > span,
-      .button.v-xs.left-rounded > span {
-        left: 1.33333px; }
-    .area.v-xs.right-rounded,
-    .button.v-xs.right-rounded {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      padding-right: 1.33333px; }
-      .area.v-xs.right-rounded > span,
-      .button.v-xs.right-rounded > span {
-        right: 1.33333px; }
-  .area.v-sm,
-  .button.v-sm {
-    height: 16px; }
-    .area.v-sm.label,
-    .button.v-sm.label {
-      font-size: 18px;
-      line-height: 16px; }
-    .area.v-sm.left-rounded,
-    .button.v-sm.left-rounded {
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
-      padding-left: 5.33333px; }
-      .area.v-sm.left-rounded > span,
-      .button.v-sm.left-rounded > span {
-        left: 5.33333px; }
-    .area.v-sm.right-rounded,
-    .button.v-sm.right-rounded {
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      padding-right: 5.33333px; }
-      .area.v-sm.right-rounded > span,
-      .button.v-sm.right-rounded > span {
-        right: 5.33333px; }
-  .area.v-lg,
-  .button.v-lg {
-    height: 88px; }
-    .area.v-lg.label,
-    .button.v-lg.label {
-      font-size: 90px;
-      line-height: 88px; }
-    .area.v-lg.left-rounded,
-    .button.v-lg.left-rounded {
-      border-top-left-radius: 88px;
-      border-bottom-left-radius: 88px;
-      padding-left: 29.33333px; }
-      .area.v-lg.left-rounded > span,
-      .button.v-lg.left-rounded > span {
-        left: 29.33333px; }
-    .area.v-lg.right-rounded,
-    .button.v-lg.right-rounded {
-      border-top-right-radius: 88px;
-      border-bottom-right-radius: 88px;
-      padding-right: 29.33333px; }
-      .area.v-lg.right-rounded > span,
-      .button.v-lg.right-rounded > span {
-        right: 29.33333px; }
-  .area.v-xl,
-  .button.v-xl {
-    height: 136px; }
-    .area.v-xl.label,
-    .button.v-xl.label {
-      font-size: 138px;
-      line-height: 136px; }
-    .area.v-xl.left-rounded,
-    .button.v-xl.left-rounded {
-      border-top-left-radius: 136px;
-      border-bottom-left-radius: 136px;
-      padding-left: 45.33333px; }
-      .area.v-xl.left-rounded > span,
-      .button.v-xl.left-rounded > span {
-        left: 45.33333px; }
-    .area.v-xl.right-rounded,
-    .button.v-xl.right-rounded {
-      border-top-right-radius: 136px;
-      border-bottom-right-radius: 136px;
-      padding-right: 45.33333px; }
-      .area.v-xl.right-rounded > span,
-      .button.v-xl.right-rounded > span {
-        right: 45.33333px; }
-  .area.h-xs,
-  .button.h-xs {
-    width: 25px; }
-  .area.h-sm,
-  .button.h-sm {
-    width: 58px; }
-  .area.h-lg,
-  .button.h-lg {
-    width: 256px; }
-  .area.h-xl,
-  .button.h-xl {
-    width: 388px; } }
 
 .panel:before, .panel > .content, .panel > .column, .panel > .row {
   background-color: #0d0d0d;
@@ -491,95 +542,40 @@ h4 {
   overflow: hidden;
   height: 300px;
   background-color: #9e9993;
-  margin: 8px; }
-  .panel.inline {
-    display: inline-block;
-    margin: 2px; }
+  margin: 4px; }
   .panel:before {
     content: "";
     overflow: hidden; }
   .panel > .content {
     margin: 16px; }
-  .panel > .column {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: column nowrap;
-    -webkit-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch; }
-    .panel > .column > .area,
-    .panel > .column > .button {
-      margin: 4px 0;
-      -ms-flex: 0 1 auto;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-      flex: 0 1 auto;
-      width: 100%; }
-      .panel > .column > .area.stretch,
-      .panel > .column > .button.stretch {
-        height: 1px;
-        -ms-flex: 1 1 auto;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1 1 auto;
-        flex: 1 1 auto; }
-  .panel > .row {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: row nowrap;
-    -webkit-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch; }
-    .panel > .row > .area,
-    .panel > .row > .button {
-      margin: 0 4px;
-      height: 100%;
-      -ms-flex: 0 1 auto;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-      flex: 0 1 auto; }
-      .panel > .row > .area.stretch,
-      .panel > .row > .button.stretch {
-        width: 1px;
-        -ms-flex: 1 1 auto;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1 1 auto;
-        flex: 1 1 auto; }
+  .panel > .column > .area,
+  .panel > .column > .button {
+    border-left-width: 0;
+    border-right-width: 0; }
+  .panel > .row > .area,
+  .panel > .row > .button {
+    border-top-width: 0;
+    border-bottom-width: 0; }
   .panel.top > .column {
     margin-top: 40px;
-    padding-top: 4px; }
+    padding-top: 2px; }
   .panel.top > .row {
     bottom: auto; }
   .panel.left > .column {
     right: auto; }
   .panel.left > .row {
     margin-left: 40px;
-    padding-left: 4px; }
+    padding-left: 2px; }
   .panel.bottom > .column {
     margin-bottom: 40px;
-    padding-bottom: 4px; }
+    padding-bottom: 2px; }
   .panel.bottom > .row {
     top: auto; }
   .panel.right > .column {
     left: auto; }
   .panel.right > .row {
     margin-right: 40px;
-    padding-right: 4px; }
+    padding-right: 2px; }
   .panel.top.left {
     border-top-left-radius: 25px; }
     .panel.top.left:before {
@@ -609,11 +605,6 @@ h4 {
 
 .panel.top > .row, .panel.bottom > .row {
   height: 25px; }
-  .panel.top > .row > .area.label,
-  .panel.top > .row > .button.label, .panel.bottom > .row > .area.label,
-  .panel.bottom > .row > .button.label {
-    font-size: 25px;
-    line-height: 25px; }
 
 .panel.left:before,
 .panel.left > .content,
@@ -640,11 +631,6 @@ h4 {
 
 .panel.row-xs.top > .row, .panel.row-xs.bottom > .row {
   height: 8px; }
-  .panel.row-xs.top > .row > .area.label,
-  .panel.row-xs.top > .row > .button.label, .panel.row-xs.bottom > .row > .area.label,
-  .panel.row-xs.bottom > .row > .button.label {
-    font-size: 8px;
-    line-height: 8px; }
 
 .panel.row-sm.top:before,
 .panel.row-sm.top > .content,
@@ -658,11 +644,6 @@ h4 {
 
 .panel.row-sm.top > .row, .panel.row-sm.bottom > .row {
   height: 15px; }
-  .panel.row-sm.top > .row > .area.label,
-  .panel.row-sm.top > .row > .button.label, .panel.row-sm.bottom > .row > .area.label,
-  .panel.row-sm.bottom > .row > .button.label {
-    font-size: 15px;
-    line-height: 15px; }
 
 .panel.row-lg.top:before,
 .panel.row-lg.top > .content,
@@ -676,11 +657,6 @@ h4 {
 
 .panel.row-lg.top > .row, .panel.row-lg.bottom > .row {
   height: 45px; }
-  .panel.row-lg.top > .row > .area.label,
-  .panel.row-lg.top > .row > .button.label, .panel.row-lg.bottom > .row > .area.label,
-  .panel.row-lg.bottom > .row > .button.label {
-    font-size: 45px;
-    line-height: 45px; }
 
 .panel.row-xl.top:before,
 .panel.row-xl.top > .content,
@@ -694,11 +670,6 @@ h4 {
 
 .panel.row-xl.top > .row, .panel.row-xl.bottom > .row {
   height: 65px; }
-  .panel.row-xl.top > .row > .area.label,
-  .panel.row-xl.top > .row > .button.label, .panel.row-xl.bottom > .row > .area.label,
-  .panel.row-xl.bottom > .row > .button.label {
-    font-size: 65px;
-    line-height: 65px; }
 
 .panel.col-xs.left:before,
 .panel.col-xs.left > .content,
@@ -763,11 +734,6 @@ h4 {
     bottom: 20px; }
   .panel.top > .row, .panel.bottom > .row {
     height: 20px; }
-    .panel.top > .row > .area.label,
-    .panel.top > .row > .button.label, .panel.bottom > .row > .area.label,
-    .panel.bottom > .row > .button.label {
-      font-size: 20px;
-      line-height: 20px; }
   .panel.left:before,
   .panel.left > .content,
   .panel.left > .row {
@@ -788,11 +754,6 @@ h4 {
     bottom: 6.4px; }
   .panel.row-xs.top > .row, .panel.row-xs.bottom > .row {
     height: 6.4px; }
-    .panel.row-xs.top > .row > .area.label,
-    .panel.row-xs.top > .row > .button.label, .panel.row-xs.bottom > .row > .area.label,
-    .panel.row-xs.bottom > .row > .button.label {
-      font-size: 6.4px;
-      line-height: 6.4px; }
   .panel.row-sm.top:before,
   .panel.row-sm.top > .content,
   .panel.row-sm.top > .column {
@@ -803,11 +764,6 @@ h4 {
     bottom: 12px; }
   .panel.row-sm.top > .row, .panel.row-sm.bottom > .row {
     height: 12px; }
-    .panel.row-sm.top > .row > .area.label,
-    .panel.row-sm.top > .row > .button.label, .panel.row-sm.bottom > .row > .area.label,
-    .panel.row-sm.bottom > .row > .button.label {
-      font-size: 12px;
-      line-height: 12px; }
   .panel.row-lg.top:before,
   .panel.row-lg.top > .content,
   .panel.row-lg.top > .column {
@@ -818,11 +774,6 @@ h4 {
     bottom: 36px; }
   .panel.row-lg.top > .row, .panel.row-lg.bottom > .row {
     height: 36px; }
-    .panel.row-lg.top > .row > .area.label,
-    .panel.row-lg.top > .row > .button.label, .panel.row-lg.bottom > .row > .area.label,
-    .panel.row-lg.bottom > .row > .button.label {
-      font-size: 36px;
-      line-height: 36px; }
   .panel.row-xl.top:before,
   .panel.row-xl.top > .content,
   .panel.row-xl.top > .column {
@@ -833,11 +784,6 @@ h4 {
     bottom: 52px; }
   .panel.row-xl.top > .row, .panel.row-xl.bottom > .row {
     height: 52px; }
-    .panel.row-xl.top > .row > .area.label,
-    .panel.row-xl.top > .row > .button.label, .panel.row-xl.bottom > .row > .area.label,
-    .panel.row-xl.bottom > .row > .button.label {
-      font-size: 52px;
-      line-height: 52px; }
   .panel.col-xs.left:before,
   .panel.col-xs.left > .content,
   .panel.col-xs.left > .row {

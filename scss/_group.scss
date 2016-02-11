@@ -1,106 +1,126 @@
 @import "variables";
 
-.group {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
+%group {
     display: flex;
-    margin: 36px 12px 12px;
-    vertical-align: top;
-
-    &.inline {
-        display: -webkit-inline-flex;
-        display: -moz-inline-flex;
-        display: -ms-inline-flex;
-        display: -o-inline-flex;
-        display: inline-flex;
+    //in main axis
+    // justify-content: flex-start;
+    //cross main axis
+    // align-items: flex-start;
+    //how to align when content is wrapped
+    // align-content: flex-start;
+    &.wrap {
+        flex-wrap: wrap;
     }
 
-    @include mobile {
-        margin: 18px 6px 6px;
-    }
-    //> header {
-    //    margin-top: -36px;
-    //    height: 24px;
-    //    line-height: 24px;
-    //    font-size: 16pt;
-    //    padding-left: 3px;
-    //    padding-top: 8px;
-    //    padding-bottom: 4px;
-    //    opacity: 0.7;
-    //    cursor: default;
-    //}
-    .group {
-        margin: 0;
-    }
+    @each $name,
+    $props in $margins {
+        &.m-#{$name} {
+            margin#{map-get($props, rule)}: map-get($props, value);
 
-    &.orient-v {
-        -ms-flex-flow: column nowrap;
-        flex-flow: column nowrap;
-
-        .stretch {
-            height: 1px;
+            > *,
+            > .flex {
+                margin#{map-get($props, rule)}: map-get($props, value);
+            }
         }
     }
 
-    &.orient-h {
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
+    > .flex {
+        flex: 1;
+    }
+$i: 0;
 
-        .stretch {
-            width: 1px;
+    @while $i <= 100 {
+        > .flex-#{$i} {
+            flex: 1 1 #{$i}%;
+            box-sizing: border-box;
+        }
+
+        @if $i < 5 {
+            $i: $i + 1;
+        }
+
+        @else {
+            $i: $i + 5;
         }
     }
 
-    &.align-v-start {
-        align-items: flex-start;
+    > .flex-33 {
+        flex: 1 1 33.33%;
+        box-sizing: border-box;
     }
 
-    &.align-v-center {
-        align-items: center;
+    > .flex-66 {
+        flex: 1 1 66.66%;
+        box-sizing: border-box;
+    }
+}
+
+.group-v {
+    @extend %group;
+    flex-direction: column;
+
+    > .flex {
+        height: auto;
+    }
+$i: 0;
+
+    @while $i <= 100 {
+        > .flex-#{$i} {
+            max-width: 100%;
+            max-height: #{$i}%;
+        }
+
+        @if $i < 5 {
+            $i: $i + 1;
+        }
+
+        @else {
+            $i: $i + 5;
+        }
     }
 
-    &.align-v-end {
-        align-items: flex-end;
-    }
-    //is this class useful anyway?
-    // &.align-v-stretch {
-    //     align-items: stretch;
-    //
-    //     .area,
-    //     .button {
-    //         height: auto;
-    //     }
-    // }
-    &.align-h-start {
-        justify-content: flex-start;
+    > .flex-33 {
+        max-width: 100%;
+        max-height: 33.33%;
     }
 
-    &.align-h-center {
-        justify-content: center;
+    > .flex-66 {
+        max-width: 100%;
+        max-height: 66.66%;
+    }
+}
+
+.group-h {
+    @extend %group;
+    flex-direction: row;
+
+    > .flex {
+        width: auto;
+    }
+$i: 0;
+
+    @while $i <= 100 {
+        > .flex-#{$i} {
+            max-width: #{$i}%;
+            max-height: 100%;
+        }
+
+        @if $i < 5 {
+            $i: $i + 1;
+        }
+
+        @else {
+            $i: $i + 5;
+        }
     }
 
-    &.align-h-end {
-        justify-content: flex-end;
+    > .flex-33 {
+        max-width: 33.33%;
+        max-height: 100%;
     }
 
-    &.align-h-space-around {
-        justify-content: space-around;
-    }
-
-    &.align-h-space-between {
-        justify-content: space-between;
-    }
-
-    .area,
-    .button {
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-    }
-
-    .stretch {
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
+    > .flex-66 {
+        max-width: 66.66%;
+        max-height: 100%;
     }
 }

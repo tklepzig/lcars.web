@@ -3,12 +3,13 @@
 body {
     -webkit-tap-highlight-color: transparent;
     font-family: $font;
-    // font-size: 12pt;
+    font-size: $font-size;
     color: $fgDefault;
     background: $bgDefault;
     margin: 0;
     padding: 0;
-
+    height: 100%;
+    min-height: 100%;
     // @include mobile {
     //     font-size: 0.75em;
     // }
@@ -20,7 +21,6 @@ textarea,
 input {
     font-size: 1em;
 }
-
 @import "typography";
 @import "group";
 @import "area-button";

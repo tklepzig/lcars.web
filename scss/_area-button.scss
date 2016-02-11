@@ -1,17 +1,12 @@
 @import "variables";
 
 %areaButtonCommon {
-    border: none;
+    border: $areaBorderWidth solid $bgDefault;
     text-decoration: none;
     cursor: default;
-    margin: $areaMargin;
-    -moz-outline: none;
+    margin: 0;
     outline: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
     user-select: none;
-    -ms-touch-action: none;
     touch-action: none;
     font-family: inherit;
     font-weight: normal;
@@ -21,12 +16,10 @@
     position: relative;
     white-space: normal;
     vertical-align: top;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-flex;
-    align-items: flex-end;
     justify-content: flex-start;
+    align-items: flex-end;
     text-align: left;
     background-color: $fgDefault;
     color: $bgDefault;
@@ -46,15 +39,12 @@
         font-weight: 500;
         text-transform: uppercase;
         white-space: nowrap;
-        -ms-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         display: inline-block;
         width: auto;
-    }
-
-    &.stretch {
-        display: block;
+        //hide text until js logic has been executed
+        font-size: 0;
+        line-height: 0;
     }
 }
 
@@ -64,24 +54,10 @@
 
 .button {
     @extend %areaButtonCommon;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     cursor: pointer;
-
-    > span {
-        position: absolute;
-        top: map-get($areaPadding, v);
-        left: map-get($areaPadding, h);
-        right: map-get($areaPadding, h);
-        bottom: map-get($areaPadding, v);
-        width: auto;
-        height: auto;
-        overflow: hidden;
-        -ms-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        display: inline-flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-    }
 
     &.disabled,
     &[disabled] {
@@ -91,60 +67,5 @@
 
     &:active {
         background-color: lighten($fgDefault, 10%);
-    }
-}
-
-@mixin areaSizeDefinition($size) {
-    @each $prop,
-    $value in $size {
-        #{$prop}: $value;
-    }
-
-    @if (map-has-key($size, height)) {
-        $height: map-get($size, height);
-        $roundPadding: $height / 3;
-
-        &.label {
-            font-size: $height + 2;
-            line-height: $height;
-        }
-
-        &.left-rounded {
-            border-top-left-radius: $height;
-            border-bottom-left-radius: $height;
-            padding-left: $roundPadding;
-
-            > span {
-                left: $roundPadding;
-            }
-        }
-
-        &.right-rounded {
-            border-top-right-radius: $height;
-            border-bottom-right-radius: $height;
-            padding-right: $roundPadding;
-
-            > span {
-                right: $roundPadding;
-            }
-        }
-    }
-}
-
-@each $name,
-$size in $areaSizes {
-    .area#{$name},
-    .button#{$name} {
-        @include areaSizeDefinition($size);
-    }
-}
-
-@include mobile {
-    @each $name,
-    $size in $areaSizes_mobile {
-        .area#{$name},
-        .button#{$name} {
-            @include areaSizeDefinition($size);
-        }
     }
 }
