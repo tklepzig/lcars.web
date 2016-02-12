@@ -1,6 +1,6 @@
 @import "variables";
 
-%group {
+%layout {
     display: flex;
     //in main axis
     // justify-content: flex-start;
@@ -55,8 +55,8 @@ $i: 0;
     }
 }
 
-.group-v {
-    @extend %group;
+.layout-v {
+    @extend %layout;
     flex-direction: column;
 
     > .flex {
@@ -126,8 +126,8 @@ $i: 0;
     }
 }
 
-.group-h {
-    @extend %group;
+.layout-h {
+    @extend %layout;
     flex-direction: row;
 
     > .flex {

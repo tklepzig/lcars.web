@@ -35,7 +35,7 @@
 
     > .column {
         @extend %panel-child;
-        @extend .group-v;
+        @extend .layout-v;
 
         > .area,
         > .button {
@@ -46,7 +46,7 @@
 
     > .row {
         @extend %panel-child;
-        @extend .group-h;
+        @extend .layout-h;
 
         > .area,
         > .button {
