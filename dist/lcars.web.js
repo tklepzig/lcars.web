@@ -60,22 +60,25 @@ var lcarsWeb = (function($, undefined) {
 
     function adjustLabelSize() {
         $('.area.label').each(function() {
-            $(this).css('font-size', $(this).height() + 'px');
-            $(this).css('line-height', $(this).height() + 'px');
+            var height = $(this).height();
+            $(this).css('font-size', height + 'px');
+            $(this).css('line-height', height + 'px');
         });
     }
 
     function adjustRoundRadius() {
         $('.area.round-l, .button.round-l').each(function() {
-            $(this).css('border-top-left-radius', $(this).height() + 'px');
-            $(this).css('border-bottom-left-radius', $(this).height() + 'px');
-            $(this).css('padding-left', ($(this).height() / 2) + 'px');
+            var height = $(this).height();
+            $(this).css('border-top-left-radius', height + 'px');
+            $(this).css('border-bottom-left-radius', height + 'px');
+            $(this).css('padding-left', (height / 2) + 'px');
         });
 
         $('.area.round-r, .button.round-r').each(function() {
-            $(this).css('border-top-right-radius', $(this).height() + 'px');
-            $(this).css('border-bottom-right-radius', $(this).height() + 'px');
-            $(this).css('padding-right', ($(this).height() / 2) + 'px');
+            var height = $(this).height();
+            $(this).css('border-top-right-radius', height + 'px');
+            $(this).css('border-bottom-right-radius', height + 'px');
+            $(this).css('padding-right', (height / 2) + 'px');
         });
     }
 
