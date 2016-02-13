@@ -53,6 +53,30 @@ $i: 0;
         flex: 1 1 66.66%;
         box-sizing: border-box;
     }
+
+    &.align-wrap-start {
+        align-content: flex-start;
+    }
+
+    &.align-wrap-center {
+        align-content: center;
+    }
+
+    &.align-wrap-end {
+        align-content: flex-end;
+    }
+
+    &.align-wrap-space-around {
+        align-content: space-around;
+    }
+
+    &.align-wrap-space-between {
+        align-content: space-between;
+    }
+
+    &.align-wrap-stretch {
+        align-content: stretch;
+    }
 }
 
 .layout-v {

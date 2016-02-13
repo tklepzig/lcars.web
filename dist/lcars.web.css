@@ -235,6 +235,30 @@ h4 {
     -ms-flex: 1 1 66.66%;
     flex: 1 1 66.66%;
     box-sizing: border-box; }
+  .align-wrap-start.layout-v, .panel > .align-wrap-start.column, .align-wrap-start.layout-h, .panel > .align-wrap-start.row {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start; }
+  .align-wrap-center.layout-v, .panel > .align-wrap-center.column, .align-wrap-center.layout-h, .panel > .align-wrap-center.row {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center; }
+  .align-wrap-end.layout-v, .panel > .align-wrap-end.column, .align-wrap-end.layout-h, .panel > .align-wrap-end.row {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end; }
+  .align-wrap-space-around.layout-v, .panel > .align-wrap-space-around.column, .align-wrap-space-around.layout-h, .panel > .align-wrap-space-around.row {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around; }
+  .align-wrap-space-between.layout-v, .panel > .align-wrap-space-between.column, .align-wrap-space-between.layout-h, .panel > .align-wrap-space-between.row {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
+  .align-wrap-stretch.layout-v, .panel > .align-wrap-stretch.column, .align-wrap-stretch.layout-h, .panel > .align-wrap-stretch.row {
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch; }
 
 .layout-v, .panel > .column {
   -webkit-box-orient: vertical;
