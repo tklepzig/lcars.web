@@ -12,23 +12,29 @@
         flex-wrap: wrap;
     }
 
+    &.layout-margin {
+        margin: 2px;
+
+        > *,
+        > .flex {
+            margin: 2px;
+        }
+    }
+
+    &.layout-padding {
+        padding: 2px;
+
+        > *,
+        > .flex {
+            padding: 2px;
+        }
+    }
+
     &.layout-fill {
         margin: 0;
         width: 100%;
         min-height: 100%;
         height: 100%;
-    }
-
-    @each $name,
-    $props in $margins {
-        &.m-#{$name} {
-            margin#{map-get($props, rule)}: map-get($props, value);
-
-            > *,
-            > .flex {
-                margin#{map-get($props, rule)}: map-get($props, value);
-            }
-        }
     }
 
     > .flex {

@@ -23,19 +23,6 @@ $areaPadding: (v: 4px, h: 6px);
 $areaBorderWidth: 2px;
 
 
-@function defineMargins($margin)
-{
-    @return ("a":             (rule: "", value: $margin),
-             "t":             (rule: "-top", value: $margin),
-             "l":             (rule: "-left", value: $margin),
-             "b":             (rule: "-bottom", value: $margin),
-             "r":             (rule: "-right", value: $margin),
-             "v":             (rule: "", value: $margin 0),
-             "h":             (rule: "", value: 0 $margin));
-}
-
-$margins: defineMargins(2px);
-
 @function definePanelSizes($factor: 1)
 {
     @return ("":              (columnWidth: 210px * $factor, rowHeight: 25px * $factor),
