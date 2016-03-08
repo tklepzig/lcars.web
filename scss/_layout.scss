@@ -13,20 +13,20 @@
     }
 
     &.layout-margin {
-        margin: 2px;
+        margin: $defaultMarginPadding;
 
         > *,
         > .flex {
-            margin: 2px;
+            margin: $defaultMarginPadding;
         }
     }
 
     &.layout-padding {
-        padding: 2px;
+        padding: $defaultMarginPadding;
 
         > *,
         > .flex {
-            padding: 2px;
+            padding: $defaultMarginPadding;
         }
     }
 
