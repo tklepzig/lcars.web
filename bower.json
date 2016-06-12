@@ -23,6 +23,6 @@
   ],
   "dependencies": {
     "jquery": "~2.2.0",
-    "simple-flex-layout": "1.*"
+    "simple-flex-layout": "2.*"
   }
 }
