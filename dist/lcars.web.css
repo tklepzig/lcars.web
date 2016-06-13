@@ -12062,7 +12062,7 @@ h4 {
   display: block;
   position: relative;
   overflow: hidden;
-  height: 300px;
+  height: auto;
   background-color: #9e9993;
   margin: 4px; }
   .panel:before {
