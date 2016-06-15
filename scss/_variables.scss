@@ -14,7 +14,7 @@ $colors: (grey: #9e9993,
           yellow: #fc3,
           sea-blue: #009cce,
           blue: #3786ff,
-          borg: #090          
+          borg: #090
         );
 
 $bgDefault: #0d0d0d;
@@ -27,17 +27,23 @@ $defaultMarginPadding: 2px;
 
 @function definePanelSizes($factor: 1)
 {
-    @return ("":              (columnWidth: 210px * $factor, rowHeight: 25px * $factor),
+    @return (
 
-             ".row-xs":       (rowHeight: 8px * $factor),
-             ".row-sm":       (rowHeight: 15px * $factor),
-             ".row-lg":       (rowHeight: 45px * $factor),
-             ".row-xl":       (rowHeight: 65px * $factor),
+             ".row-xxs":      (rowHeight: 15px * $factor),
+             ".row-xs":       (rowHeight: 25px * $factor),
+             ".row-sm":       (rowHeight: 45px * $factor),
+             ".row-md":       (rowHeight: 75px * $factor),
+             ".row-lg":       (rowHeight: 140px * $factor),
+             ".row-xl":       (rowHeight: 210px * $factor),
+             ".row-xxl":      (rowHeight: 300px * $factor),
 
-             ".col-xs":       (columnWidth: 150px * $factor),
-             ".col-sm":       (columnWidth: 180px * $factor),
-             ".col-lg":       (columnWidth: 240px * $factor),
-             ".col-xl":       (columnWidth: 270px * $factor))
+             ".col-xxs":      (columnWidth: 15px * $factor),
+             ".col-xs":       (columnWidth: 25px * $factor),
+             ".col-sm":       (columnWidth: 45px * $factor),
+             ".col-md":       (columnWidth: 75px * $factor),
+             ".col-lg":       (columnWidth: 140px * $factor),
+             ".col-xl":       (columnWidth: 210px * $factor),
+             ".col-xxl":      (columnWidth: 300px * $factor))
 }
 
 $panelSizes: definePanelSizes();
