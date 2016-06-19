@@ -1,29 +1,6 @@
+'use strict';
+
 var lcarsWeb = (function($, undefined) {
-    'use strict';
-
-    function checkAudioSupport() {
-
-        var audioElement = document.createElement('audio');
-
-        if (audioElement.canPlayType('audio/mpeg')) {
-            return 'mp3';
-        } else if (audioElement.canPlayType('audio/wav')) {
-            return 'wav';
-        } else {
-            return 'none';
-        }
-    }
-
-    function getAudioFileFromId(id) {
-        if (supportedAudioType === 'mp3') {
-            return audioIds[id] + '.mp3';
-        } else if (supportedAudioType === 'wav') {
-            return audioIds[id] + '.wav';
-        } else {
-            return undefined;
-        }
-    }
-
     var module = {};
 
     var defaultAudioId;
@@ -31,8 +8,6 @@ var lcarsWeb = (function($, undefined) {
     var downEvent;
     var moveEvent;
     var upEvent;
-    var audioIds = {};
-    var supportedAudioType = checkAudioSupport();
 
 
     if ('ontouchstart' in window) {
@@ -88,7 +63,10 @@ var lcarsWeb = (function($, undefined) {
     $(adjustRoundRadius);
 
     module.defineAudioId = function(id, file, setAsDefault) {
-        audioIds[id] = file;
+        var $audio = $('<audio>').attr('id', 'audio-' + id).attr('preload', 'auto');
+        $audio.append($('<source>').attr('src', name + '.wav').attr('type', 'audio/wav'));
+        $audio.append($('<source>').attr('src', name + '.mp3').attr('type', 'audio/mpeg'));
+        $('body').append($audio);
 
         if (setAsDefault) {
             defaultAudioId = id;
@@ -96,7 +74,7 @@ var lcarsWeb = (function($, undefined) {
     };
 
     module.removeAudioId = function(id) {
-        delete audioIds[id];
+        $('#audio-' + id).remove();
     };
 
     module.isAudioEnabled = function() {
@@ -117,10 +95,9 @@ var lcarsWeb = (function($, undefined) {
 
     module.play = function(id) {
         if (audioEnabled) {
-            var audioFile = getAudioFileFromId(id);
-            if (audioFile !== undefined) {
-                var audio = new Audio(audioFile);
-                audio.play();
+            var $audio = $('#audio-' + id);
+            if ($audio.length === 1) {
+                $audio.get(0).play();
             }
         }
     };
