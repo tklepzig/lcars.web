@@ -62,7 +62,7 @@ var lcarsWeb = (function($, undefined) {
     $(window).on('resize', adjustRoundRadius);
     $(adjustRoundRadius);
 
-    module.defineAudioId = function(id, file, setAsDefault) {
+    module.defineAudioId = function(id, name, setAsDefault) {
         var $audio = $('<audio>').attr('id', 'audio-' + id).attr('preload', 'auto');
         $audio.append($('<source>').attr('src', name + '.wav').attr('type', 'audio/wav'));
         $audio.append($('<source>').attr('src', name + '.mp3').attr('type', 'audio/mpeg'));
