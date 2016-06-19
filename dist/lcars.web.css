@@ -12038,7 +12038,8 @@ h4 {
   -ms-flex-align: start;
   -ms-grid-row-align: flex-start;
   align-items: flex-start;
-  cursor: pointer; }
+  cursor: pointer;
+  min-height: 46px; }
   .button.disabled, .button[disabled] {
     background-color: #9e9993 !important;
     color: rgba(13, 13, 13, 0.6) !important; }
@@ -12077,7 +12078,8 @@ h4 {
   .panel > .row > .area,
   .panel > .row > .button {
     border-top-width: 0;
-    border-bottom-width: 0; }
+    border-bottom-width: 0;
+    min-height: 0; }
   .panel.top > .column {
     margin-top: 40px;
     padding-top: 2px; }

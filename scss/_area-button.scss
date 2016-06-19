@@ -58,6 +58,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     cursor: pointer;
+    min-height: 46px;
 
     &.disabled,
     &[disabled] {
