@@ -21,9 +21,7 @@ $bgDefault: #0d0d0d;
 $fgDefault: map-get($colors, grey);
 
 $areaPadding: (v: 4px, h: 6px);
-$areaBorderWidth: 2px;
-
-$defaultMarginPadding: 2px;
+$areaBorderWidth: 4px;
 
 @function definePanelSizes($factor: 1)
 {
