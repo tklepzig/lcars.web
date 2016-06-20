@@ -46,6 +46,9 @@
         font-size: 0;
         line-height: 0;
     }
+    @include mobile {
+        border: $areaBorderWidth_mobile solid $bgDefault;
+    }
 }
 
 .area {

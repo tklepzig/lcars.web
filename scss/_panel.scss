@@ -21,6 +21,9 @@
     height: auto;
     background-color: $fgDefault;
     margin: $areaBorderWidth * 2;
+    @include mobile {
+        margin: $areaBorderWidth_mobile * 2;
+    }
 
     &:before {
         @extend %panel-child;
@@ -37,8 +40,8 @@
         @extend %panel-child;
         @extend .layout-v;
 
-        > .area,
-        > .button {
+         > .button,
+        > .area {
             border-left-width: 0;
             border-right-width: 0;
         }
@@ -48,8 +51,8 @@
         @extend %panel-child;
         @extend .layout-h;
 
-        > .area,
-        > .button {
+         > .button,
+        > .area {
             border-top-width: 0;
             border-bottom-width: 0;
             min-height: 0;
@@ -60,6 +63,9 @@
         > .column {
             margin-top: 40px;
             padding-top: $areaBorderWidth;
+            @include mobile {
+                padding-top: $areaBorderWidth_mobile;
+            }
         }
 
         > .row {
@@ -75,6 +81,9 @@
         > .row {
             margin-left: 40px;
             padding-left: $areaBorderWidth;
+            @include mobile {
+                padding-left: $areaBorderWidth_mobile;
+            }
         }
     }
 
@@ -82,6 +91,9 @@
         > .column {
             margin-bottom: 40px;
             padding-bottom: $areaBorderWidth;
+            @include mobile {
+                padding-bottom: $areaBorderWidth_mobile;
+            }
         }
 
         > .row {
@@ -97,6 +109,9 @@
         > .row {
             margin-right: 40px;
             padding-right: $areaBorderWidth;
+            @include mobile {
+                padding-right: $areaBorderWidth_mobile;
+            }
         }
     }
 
@@ -132,50 +147,48 @@
         }
     }
 }
-
 @mixin panelSizeDefinition($size) {
-    @if (map-has-key($size, rowHeight)) {
+     @if (map-has-key($size, rowHeight)){
         $rowHeight: map-get($size, rowHeight);
 
         &.top {
-            &:before,
-            > .content,
-            > .column {
+             > .column,
+             > .content,
+            &:before {
                 top: $rowHeight;
             }
         }
 
         &.bottom {
-            &:before,
-            > .content,
-            > .column {
+             > .column,
+             > .content,
+            &:before {
                 bottom: $rowHeight;
             }
         }
 
-        &.top,
-        &.bottom {
+        &.bottom,
+        &.top {
             > .row {
                 height: $rowHeight;
             }
         }
     }
-
     @if (map-has-key($size, columnWidth)) {
         $columnWidth: map-get($size, columnWidth);
 
         &.left {
-            &:before,
-            > .content,
-            > .row {
+             > .content,
+             > .row,
+            &:before {
                 left: $columnWidth;
             }
         }
 
         &.right {
-            &:before,
-            > .content,
-            > .row {
+             > .content,
+             > .row,
+            &:before {
                 right: $columnWidth;
             }
         }
@@ -188,17 +201,13 @@
         }
     }
 }
-
-@each $name,
-$size in $panelSizes {
+@each $name, $size in $panelSizes {
     .panel#{$name} {
         @include panelSizeDefinition($size);
     }
 }
-
 @include mobile {
-    @each $name,
-    $size in $panelSizes_mobile {
+     @each $name, $size in $panelSizes_mobile{
         .panel#{$name} {
             @include panelSizeDefinition($size);
         }
