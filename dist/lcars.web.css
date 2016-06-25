@@ -12650,32 +12650,860 @@ h4 {
       background-color: #0d0d0d;
       color: #215099; }
 
-.borg {
+.green {
   background-color: #090;
   color: #0d0d0d; }
-  .borg.button:active {
+  .green.button:active {
     background-color: #00cc00; }
-  .borg.area.label, .borg.text {
+  .green.area.label, .green.text {
     background-color: #0d0d0d;
     color: #090; }
-  .borg.light {
+  .green.light {
     background-color: #66c266; }
-    .borg.light.button:active {
+    .green.light.button:active {
       background-color: #8ad18a; }
-    .borg.light.area.label, .borg.light.text {
+    .green.light.area.label, .green.light.text {
       background-color: #0d0d0d;
       color: #66c266; }
-  .borg.dim {
+  .green.dim {
     background-color: #338f33; }
-    .borg.dim.button:active {
+    .green.dim.button:active {
       background-color: #40b540; }
-    .borg.dim.area.label, .borg.dim.text {
+    .green.dim.area.label, .green.dim.text {
       background-color: #0d0d0d;
       color: #338f33; }
-  .borg.dark {
+  .green.dark {
     background-color: #005c00; }
-    .borg.dark.button:active {
+    .green.dark.button:active {
       background-color: #008f00; }
-    .borg.dark.area.label, .borg.dark.text {
+    .green.dark.area.label, .green.dark.text {
       background-color: #0d0d0d;
       color: #005c00; }
+
+.blink-grey {
+  -webkit-animation: blink-bg-grey 1s steps(1) infinite;
+  animation: blink-bg-grey 1s steps(1) infinite; }
+  .blink-grey.area.label, .blink-grey.text {
+    -webkit-animation: blink-fg-grey 1s steps(1) infinite;
+    animation: blink-fg-grey 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-grey {
+  50% {
+    background: #9e9993; } }
+
+@keyframes blink-bg-grey {
+  50% {
+    background: #9e9993; } }
+
+@-webkit-keyframes blink-fg-grey {
+  50% {
+    color: #9e9993; } }
+
+@keyframes blink-fg-grey {
+  50% {
+    color: #9e9993; } }
+
+.blink-light-grey {
+  -webkit-animation: blink-bg-light-grey 1s steps(1) infinite;
+  animation: blink-bg-light-grey 1s steps(1) infinite; }
+  .blink-light-grey.area.label, .blink-light-grey.text {
+    -webkit-animation: blink-fg-light-grey 1s steps(1) infinite;
+    animation: blink-fg-light-grey 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-grey {
+  50% {
+    background: #c5c2be; } }
+
+@keyframes blink-bg-light-grey {
+  50% {
+    background: #c5c2be; } }
+
+@-webkit-keyframes blink-fg-light-grey {
+  50% {
+    color: #c5c2be; } }
+
+@keyframes blink-fg-light-grey {
+  50% {
+    color: #c5c2be; } }
+
+.blink-dim-grey {
+  -webkit-animation: blink-bg-dim-grey 1s steps(1) infinite;
+  animation: blink-bg-dim-grey 1s steps(1) infinite; }
+  .blink-dim-grey.area.label, .blink-dim-grey.text {
+    -webkit-animation: blink-fg-dim-grey 1s steps(1) infinite;
+    animation: blink-fg-dim-grey 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-grey {
+  50% {
+    background: #928f8b; } }
+
+@keyframes blink-bg-dim-grey {
+  50% {
+    background: #928f8b; } }
+
+@-webkit-keyframes blink-fg-dim-grey {
+  50% {
+    color: #928f8b; } }
+
+@keyframes blink-fg-dim-grey {
+  50% {
+    color: #928f8b; } }
+
+.blink-dark-grey {
+  -webkit-animation: blink-bg-dark-grey 1s steps(1) infinite;
+  animation: blink-bg-dark-grey 1s steps(1) infinite; }
+  .blink-dark-grey.area.label, .blink-dark-grey.text {
+    -webkit-animation: blink-fg-dark-grey 1s steps(1) infinite;
+    animation: blink-fg-dark-grey 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-grey {
+  50% {
+    background: #5f5c58; } }
+
+@keyframes blink-bg-dark-grey {
+  50% {
+    background: #5f5c58; } }
+
+@-webkit-keyframes blink-fg-dark-grey {
+  50% {
+    color: #5f5c58; } }
+
+@keyframes blink-fg-dark-grey {
+  50% {
+    color: #5f5c58; } }
+
+.blink-orange {
+  -webkit-animation: blink-bg-orange 1s steps(1) infinite;
+  animation: blink-bg-orange 1s steps(1) infinite; }
+  .blink-orange.area.label, .blink-orange.text {
+    -webkit-animation: blink-fg-orange 1s steps(1) infinite;
+    animation: blink-fg-orange 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-orange {
+  50% {
+    background: #ff9c00; } }
+
+@keyframes blink-bg-orange {
+  50% {
+    background: #ff9c00; } }
+
+@-webkit-keyframes blink-fg-orange {
+  50% {
+    color: #ff9c00; } }
+
+@keyframes blink-fg-orange {
+  50% {
+    color: #ff9c00; } }
+
+.blink-light-orange {
+  -webkit-animation: blink-bg-light-orange 1s steps(1) infinite;
+  animation: blink-bg-light-orange 1s steps(1) infinite; }
+  .blink-light-orange.area.label, .blink-light-orange.text {
+    -webkit-animation: blink-fg-light-orange 1s steps(1) infinite;
+    animation: blink-fg-light-orange 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-orange {
+  50% {
+    background: #ffc466; } }
+
+@keyframes blink-bg-light-orange {
+  50% {
+    background: #ffc466; } }
+
+@-webkit-keyframes blink-fg-light-orange {
+  50% {
+    color: #ffc466; } }
+
+@keyframes blink-fg-light-orange {
+  50% {
+    color: #ffc466; } }
+
+.blink-dim-orange {
+  -webkit-animation: blink-bg-dim-orange 1s steps(1) infinite;
+  animation: blink-bg-dim-orange 1s steps(1) infinite; }
+  .blink-dim-orange.area.label, .blink-dim-orange.text {
+    -webkit-animation: blink-fg-dim-orange 1s steps(1) infinite;
+    animation: blink-fg-dim-orange 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-orange {
+  50% {
+    background: #cc9133; } }
+
+@keyframes blink-bg-dim-orange {
+  50% {
+    background: #cc9133; } }
+
+@-webkit-keyframes blink-fg-dim-orange {
+  50% {
+    color: #cc9133; } }
+
+@keyframes blink-fg-dim-orange {
+  50% {
+    color: #cc9133; } }
+
+.blink-dark-orange {
+  -webkit-animation: blink-bg-dark-orange 1s steps(1) infinite;
+  animation: blink-bg-dark-orange 1s steps(1) infinite; }
+  .blink-dark-orange.area.label, .blink-dark-orange.text {
+    -webkit-animation: blink-fg-dark-orange 1s steps(1) infinite;
+    animation: blink-fg-dark-orange 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-orange {
+  50% {
+    background: #995e00; } }
+
+@keyframes blink-bg-dark-orange {
+  50% {
+    background: #995e00; } }
+
+@-webkit-keyframes blink-fg-dark-orange {
+  50% {
+    color: #995e00; } }
+
+@keyframes blink-fg-dark-orange {
+  50% {
+    color: #995e00; } }
+
+.blink-red {
+  -webkit-animation: blink-bg-red 1s steps(1) infinite;
+  animation: blink-bg-red 1s steps(1) infinite; }
+  .blink-red.area.label, .blink-red.text {
+    -webkit-animation: blink-fg-red 1s steps(1) infinite;
+    animation: blink-fg-red 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-red {
+  50% {
+    background: #f00; } }
+
+@keyframes blink-bg-red {
+  50% {
+    background: #f00; } }
+
+@-webkit-keyframes blink-fg-red {
+  50% {
+    color: #f00; } }
+
+@keyframes blink-fg-red {
+  50% {
+    color: #f00; } }
+
+.blink-light-red {
+  -webkit-animation: blink-bg-light-red 1s steps(1) infinite;
+  animation: blink-bg-light-red 1s steps(1) infinite; }
+  .blink-light-red.area.label, .blink-light-red.text {
+    -webkit-animation: blink-fg-light-red 1s steps(1) infinite;
+    animation: blink-fg-light-red 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-red {
+  50% {
+    background: #ff6666; } }
+
+@keyframes blink-bg-light-red {
+  50% {
+    background: #ff6666; } }
+
+@-webkit-keyframes blink-fg-light-red {
+  50% {
+    color: #ff6666; } }
+
+@keyframes blink-fg-light-red {
+  50% {
+    color: #ff6666; } }
+
+.blink-dim-red {
+  -webkit-animation: blink-bg-dim-red 1s steps(1) infinite;
+  animation: blink-bg-dim-red 1s steps(1) infinite; }
+  .blink-dim-red.area.label, .blink-dim-red.text {
+    -webkit-animation: blink-fg-dim-red 1s steps(1) infinite;
+    animation: blink-fg-dim-red 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-red {
+  50% {
+    background: #cc3333; } }
+
+@keyframes blink-bg-dim-red {
+  50% {
+    background: #cc3333; } }
+
+@-webkit-keyframes blink-fg-dim-red {
+  50% {
+    color: #cc3333; } }
+
+@keyframes blink-fg-dim-red {
+  50% {
+    color: #cc3333; } }
+
+.blink-dark-red {
+  -webkit-animation: blink-bg-dark-red 1s steps(1) infinite;
+  animation: blink-bg-dark-red 1s steps(1) infinite; }
+  .blink-dark-red.area.label, .blink-dark-red.text {
+    -webkit-animation: blink-fg-dark-red 1s steps(1) infinite;
+    animation: blink-fg-dark-red 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-red {
+  50% {
+    background: #990000; } }
+
+@keyframes blink-bg-dark-red {
+  50% {
+    background: #990000; } }
+
+@-webkit-keyframes blink-fg-dark-red {
+  50% {
+    color: #990000; } }
+
+@keyframes blink-fg-dark-red {
+  50% {
+    color: #990000; } }
+
+.blink-tan {
+  -webkit-animation: blink-bg-tan 1s steps(1) infinite;
+  animation: blink-bg-tan 1s steps(1) infinite; }
+  .blink-tan.area.label, .blink-tan.text {
+    -webkit-animation: blink-fg-tan 1s steps(1) infinite;
+    animation: blink-fg-tan 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-tan {
+  50% {
+    background: #dfaf71; } }
+
+@keyframes blink-bg-tan {
+  50% {
+    background: #dfaf71; } }
+
+@-webkit-keyframes blink-fg-tan {
+  50% {
+    color: #dfaf71; } }
+
+@keyframes blink-fg-tan {
+  50% {
+    color: #dfaf71; } }
+
+.blink-light-tan {
+  -webkit-animation: blink-bg-light-tan 1s steps(1) infinite;
+  animation: blink-bg-light-tan 1s steps(1) infinite; }
+  .blink-light-tan.area.label, .blink-light-tan.text {
+    -webkit-animation: blink-fg-light-tan 1s steps(1) infinite;
+    animation: blink-fg-light-tan 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-tan {
+  50% {
+    background: #eccfaa; } }
+
+@keyframes blink-bg-light-tan {
+  50% {
+    background: #eccfaa; } }
+
+@-webkit-keyframes blink-fg-light-tan {
+  50% {
+    color: #eccfaa; } }
+
+@keyframes blink-fg-light-tan {
+  50% {
+    color: #eccfaa; } }
+
+.blink-dim-tan {
+  -webkit-animation: blink-bg-dim-tan 1s steps(1) infinite;
+  animation: blink-bg-dim-tan 1s steps(1) infinite; }
+  .blink-dim-tan.area.label, .blink-dim-tan.text {
+    -webkit-animation: blink-fg-dim-tan 1s steps(1) infinite;
+    animation: blink-fg-dim-tan 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-tan {
+  50% {
+    background: #b99c77; } }
+
+@keyframes blink-bg-dim-tan {
+  50% {
+    background: #b99c77; } }
+
+@-webkit-keyframes blink-fg-dim-tan {
+  50% {
+    color: #b99c77; } }
+
+@keyframes blink-fg-dim-tan {
+  50% {
+    color: #b99c77; } }
+
+.blink-dark-tan {
+  -webkit-animation: blink-bg-dark-tan 1s steps(1) infinite;
+  animation: blink-bg-dark-tan 1s steps(1) infinite; }
+  .blink-dark-tan.area.label, .blink-dark-tan.text {
+    -webkit-animation: blink-fg-dark-tan 1s steps(1) infinite;
+    animation: blink-fg-dark-tan 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-tan {
+  50% {
+    background: #866944; } }
+
+@keyframes blink-bg-dark-tan {
+  50% {
+    background: #866944; } }
+
+@-webkit-keyframes blink-fg-dark-tan {
+  50% {
+    color: #866944; } }
+
+@keyframes blink-fg-dark-tan {
+  50% {
+    color: #866944; } }
+
+.blink-grey-brown {
+  -webkit-animation: blink-bg-grey-brown 1s steps(1) infinite;
+  animation: blink-bg-grey-brown 1s steps(1) infinite; }
+  .blink-grey-brown.area.label, .blink-grey-brown.text {
+    -webkit-animation: blink-fg-grey-brown 1s steps(1) infinite;
+    animation: blink-fg-grey-brown 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-grey-brown {
+  50% {
+    background: #aca98a; } }
+
+@keyframes blink-bg-grey-brown {
+  50% {
+    background: #aca98a; } }
+
+@-webkit-keyframes blink-fg-grey-brown {
+  50% {
+    color: #aca98a; } }
+
+@keyframes blink-fg-grey-brown {
+  50% {
+    color: #aca98a; } }
+
+.blink-light-grey-brown {
+  -webkit-animation: blink-bg-light-grey-brown 1s steps(1) infinite;
+  animation: blink-bg-light-grey-brown 1s steps(1) infinite; }
+  .blink-light-grey-brown.area.label, .blink-light-grey-brown.text {
+    -webkit-animation: blink-fg-light-grey-brown 1s steps(1) infinite;
+    animation: blink-fg-light-grey-brown 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-grey-brown {
+  50% {
+    background: #cdcbb9; } }
+
+@keyframes blink-bg-light-grey-brown {
+  50% {
+    background: #cdcbb9; } }
+
+@-webkit-keyframes blink-fg-light-grey-brown {
+  50% {
+    color: #cdcbb9; } }
+
+@keyframes blink-fg-light-grey-brown {
+  50% {
+    color: #cdcbb9; } }
+
+.blink-dim-grey-brown {
+  -webkit-animation: blink-bg-dim-grey-brown 1s steps(1) infinite;
+  animation: blink-bg-dim-grey-brown 1s steps(1) infinite; }
+  .blink-dim-grey-brown.area.label, .blink-dim-grey-brown.text {
+    -webkit-animation: blink-fg-dim-grey-brown 1s steps(1) infinite;
+    animation: blink-fg-dim-grey-brown 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-grey-brown {
+  50% {
+    background: #9a9986; } }
+
+@keyframes blink-bg-dim-grey-brown {
+  50% {
+    background: #9a9986; } }
+
+@-webkit-keyframes blink-fg-dim-grey-brown {
+  50% {
+    color: #9a9986; } }
+
+@keyframes blink-fg-dim-grey-brown {
+  50% {
+    color: #9a9986; } }
+
+.blink-dark-grey-brown {
+  -webkit-animation: blink-bg-dark-grey-brown 1s steps(1) infinite;
+  animation: blink-bg-dark-grey-brown 1s steps(1) infinite; }
+  .blink-dark-grey-brown.area.label, .blink-dark-grey-brown.text {
+    -webkit-animation: blink-fg-dark-grey-brown 1s steps(1) infinite;
+    animation: blink-fg-dark-grey-brown 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-grey-brown {
+  50% {
+    background: #676553; } }
+
+@keyframes blink-bg-dark-grey-brown {
+  50% {
+    background: #676553; } }
+
+@-webkit-keyframes blink-fg-dark-grey-brown {
+  50% {
+    color: #676553; } }
+
+@keyframes blink-fg-dark-grey-brown {
+  50% {
+    color: #676553; } }
+
+.blink-yellow {
+  -webkit-animation: blink-bg-yellow 1s steps(1) infinite;
+  animation: blink-bg-yellow 1s steps(1) infinite; }
+  .blink-yellow.area.label, .blink-yellow.text {
+    -webkit-animation: blink-fg-yellow 1s steps(1) infinite;
+    animation: blink-fg-yellow 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-yellow {
+  50% {
+    background: #fc3; } }
+
+@keyframes blink-bg-yellow {
+  50% {
+    background: #fc3; } }
+
+@-webkit-keyframes blink-fg-yellow {
+  50% {
+    color: #fc3; } }
+
+@keyframes blink-fg-yellow {
+  50% {
+    color: #fc3; } }
+
+.blink-light-yellow {
+  -webkit-animation: blink-bg-light-yellow 1s steps(1) infinite;
+  animation: blink-bg-light-yellow 1s steps(1) infinite; }
+  .blink-light-yellow.area.label, .blink-light-yellow.text {
+    -webkit-animation: blink-fg-light-yellow 1s steps(1) infinite;
+    animation: blink-fg-light-yellow 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-yellow {
+  50% {
+    background: #ffe085; } }
+
+@keyframes blink-bg-light-yellow {
+  50% {
+    background: #ffe085; } }
+
+@-webkit-keyframes blink-fg-light-yellow {
+  50% {
+    color: #ffe085; } }
+
+@keyframes blink-fg-light-yellow {
+  50% {
+    color: #ffe085; } }
+
+.blink-dim-yellow {
+  -webkit-animation: blink-bg-dim-yellow 1s steps(1) infinite;
+  animation: blink-bg-dim-yellow 1s steps(1) infinite; }
+  .blink-dim-yellow.area.label, .blink-dim-yellow.text {
+    -webkit-animation: blink-fg-dim-yellow 1s steps(1) infinite;
+    animation: blink-fg-dim-yellow 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-yellow {
+  50% {
+    background: #ccae52; } }
+
+@keyframes blink-bg-dim-yellow {
+  50% {
+    background: #ccae52; } }
+
+@-webkit-keyframes blink-fg-dim-yellow {
+  50% {
+    color: #ccae52; } }
+
+@keyframes blink-fg-dim-yellow {
+  50% {
+    color: #ccae52; } }
+
+.blink-dark-yellow {
+  -webkit-animation: blink-bg-dark-yellow 1s steps(1) infinite;
+  animation: blink-bg-dark-yellow 1s steps(1) infinite; }
+  .blink-dark-yellow.area.label, .blink-dark-yellow.text {
+    -webkit-animation: blink-fg-dark-yellow 1s steps(1) infinite;
+    animation: blink-fg-dark-yellow 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-yellow {
+  50% {
+    background: #997a1f; } }
+
+@keyframes blink-bg-dark-yellow {
+  50% {
+    background: #997a1f; } }
+
+@-webkit-keyframes blink-fg-dark-yellow {
+  50% {
+    color: #997a1f; } }
+
+@keyframes blink-fg-dark-yellow {
+  50% {
+    color: #997a1f; } }
+
+.blink-sea-blue {
+  -webkit-animation: blink-bg-sea-blue 1s steps(1) infinite;
+  animation: blink-bg-sea-blue 1s steps(1) infinite; }
+  .blink-sea-blue.area.label, .blink-sea-blue.text {
+    -webkit-animation: blink-fg-sea-blue 1s steps(1) infinite;
+    animation: blink-fg-sea-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-sea-blue {
+  50% {
+    background: #009cce; } }
+
+@keyframes blink-bg-sea-blue {
+  50% {
+    background: #009cce; } }
+
+@-webkit-keyframes blink-fg-sea-blue {
+  50% {
+    color: #009cce; } }
+
+@keyframes blink-fg-sea-blue {
+  50% {
+    color: #009cce; } }
+
+.blink-light-sea-blue {
+  -webkit-animation: blink-bg-light-sea-blue 1s steps(1) infinite;
+  animation: blink-bg-light-sea-blue 1s steps(1) infinite; }
+  .blink-light-sea-blue.area.label, .blink-light-sea-blue.text {
+    -webkit-animation: blink-fg-light-sea-blue 1s steps(1) infinite;
+    animation: blink-fg-light-sea-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-sea-blue {
+  50% {
+    background: #66c4e2; } }
+
+@keyframes blink-bg-light-sea-blue {
+  50% {
+    background: #66c4e2; } }
+
+@-webkit-keyframes blink-fg-light-sea-blue {
+  50% {
+    color: #66c4e2; } }
+
+@keyframes blink-fg-light-sea-blue {
+  50% {
+    color: #66c4e2; } }
+
+.blink-dim-sea-blue {
+  -webkit-animation: blink-bg-dim-sea-blue 1s steps(1) infinite;
+  animation: blink-bg-dim-sea-blue 1s steps(1) infinite; }
+  .blink-dim-sea-blue.area.label, .blink-dim-sea-blue.text {
+    -webkit-animation: blink-fg-dim-sea-blue 1s steps(1) infinite;
+    animation: blink-fg-dim-sea-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-sea-blue {
+  50% {
+    background: #3391af; } }
+
+@keyframes blink-bg-dim-sea-blue {
+  50% {
+    background: #3391af; } }
+
+@-webkit-keyframes blink-fg-dim-sea-blue {
+  50% {
+    color: #3391af; } }
+
+@keyframes blink-fg-dim-sea-blue {
+  50% {
+    color: #3391af; } }
+
+.blink-dark-sea-blue {
+  -webkit-animation: blink-bg-dark-sea-blue 1s steps(1) infinite;
+  animation: blink-bg-dark-sea-blue 1s steps(1) infinite; }
+  .blink-dark-sea-blue.area.label, .blink-dark-sea-blue.text {
+    -webkit-animation: blink-fg-dark-sea-blue 1s steps(1) infinite;
+    animation: blink-fg-dark-sea-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-sea-blue {
+  50% {
+    background: #005e7c; } }
+
+@keyframes blink-bg-dark-sea-blue {
+  50% {
+    background: #005e7c; } }
+
+@-webkit-keyframes blink-fg-dark-sea-blue {
+  50% {
+    color: #005e7c; } }
+
+@keyframes blink-fg-dark-sea-blue {
+  50% {
+    color: #005e7c; } }
+
+.blink-blue {
+  -webkit-animation: blink-bg-blue 1s steps(1) infinite;
+  animation: blink-bg-blue 1s steps(1) infinite; }
+  .blink-blue.area.label, .blink-blue.text {
+    -webkit-animation: blink-fg-blue 1s steps(1) infinite;
+    animation: blink-fg-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-blue {
+  50% {
+    background: #3786ff; } }
+
+@keyframes blink-bg-blue {
+  50% {
+    background: #3786ff; } }
+
+@-webkit-keyframes blink-fg-blue {
+  50% {
+    color: #3786ff; } }
+
+@keyframes blink-fg-blue {
+  50% {
+    color: #3786ff; } }
+
+.blink-light-blue {
+  -webkit-animation: blink-bg-light-blue 1s steps(1) infinite;
+  animation: blink-bg-light-blue 1s steps(1) infinite; }
+  .blink-light-blue.area.label, .blink-light-blue.text {
+    -webkit-animation: blink-fg-light-blue 1s steps(1) infinite;
+    animation: blink-fg-light-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-blue {
+  50% {
+    background: #87b6ff; } }
+
+@keyframes blink-bg-light-blue {
+  50% {
+    background: #87b6ff; } }
+
+@-webkit-keyframes blink-fg-light-blue {
+  50% {
+    color: #87b6ff; } }
+
+@keyframes blink-fg-light-blue {
+  50% {
+    color: #87b6ff; } }
+
+.blink-dim-blue {
+  -webkit-animation: blink-bg-dim-blue 1s steps(1) infinite;
+  animation: blink-bg-dim-blue 1s steps(1) infinite; }
+  .blink-dim-blue.area.label, .blink-dim-blue.text {
+    -webkit-animation: blink-fg-dim-blue 1s steps(1) infinite;
+    animation: blink-fg-dim-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-blue {
+  50% {
+    background: #5484cc; } }
+
+@keyframes blink-bg-dim-blue {
+  50% {
+    background: #5484cc; } }
+
+@-webkit-keyframes blink-fg-dim-blue {
+  50% {
+    color: #5484cc; } }
+
+@keyframes blink-fg-dim-blue {
+  50% {
+    color: #5484cc; } }
+
+.blink-dark-blue {
+  -webkit-animation: blink-bg-dark-blue 1s steps(1) infinite;
+  animation: blink-bg-dark-blue 1s steps(1) infinite; }
+  .blink-dark-blue.area.label, .blink-dark-blue.text {
+    -webkit-animation: blink-fg-dark-blue 1s steps(1) infinite;
+    animation: blink-fg-dark-blue 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-blue {
+  50% {
+    background: #215099; } }
+
+@keyframes blink-bg-dark-blue {
+  50% {
+    background: #215099; } }
+
+@-webkit-keyframes blink-fg-dark-blue {
+  50% {
+    color: #215099; } }
+
+@keyframes blink-fg-dark-blue {
+  50% {
+    color: #215099; } }
+
+.blink-green {
+  -webkit-animation: blink-bg-green 1s steps(1) infinite;
+  animation: blink-bg-green 1s steps(1) infinite; }
+  .blink-green.area.label, .blink-green.text {
+    -webkit-animation: blink-fg-green 1s steps(1) infinite;
+    animation: blink-fg-green 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-green {
+  50% {
+    background: #090; } }
+
+@keyframes blink-bg-green {
+  50% {
+    background: #090; } }
+
+@-webkit-keyframes blink-fg-green {
+  50% {
+    color: #090; } }
+
+@keyframes blink-fg-green {
+  50% {
+    color: #090; } }
+
+.blink-light-green {
+  -webkit-animation: blink-bg-light-green 1s steps(1) infinite;
+  animation: blink-bg-light-green 1s steps(1) infinite; }
+  .blink-light-green.area.label, .blink-light-green.text {
+    -webkit-animation: blink-fg-light-green 1s steps(1) infinite;
+    animation: blink-fg-light-green 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-light-green {
+  50% {
+    background: #66c266; } }
+
+@keyframes blink-bg-light-green {
+  50% {
+    background: #66c266; } }
+
+@-webkit-keyframes blink-fg-light-green {
+  50% {
+    color: #66c266; } }
+
+@keyframes blink-fg-light-green {
+  50% {
+    color: #66c266; } }
+
+.blink-dim-green {
+  -webkit-animation: blink-bg-dim-green 1s steps(1) infinite;
+  animation: blink-bg-dim-green 1s steps(1) infinite; }
+  .blink-dim-green.area.label, .blink-dim-green.text {
+    -webkit-animation: blink-fg-dim-green 1s steps(1) infinite;
+    animation: blink-fg-dim-green 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dim-green {
+  50% {
+    background: #338f33; } }
+
+@keyframes blink-bg-dim-green {
+  50% {
+    background: #338f33; } }
+
+@-webkit-keyframes blink-fg-dim-green {
+  50% {
+    color: #338f33; } }
+
+@keyframes blink-fg-dim-green {
+  50% {
+    color: #338f33; } }
+
+.blink-dark-green {
+  -webkit-animation: blink-bg-dark-green 1s steps(1) infinite;
+  animation: blink-bg-dark-green 1s steps(1) infinite; }
+  .blink-dark-green.area.label, .blink-dark-green.text {
+    -webkit-animation: blink-fg-dark-green 1s steps(1) infinite;
+    animation: blink-fg-dark-green 1s steps(1) infinite; }
+
+@-webkit-keyframes blink-bg-dark-green {
+  50% {
+    background: #005c00; } }
+
+@keyframes blink-bg-dark-green {
+  50% {
+    background: #005c00; } }
+
+@-webkit-keyframes blink-fg-dark-green {
+  50% {
+    color: #005c00; } }
+
+@keyframes blink-fg-dark-green {
+  50% {
+    color: #005c00; } }
