@@ -1223,6 +1223,9 @@ h4 {
   max-width: 66.66%;
   max-height: 100%; }
 
+.hide {
+  display: none; }
+
 @media screen and (min-width: 0) and (max-width: 599px) {
   .layout-xs-h,
   .layout-xs-v {
@@ -2198,7 +2201,9 @@ h4 {
     max-height: 100%; }
   .layout-xs-h > .flex-xs-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-xs {
+    display: none; } }
 
 @media screen and (min-width: 600px) {
   .layout-gt-xs-h,
@@ -3175,7 +3180,9 @@ h4 {
     max-height: 100%; }
   .layout-gt-xs-h > .flex-gt-xs-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-gt-xs {
+    display: none; } }
 
 @media screen and (min-width: 0) and (max-width: 599px) {
   .layout-lt-sm-h,
@@ -4152,7 +4159,9 @@ h4 {
     max-height: 100%; }
   .layout-lt-sm-h > .flex-lt-sm-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-lt-sm {
+    display: none; } }
 
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .layout-sm-h,
@@ -5129,7 +5138,9 @@ h4 {
     max-height: 100%; }
   .layout-sm-h > .flex-sm-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-sm {
+    display: none; } }
 
 @media screen and (min-width: 960px) {
   .layout-gt-sm-h,
@@ -6106,7 +6117,9 @@ h4 {
     max-height: 100%; }
   .layout-gt-sm-h > .flex-gt-sm-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-gt-sm {
+    display: none; } }
 
 @media screen and (min-width: 0) and (max-width: 959px) {
   .layout-lt-md-h,
@@ -7083,7 +7096,9 @@ h4 {
     max-height: 100%; }
   .layout-lt-md-h > .flex-lt-md-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-lt-md {
+    display: none; } }
 
 @media screen and (min-width: 960px) and (max-width: 1279px) {
   .layout-md-h,
@@ -8060,7 +8075,9 @@ h4 {
     max-height: 100%; }
   .layout-md-h > .flex-md-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-md {
+    display: none; } }
 
 @media screen and (min-width: 1280px) {
   .layout-gt-md-h,
@@ -9037,7 +9054,9 @@ h4 {
     max-height: 100%; }
   .layout-gt-md-h > .flex-gt-md-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-gt-md {
+    display: none; } }
 
 @media screen and (min-width: 0) and (max-width: 1279px) {
   .layout-lt-lg-h,
@@ -10014,7 +10033,9 @@ h4 {
     max-height: 100%; }
   .layout-lt-lg-h > .flex-lt-lg-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-lt-lg {
+    display: none; } }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .layout-lg-h,
@@ -10991,7 +11012,9 @@ h4 {
     max-height: 100%; }
   .layout-lg-h > .flex-lg-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-lg {
+    display: none; } }
 
 @media screen and (min-width: 1920px) {
   .layout-gt-lg-h,
@@ -11968,7 +11991,9 @@ h4 {
     max-height: 100%; }
   .layout-gt-lg-h > .flex-gt-lg-66 {
     max-width: 66.66%;
-    max-height: 100%; } }
+    max-height: 100%; }
+  .hide-gt-lg {
+    display: none; } }
 
 .area, .button {
   border: 4px solid #0d0d0d;
