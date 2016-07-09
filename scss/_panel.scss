@@ -70,12 +70,23 @@
 
         > .row {
             bottom: auto;
+
+            &.top {
+                //in case of panel with three sides (e.g. top left bottom),
+                //override rule for explicit class row.top
+                top: $zero !important;
+            }
         }
     }
 
     &.left {
         > .column {
             right: auto;
+
+            &.left {
+                //see above
+                left: $zero !important;
+            }
         }
 
         > .row {
@@ -98,12 +109,22 @@
 
         > .row {
             top: auto;
+
+            &.bottom {
+                //see above
+                bottom: $zero !important;
+            }
         }
     }
 
     &.right {
         > .column {
             left: auto;
+
+            &.right {
+                //see above
+                right: $zero !important;
+            }
         }
 
         > .row {

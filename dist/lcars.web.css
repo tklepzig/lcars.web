@@ -12119,8 +12119,12 @@ h4 {
         padding-top: 2px; } }
   .panel.top > .row {
     bottom: auto; }
+    .panel.top > .row.top {
+      top: 0 !important; }
   .panel.left > .column {
     right: auto; }
+    .panel.left > .column.left {
+      left: 0 !important; }
   .panel.left > .row {
     margin-left: 40px;
     padding-left: 4px; }
@@ -12135,8 +12139,12 @@ h4 {
         padding-bottom: 2px; } }
   .panel.bottom > .row {
     top: auto; }
+    .panel.bottom > .row.bottom {
+      bottom: 0 !important; }
   .panel.right > .column {
     left: auto; }
+    .panel.right > .column.right {
+      right: 0 !important; }
   .panel.right > .row {
     margin-right: 40px;
     padding-right: 4px; }
