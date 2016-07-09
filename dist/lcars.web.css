@@ -12047,7 +12047,7 @@ h4 {
     width: auto;
     font-size: 0;
     line-height: 0; }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 959px) {
     .area, .button {
       border: 2px solid #0d0d0d; } }
 
@@ -12094,7 +12094,7 @@ h4 {
   height: auto;
   background-color: #9e9993;
   margin: 8px; }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 959px) {
     .panel {
       margin: 4px; } }
   .panel:before {
@@ -12114,7 +12114,7 @@ h4 {
   .panel.top > .column {
     margin-top: 40px;
     padding-top: 4px; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 959px) {
       .panel.top > .column {
         padding-top: 2px; } }
   .panel.top > .row {
@@ -12128,13 +12128,13 @@ h4 {
   .panel.left > .row {
     margin-left: 40px;
     padding-left: 4px; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 959px) {
       .panel.left > .row {
         padding-left: 2px; } }
   .panel.bottom > .column {
     margin-bottom: 40px;
     padding-bottom: 4px; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 959px) {
       .panel.bottom > .column {
         padding-bottom: 2px; } }
   .panel.bottom > .row {
@@ -12148,7 +12148,7 @@ h4 {
   .panel.right > .row {
     margin-right: 40px;
     padding-right: 4px; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 959px) {
       .panel.right > .row {
         padding-right: 2px; } }
   .panel.top.left {
@@ -12168,273 +12168,455 @@ h4 {
     .panel.bottom.right:before {
       border-bottom-right-radius: 20px; }
 
-.panel.row-xxs.top > .column,
-.panel.row-xxs.top > .content, .panel.row-xxs.top:before {
+.panel.top.row-top-xxs > .column,
+.panel.top.row-top-xxs > .content, .panel.top.row-top-xxs:before {
   top: 15px; }
 
-.panel.row-xxs.bottom > .column,
-.panel.row-xxs.bottom > .content, .panel.row-xxs.bottom:before {
+.panel.top.row-top-xxs > .row {
+  height: 15px; }
+  .panel.top.row-top-xxs > .row.top {
+    height: 15px !important; }
+
+.panel.bottom.row-bottom-xxs > .column,
+.panel.bottom.row-bottom-xxs > .content, .panel.bottom.row-bottom-xxs:before {
   bottom: 15px; }
 
-.panel.row-xxs.bottom > .row, .panel.row-xxs.top > .row {
+.panel.bottom.row-bottom-xxs > .row {
   height: 15px; }
+  .panel.bottom.row-bottom-xxs > .row.bottom {
+    height: 15px !important; }
 
-.panel.row-xs.top > .column,
-.panel.row-xs.top > .content, .panel.row-xs.top:before {
-  top: 25px; }
-
-.panel.row-xs.bottom > .column,
-.panel.row-xs.bottom > .content, .panel.row-xs.bottom:before {
-  bottom: 25px; }
-
-.panel.row-xs.bottom > .row, .panel.row-xs.top > .row {
-  height: 25px; }
-
-.panel.row-sm.top > .column,
-.panel.row-sm.top > .content, .panel.row-sm.top:before {
-  top: 45px; }
-
-.panel.row-sm.bottom > .column,
-.panel.row-sm.bottom > .content, .panel.row-sm.bottom:before {
-  bottom: 45px; }
-
-.panel.row-sm.bottom > .row, .panel.row-sm.top > .row {
-  height: 45px; }
-
-.panel.row-md.top > .column,
-.panel.row-md.top > .content, .panel.row-md.top:before {
-  top: 75px; }
-
-.panel.row-md.bottom > .column,
-.panel.row-md.bottom > .content, .panel.row-md.bottom:before {
-  bottom: 75px; }
-
-.panel.row-md.bottom > .row, .panel.row-md.top > .row {
-  height: 75px; }
-
-.panel.row-lg.top > .column,
-.panel.row-lg.top > .content, .panel.row-lg.top:before {
-  top: 140px; }
-
-.panel.row-lg.bottom > .column,
-.panel.row-lg.bottom > .content, .panel.row-lg.bottom:before {
-  bottom: 140px; }
-
-.panel.row-lg.bottom > .row, .panel.row-lg.top > .row {
-  height: 140px; }
-
-.panel.row-xl.top > .column,
-.panel.row-xl.top > .content, .panel.row-xl.top:before {
-  top: 210px; }
-
-.panel.row-xl.bottom > .column,
-.panel.row-xl.bottom > .content, .panel.row-xl.bottom:before {
-  bottom: 210px; }
-
-.panel.row-xl.bottom > .row, .panel.row-xl.top > .row {
-  height: 210px; }
-
-.panel.row-xxl.top > .column,
-.panel.row-xxl.top > .content, .panel.row-xxl.top:before {
-  top: 300px; }
-
-.panel.row-xxl.bottom > .column,
-.panel.row-xxl.bottom > .content, .panel.row-xxl.bottom:before {
-  bottom: 300px; }
-
-.panel.row-xxl.bottom > .row, .panel.row-xxl.top > .row {
-  height: 300px; }
-
-.panel.col-xxs.left > .content,
-.panel.col-xxs.left > .row, .panel.col-xxs.left:before {
+.panel.left.col-left-xxs > .content,
+.panel.left.col-left-xxs > .row, .panel.left.col-left-xxs:before {
   left: 15px; }
 
-.panel.col-xxs.right > .content,
-.panel.col-xxs.right > .row, .panel.col-xxs.right:before {
+.panel.left.col-left-xxs > .column {
+  width: 15px; }
+  .panel.left.col-left-xxs > .column.left {
+    width: 15px !important; }
+
+.panel.right.col-right-xxs > .content,
+.panel.right.col-right-xxs > .row, .panel.right.col-right-xxs:before {
   right: 15px; }
 
-.panel.col-xxs.left > .column, .panel.col-xxs.right > .column {
+.panel.right.col-right-xxs > .column {
   width: 15px; }
+  .panel.right.col-right-xxs > .column.right {
+    width: 15px !important; }
 
-.panel.col-xs.left > .content,
-.panel.col-xs.left > .row, .panel.col-xs.left:before {
+.panel.top.row-top-xs > .column,
+.panel.top.row-top-xs > .content, .panel.top.row-top-xs:before {
+  top: 25px; }
+
+.panel.top.row-top-xs > .row {
+  height: 25px; }
+  .panel.top.row-top-xs > .row.top {
+    height: 25px !important; }
+
+.panel.bottom.row-bottom-xs > .column,
+.panel.bottom.row-bottom-xs > .content, .panel.bottom.row-bottom-xs:before {
+  bottom: 25px; }
+
+.panel.bottom.row-bottom-xs > .row {
+  height: 25px; }
+  .panel.bottom.row-bottom-xs > .row.bottom {
+    height: 25px !important; }
+
+.panel.left.col-left-xs > .content,
+.panel.left.col-left-xs > .row, .panel.left.col-left-xs:before {
   left: 25px; }
 
-.panel.col-xs.right > .content,
-.panel.col-xs.right > .row, .panel.col-xs.right:before {
+.panel.left.col-left-xs > .column {
+  width: 25px; }
+  .panel.left.col-left-xs > .column.left {
+    width: 25px !important; }
+
+.panel.right.col-right-xs > .content,
+.panel.right.col-right-xs > .row, .panel.right.col-right-xs:before {
   right: 25px; }
 
-.panel.col-xs.left > .column, .panel.col-xs.right > .column {
+.panel.right.col-right-xs > .column {
   width: 25px; }
+  .panel.right.col-right-xs > .column.right {
+    width: 25px !important; }
 
-.panel.col-sm.left > .content,
-.panel.col-sm.left > .row, .panel.col-sm.left:before {
+.panel.top.row-top-sm > .column,
+.panel.top.row-top-sm > .content, .panel.top.row-top-sm:before {
+  top: 45px; }
+
+.panel.top.row-top-sm > .row {
+  height: 45px; }
+  .panel.top.row-top-sm > .row.top {
+    height: 45px !important; }
+
+.panel.bottom.row-bottom-sm > .column,
+.panel.bottom.row-bottom-sm > .content, .panel.bottom.row-bottom-sm:before {
+  bottom: 45px; }
+
+.panel.bottom.row-bottom-sm > .row {
+  height: 45px; }
+  .panel.bottom.row-bottom-sm > .row.bottom {
+    height: 45px !important; }
+
+.panel.left.col-left-sm > .content,
+.panel.left.col-left-sm > .row, .panel.left.col-left-sm:before {
   left: 45px; }
 
-.panel.col-sm.right > .content,
-.panel.col-sm.right > .row, .panel.col-sm.right:before {
+.panel.left.col-left-sm > .column {
+  width: 45px; }
+  .panel.left.col-left-sm > .column.left {
+    width: 45px !important; }
+
+.panel.right.col-right-sm > .content,
+.panel.right.col-right-sm > .row, .panel.right.col-right-sm:before {
   right: 45px; }
 
-.panel.col-sm.left > .column, .panel.col-sm.right > .column {
+.panel.right.col-right-sm > .column {
   width: 45px; }
+  .panel.right.col-right-sm > .column.right {
+    width: 45px !important; }
 
-.panel.col-md.left > .content,
-.panel.col-md.left > .row, .panel.col-md.left:before {
+.panel.top.row-top-md > .column,
+.panel.top.row-top-md > .content, .panel.top.row-top-md:before {
+  top: 75px; }
+
+.panel.top.row-top-md > .row {
+  height: 75px; }
+  .panel.top.row-top-md > .row.top {
+    height: 75px !important; }
+
+.panel.bottom.row-bottom-md > .column,
+.panel.bottom.row-bottom-md > .content, .panel.bottom.row-bottom-md:before {
+  bottom: 75px; }
+
+.panel.bottom.row-bottom-md > .row {
+  height: 75px; }
+  .panel.bottom.row-bottom-md > .row.bottom {
+    height: 75px !important; }
+
+.panel.left.col-left-md > .content,
+.panel.left.col-left-md > .row, .panel.left.col-left-md:before {
   left: 75px; }
 
-.panel.col-md.right > .content,
-.panel.col-md.right > .row, .panel.col-md.right:before {
+.panel.left.col-left-md > .column {
+  width: 75px; }
+  .panel.left.col-left-md > .column.left {
+    width: 75px !important; }
+
+.panel.right.col-right-md > .content,
+.panel.right.col-right-md > .row, .panel.right.col-right-md:before {
   right: 75px; }
 
-.panel.col-md.left > .column, .panel.col-md.right > .column {
+.panel.right.col-right-md > .column {
   width: 75px; }
+  .panel.right.col-right-md > .column.right {
+    width: 75px !important; }
 
-.panel.col-lg.left > .content,
-.panel.col-lg.left > .row, .panel.col-lg.left:before {
+.panel.top.row-top-lg > .column,
+.panel.top.row-top-lg > .content, .panel.top.row-top-lg:before {
+  top: 140px; }
+
+.panel.top.row-top-lg > .row {
+  height: 140px; }
+  .panel.top.row-top-lg > .row.top {
+    height: 140px !important; }
+
+.panel.bottom.row-bottom-lg > .column,
+.panel.bottom.row-bottom-lg > .content, .panel.bottom.row-bottom-lg:before {
+  bottom: 140px; }
+
+.panel.bottom.row-bottom-lg > .row {
+  height: 140px; }
+  .panel.bottom.row-bottom-lg > .row.bottom {
+    height: 140px !important; }
+
+.panel.left.col-left-lg > .content,
+.panel.left.col-left-lg > .row, .panel.left.col-left-lg:before {
   left: 140px; }
 
-.panel.col-lg.right > .content,
-.panel.col-lg.right > .row, .panel.col-lg.right:before {
+.panel.left.col-left-lg > .column {
+  width: 140px; }
+  .panel.left.col-left-lg > .column.left {
+    width: 140px !important; }
+
+.panel.right.col-right-lg > .content,
+.panel.right.col-right-lg > .row, .panel.right.col-right-lg:before {
   right: 140px; }
 
-.panel.col-lg.left > .column, .panel.col-lg.right > .column {
+.panel.right.col-right-lg > .column {
   width: 140px; }
+  .panel.right.col-right-lg > .column.right {
+    width: 140px !important; }
 
-.panel.col-xl.left > .content,
-.panel.col-xl.left > .row, .panel.col-xl.left:before {
+.panel.top.row-top-xl > .column,
+.panel.top.row-top-xl > .content, .panel.top.row-top-xl:before {
+  top: 210px; }
+
+.panel.top.row-top-xl > .row {
+  height: 210px; }
+  .panel.top.row-top-xl > .row.top {
+    height: 210px !important; }
+
+.panel.bottom.row-bottom-xl > .column,
+.panel.bottom.row-bottom-xl > .content, .panel.bottom.row-bottom-xl:before {
+  bottom: 210px; }
+
+.panel.bottom.row-bottom-xl > .row {
+  height: 210px; }
+  .panel.bottom.row-bottom-xl > .row.bottom {
+    height: 210px !important; }
+
+.panel.left.col-left-xl > .content,
+.panel.left.col-left-xl > .row, .panel.left.col-left-xl:before {
   left: 210px; }
 
-.panel.col-xl.right > .content,
-.panel.col-xl.right > .row, .panel.col-xl.right:before {
+.panel.left.col-left-xl > .column {
+  width: 210px; }
+  .panel.left.col-left-xl > .column.left {
+    width: 210px !important; }
+
+.panel.right.col-right-xl > .content,
+.panel.right.col-right-xl > .row, .panel.right.col-right-xl:before {
   right: 210px; }
 
-.panel.col-xl.left > .column, .panel.col-xl.right > .column {
+.panel.right.col-right-xl > .column {
   width: 210px; }
+  .panel.right.col-right-xl > .column.right {
+    width: 210px !important; }
 
-.panel.col-xxl.left > .content,
-.panel.col-xxl.left > .row, .panel.col-xxl.left:before {
+.panel.top.row-top-xxl > .column,
+.panel.top.row-top-xxl > .content, .panel.top.row-top-xxl:before {
+  top: 300px; }
+
+.panel.top.row-top-xxl > .row {
+  height: 300px; }
+  .panel.top.row-top-xxl > .row.top {
+    height: 300px !important; }
+
+.panel.bottom.row-bottom-xxl > .column,
+.panel.bottom.row-bottom-xxl > .content, .panel.bottom.row-bottom-xxl:before {
+  bottom: 300px; }
+
+.panel.bottom.row-bottom-xxl > .row {
+  height: 300px; }
+  .panel.bottom.row-bottom-xxl > .row.bottom {
+    height: 300px !important; }
+
+.panel.left.col-left-xxl > .content,
+.panel.left.col-left-xxl > .row, .panel.left.col-left-xxl:before {
   left: 300px; }
 
-.panel.col-xxl.right > .content,
-.panel.col-xxl.right > .row, .panel.col-xxl.right:before {
+.panel.left.col-left-xxl > .column {
+  width: 300px; }
+  .panel.left.col-left-xxl > .column.left {
+    width: 300px !important; }
+
+.panel.right.col-right-xxl > .content,
+.panel.right.col-right-xxl > .row, .panel.right.col-right-xxl:before {
   right: 300px; }
 
-.panel.col-xxl.left > .column, .panel.col-xxl.right > .column {
+.panel.right.col-right-xxl > .column {
   width: 300px; }
+  .panel.right.col-right-xxl > .column.right {
+    width: 300px !important; }
 
-@media only screen and (max-width: 767px) {
-  .panel.row-xxs.top > .column,
-  .panel.row-xxs.top > .content, .panel.row-xxs.top:before {
+@media only screen and (max-width: 959px) {
+  .panel.top.row-top-xxs > .column,
+  .panel.top.row-top-xxs > .content, .panel.top.row-top-xxs:before {
     top: 12px; }
-  .panel.row-xxs.bottom > .column,
-  .panel.row-xxs.bottom > .content, .panel.row-xxs.bottom:before {
-    bottom: 12px; }
-  .panel.row-xxs.bottom > .row, .panel.row-xxs.top > .row {
+  .panel.top.row-top-xxs > .row {
     height: 12px; }
-  .panel.row-xs.top > .column,
-  .panel.row-xs.top > .content, .panel.row-xs.top:before {
-    top: 20px; }
-  .panel.row-xs.bottom > .column,
-  .panel.row-xs.bottom > .content, .panel.row-xs.bottom:before {
-    bottom: 20px; }
-  .panel.row-xs.bottom > .row, .panel.row-xs.top > .row {
-    height: 20px; }
-  .panel.row-sm.top > .column,
-  .panel.row-sm.top > .content, .panel.row-sm.top:before {
-    top: 36px; }
-  .panel.row-sm.bottom > .column,
-  .panel.row-sm.bottom > .content, .panel.row-sm.bottom:before {
-    bottom: 36px; }
-  .panel.row-sm.bottom > .row, .panel.row-sm.top > .row {
-    height: 36px; }
-  .panel.row-md.top > .column,
-  .panel.row-md.top > .content, .panel.row-md.top:before {
-    top: 60px; }
-  .panel.row-md.bottom > .column,
-  .panel.row-md.bottom > .content, .panel.row-md.bottom:before {
-    bottom: 60px; }
-  .panel.row-md.bottom > .row, .panel.row-md.top > .row {
-    height: 60px; }
-  .panel.row-lg.top > .column,
-  .panel.row-lg.top > .content, .panel.row-lg.top:before {
-    top: 112px; }
-  .panel.row-lg.bottom > .column,
-  .panel.row-lg.bottom > .content, .panel.row-lg.bottom:before {
-    bottom: 112px; }
-  .panel.row-lg.bottom > .row, .panel.row-lg.top > .row {
-    height: 112px; }
-  .panel.row-xl.top > .column,
-  .panel.row-xl.top > .content, .panel.row-xl.top:before {
-    top: 168px; }
-  .panel.row-xl.bottom > .column,
-  .panel.row-xl.bottom > .content, .panel.row-xl.bottom:before {
-    bottom: 168px; }
-  .panel.row-xl.bottom > .row, .panel.row-xl.top > .row {
-    height: 168px; }
-  .panel.row-xxl.top > .column,
-  .panel.row-xxl.top > .content, .panel.row-xxl.top:before {
-    top: 240px; }
-  .panel.row-xxl.bottom > .column,
-  .panel.row-xxl.bottom > .content, .panel.row-xxl.bottom:before {
-    bottom: 240px; }
-  .panel.row-xxl.bottom > .row, .panel.row-xxl.top > .row {
-    height: 240px; }
-  .panel.col-xxs.left > .content,
-  .panel.col-xxs.left > .row, .panel.col-xxs.left:before {
+    .panel.top.row-top-xxs > .row.top {
+      height: 12px !important; }
+  .panel.bottom.row-bottom-xxs > .column,
+  .panel.bottom.row-bottom-xxs > .content, .panel.bottom.row-bottom-xxs:before {
+    bottom: 12px; }
+  .panel.bottom.row-bottom-xxs > .row {
+    height: 12px; }
+    .panel.bottom.row-bottom-xxs > .row.bottom {
+      height: 12px !important; }
+  .panel.left.col-left-xxs > .content,
+  .panel.left.col-left-xxs > .row, .panel.left.col-left-xxs:before {
     left: 12px; }
-  .panel.col-xxs.right > .content,
-  .panel.col-xxs.right > .row, .panel.col-xxs.right:before {
-    right: 12px; }
-  .panel.col-xxs.left > .column, .panel.col-xxs.right > .column {
+  .panel.left.col-left-xxs > .column {
     width: 12px; }
-  .panel.col-xs.left > .content,
-  .panel.col-xs.left > .row, .panel.col-xs.left:before {
+    .panel.left.col-left-xxs > .column.left {
+      width: 12px !important; }
+  .panel.right.col-right-xxs > .content,
+  .panel.right.col-right-xxs > .row, .panel.right.col-right-xxs:before {
+    right: 12px; }
+  .panel.right.col-right-xxs > .column {
+    width: 12px; }
+    .panel.right.col-right-xxs > .column.right {
+      width: 12px !important; }
+  .panel.top.row-top-xs > .column,
+  .panel.top.row-top-xs > .content, .panel.top.row-top-xs:before {
+    top: 20px; }
+  .panel.top.row-top-xs > .row {
+    height: 20px; }
+    .panel.top.row-top-xs > .row.top {
+      height: 20px !important; }
+  .panel.bottom.row-bottom-xs > .column,
+  .panel.bottom.row-bottom-xs > .content, .panel.bottom.row-bottom-xs:before {
+    bottom: 20px; }
+  .panel.bottom.row-bottom-xs > .row {
+    height: 20px; }
+    .panel.bottom.row-bottom-xs > .row.bottom {
+      height: 20px !important; }
+  .panel.left.col-left-xs > .content,
+  .panel.left.col-left-xs > .row, .panel.left.col-left-xs:before {
     left: 20px; }
-  .panel.col-xs.right > .content,
-  .panel.col-xs.right > .row, .panel.col-xs.right:before {
-    right: 20px; }
-  .panel.col-xs.left > .column, .panel.col-xs.right > .column {
+  .panel.left.col-left-xs > .column {
     width: 20px; }
-  .panel.col-sm.left > .content,
-  .panel.col-sm.left > .row, .panel.col-sm.left:before {
+    .panel.left.col-left-xs > .column.left {
+      width: 20px !important; }
+  .panel.right.col-right-xs > .content,
+  .panel.right.col-right-xs > .row, .panel.right.col-right-xs:before {
+    right: 20px; }
+  .panel.right.col-right-xs > .column {
+    width: 20px; }
+    .panel.right.col-right-xs > .column.right {
+      width: 20px !important; }
+  .panel.top.row-top-sm > .column,
+  .panel.top.row-top-sm > .content, .panel.top.row-top-sm:before {
+    top: 36px; }
+  .panel.top.row-top-sm > .row {
+    height: 36px; }
+    .panel.top.row-top-sm > .row.top {
+      height: 36px !important; }
+  .panel.bottom.row-bottom-sm > .column,
+  .panel.bottom.row-bottom-sm > .content, .panel.bottom.row-bottom-sm:before {
+    bottom: 36px; }
+  .panel.bottom.row-bottom-sm > .row {
+    height: 36px; }
+    .panel.bottom.row-bottom-sm > .row.bottom {
+      height: 36px !important; }
+  .panel.left.col-left-sm > .content,
+  .panel.left.col-left-sm > .row, .panel.left.col-left-sm:before {
     left: 36px; }
-  .panel.col-sm.right > .content,
-  .panel.col-sm.right > .row, .panel.col-sm.right:before {
-    right: 36px; }
-  .panel.col-sm.left > .column, .panel.col-sm.right > .column {
+  .panel.left.col-left-sm > .column {
     width: 36px; }
-  .panel.col-md.left > .content,
-  .panel.col-md.left > .row, .panel.col-md.left:before {
+    .panel.left.col-left-sm > .column.left {
+      width: 36px !important; }
+  .panel.right.col-right-sm > .content,
+  .panel.right.col-right-sm > .row, .panel.right.col-right-sm:before {
+    right: 36px; }
+  .panel.right.col-right-sm > .column {
+    width: 36px; }
+    .panel.right.col-right-sm > .column.right {
+      width: 36px !important; }
+  .panel.top.row-top-md > .column,
+  .panel.top.row-top-md > .content, .panel.top.row-top-md:before {
+    top: 60px; }
+  .panel.top.row-top-md > .row {
+    height: 60px; }
+    .panel.top.row-top-md > .row.top {
+      height: 60px !important; }
+  .panel.bottom.row-bottom-md > .column,
+  .panel.bottom.row-bottom-md > .content, .panel.bottom.row-bottom-md:before {
+    bottom: 60px; }
+  .panel.bottom.row-bottom-md > .row {
+    height: 60px; }
+    .panel.bottom.row-bottom-md > .row.bottom {
+      height: 60px !important; }
+  .panel.left.col-left-md > .content,
+  .panel.left.col-left-md > .row, .panel.left.col-left-md:before {
     left: 60px; }
-  .panel.col-md.right > .content,
-  .panel.col-md.right > .row, .panel.col-md.right:before {
-    right: 60px; }
-  .panel.col-md.left > .column, .panel.col-md.right > .column {
+  .panel.left.col-left-md > .column {
     width: 60px; }
-  .panel.col-lg.left > .content,
-  .panel.col-lg.left > .row, .panel.col-lg.left:before {
+    .panel.left.col-left-md > .column.left {
+      width: 60px !important; }
+  .panel.right.col-right-md > .content,
+  .panel.right.col-right-md > .row, .panel.right.col-right-md:before {
+    right: 60px; }
+  .panel.right.col-right-md > .column {
+    width: 60px; }
+    .panel.right.col-right-md > .column.right {
+      width: 60px !important; }
+  .panel.top.row-top-lg > .column,
+  .panel.top.row-top-lg > .content, .panel.top.row-top-lg:before {
+    top: 112px; }
+  .panel.top.row-top-lg > .row {
+    height: 112px; }
+    .panel.top.row-top-lg > .row.top {
+      height: 112px !important; }
+  .panel.bottom.row-bottom-lg > .column,
+  .panel.bottom.row-bottom-lg > .content, .panel.bottom.row-bottom-lg:before {
+    bottom: 112px; }
+  .panel.bottom.row-bottom-lg > .row {
+    height: 112px; }
+    .panel.bottom.row-bottom-lg > .row.bottom {
+      height: 112px !important; }
+  .panel.left.col-left-lg > .content,
+  .panel.left.col-left-lg > .row, .panel.left.col-left-lg:before {
     left: 112px; }
-  .panel.col-lg.right > .content,
-  .panel.col-lg.right > .row, .panel.col-lg.right:before {
-    right: 112px; }
-  .panel.col-lg.left > .column, .panel.col-lg.right > .column {
+  .panel.left.col-left-lg > .column {
     width: 112px; }
-  .panel.col-xl.left > .content,
-  .panel.col-xl.left > .row, .panel.col-xl.left:before {
+    .panel.left.col-left-lg > .column.left {
+      width: 112px !important; }
+  .panel.right.col-right-lg > .content,
+  .panel.right.col-right-lg > .row, .panel.right.col-right-lg:before {
+    right: 112px; }
+  .panel.right.col-right-lg > .column {
+    width: 112px; }
+    .panel.right.col-right-lg > .column.right {
+      width: 112px !important; }
+  .panel.top.row-top-xl > .column,
+  .panel.top.row-top-xl > .content, .panel.top.row-top-xl:before {
+    top: 168px; }
+  .panel.top.row-top-xl > .row {
+    height: 168px; }
+    .panel.top.row-top-xl > .row.top {
+      height: 168px !important; }
+  .panel.bottom.row-bottom-xl > .column,
+  .panel.bottom.row-bottom-xl > .content, .panel.bottom.row-bottom-xl:before {
+    bottom: 168px; }
+  .panel.bottom.row-bottom-xl > .row {
+    height: 168px; }
+    .panel.bottom.row-bottom-xl > .row.bottom {
+      height: 168px !important; }
+  .panel.left.col-left-xl > .content,
+  .panel.left.col-left-xl > .row, .panel.left.col-left-xl:before {
     left: 168px; }
-  .panel.col-xl.right > .content,
-  .panel.col-xl.right > .row, .panel.col-xl.right:before {
-    right: 168px; }
-  .panel.col-xl.left > .column, .panel.col-xl.right > .column {
+  .panel.left.col-left-xl > .column {
     width: 168px; }
-  .panel.col-xxl.left > .content,
-  .panel.col-xxl.left > .row, .panel.col-xxl.left:before {
+    .panel.left.col-left-xl > .column.left {
+      width: 168px !important; }
+  .panel.right.col-right-xl > .content,
+  .panel.right.col-right-xl > .row, .panel.right.col-right-xl:before {
+    right: 168px; }
+  .panel.right.col-right-xl > .column {
+    width: 168px; }
+    .panel.right.col-right-xl > .column.right {
+      width: 168px !important; }
+  .panel.top.row-top-xxl > .column,
+  .panel.top.row-top-xxl > .content, .panel.top.row-top-xxl:before {
+    top: 240px; }
+  .panel.top.row-top-xxl > .row {
+    height: 240px; }
+    .panel.top.row-top-xxl > .row.top {
+      height: 240px !important; }
+  .panel.bottom.row-bottom-xxl > .column,
+  .panel.bottom.row-bottom-xxl > .content, .panel.bottom.row-bottom-xxl:before {
+    bottom: 240px; }
+  .panel.bottom.row-bottom-xxl > .row {
+    height: 240px; }
+    .panel.bottom.row-bottom-xxl > .row.bottom {
+      height: 240px !important; }
+  .panel.left.col-left-xxl > .content,
+  .panel.left.col-left-xxl > .row, .panel.left.col-left-xxl:before {
     left: 240px; }
-  .panel.col-xxl.right > .content,
-  .panel.col-xxl.right > .row, .panel.col-xxl.right:before {
+  .panel.left.col-left-xxl > .column {
+    width: 240px; }
+    .panel.left.col-left-xxl > .column.left {
+      width: 240px !important; }
+  .panel.right.col-right-xxl > .content,
+  .panel.right.col-right-xxl > .row, .panel.right.col-right-xxl:before {
     right: 240px; }
-  .panel.col-xxl.left > .column, .panel.col-xxl.right > .column {
-    width: 240px; } }
+  .panel.right.col-right-xxl > .column {
+    width: 240px; }
+    .panel.right.col-right-xxl > .column.right {
+      width: 240px !important; } }
 
 .bgDefault {
   background-color: #0d0d0d;

@@ -168,69 +168,79 @@
         }
     }
 }
-@mixin panelSizeDefinition($size) {
-     @if (map-has-key($size, rowHeight)){
-        $rowHeight: map-get($size, rowHeight);
-
-        &.top {
+@mixin createPanelSizes($sizesDefinition) {
+     @each $name, $value in $sizesDefinition{
+        .panel.top.row-top-#{$name} {
              > .column,
              > .content,
             &:before {
-                top: $rowHeight;
+                top: $value;
             }
-        }
 
-        &.bottom {
-             > .column,
-             > .content,
-            &:before {
-                bottom: $rowHeight;
-            }
-        }
-
-        &.bottom,
-        &.top {
             > .row {
-                height: $rowHeight;
+                height: $value;
+
+                &.top {
+                    //see above
+                    height: $value !important;
+                }
             }
         }
-    }
-    @if (map-has-key($size, columnWidth)) {
-        $columnWidth: map-get($size, columnWidth);
 
-        &.left {
+        .panel.bottom.row-bottom-#{$name} {
+             > .column,
+             > .content,
+            &:before {
+                bottom: $value;
+            }
+
+            > .row {
+                height: $value;
+
+                &.bottom {
+                    //see above
+                    height: $value !important;
+                }
+            }
+        }
+
+        .panel.left.col-left-#{$name} {
              > .content,
              > .row,
             &:before {
-                left: $columnWidth;
+                left: $value;
             }
-        }
 
-        &.right {
-             > .content,
-             > .row,
-            &:before {
-                right: $columnWidth;
-            }
-        }
-
-        &.left,
-        &.right {
             > .column {
-                width: $columnWidth;
+                width: $value;
+
+                &.left {
+                    //see above
+                    width: $value !important;
+                }
+            }
+        }
+
+        .panel.right.col-right-#{$name} {
+             > .content,
+             > .row,
+            &:before {
+                right: $value;
+            }
+
+            > .column {
+                width: $value;
+
+                &.right {
+                    //see above
+                    width: $value !important;
+                }
             }
         }
     }
 }
-@each $name, $size in $panelSizes {
-    .panel#{$name} {
-        @include panelSizeDefinition($size);
-    }
-}
+@include createPanelSizes($panelSizes);
+
 @include mobile {
-     @each $name, $size in $panelSizes_mobile{
-        .panel#{$name} {
-            @include panelSizeDefinition($size);
-        }
-    }
+    @include createPanelSizes($panelSizes_mobile);
 }
