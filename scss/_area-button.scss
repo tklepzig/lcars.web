@@ -10,7 +10,7 @@
     touch-action: none;
     font-family: inherit;
     font-weight: normal;
-    padding: map-get($areaPadding, v) map-get($areaPadding, h);
+    padding: $areaPadding;
     font-size: 1.1em;
     overflow: hidden;
     position: relative;
@@ -48,6 +48,7 @@
     }
     @include mobile {
         border: $areaBorderWidth_mobile solid $bgDefault;
+        padding: $areaPadding_mobile;
     }
 }
 
@@ -61,7 +62,6 @@
     justify-content: flex-end;
     align-items: flex-start;
     cursor: pointer;
-    min-height: 46px;
 
     &.disabled,
     &[disabled] {
