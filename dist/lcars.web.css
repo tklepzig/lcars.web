@@ -12068,7 +12068,10 @@ h4 {
   -ms-grid-row-align: flex-start;
   align-items: flex-start;
   cursor: pointer;
-  min-height: 46px; }
+  min-height: 54px; }
+  @media only screen and (max-width: 959px) {
+    .button {
+      min-height: 42px; } }
   .button.disabled, .button[disabled] {
     background-color: #9e9993 !important;
     color: rgba(13, 13, 13, 0.6) !important; }

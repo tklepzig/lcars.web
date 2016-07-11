@@ -62,7 +62,10 @@
     justify-content: flex-end;
     align-items: flex-start;
     cursor: pointer;
-    min-height: 46px;
+    min-height: 54px;
+    @include mobile {
+        min-height: 42px;
+    }
 
     &.disabled,
     &[disabled] {
