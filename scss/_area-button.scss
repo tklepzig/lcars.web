@@ -7,7 +7,6 @@
     margin: 0;
     outline: none;
     user-select: none;
-    touch-action: none;
     font-family: inherit;
     font-weight: normal;
     padding: $areaPadding;
@@ -48,6 +47,7 @@
     @include mobile {
         border: $areaBorderWidth_mobile solid $bgDefault;
         padding: $areaPadding_mobile;
+        font-size: 0.9em;
     }
 }
 

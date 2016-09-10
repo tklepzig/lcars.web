@@ -12005,8 +12005,6 @@ h4 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -ms-touch-action: none;
-  touch-action: none;
   font-family: inherit;
   font-weight: normal;
   padding: 4px 6px;
@@ -12049,7 +12047,8 @@ h4 {
   @media only screen and (max-width: 959px) {
     .area, .button {
       border: 2px solid #0d0d0d;
-      padding: 2px 4px; } }
+      padding: 2px 4px;
+      font-size: 0.9em; } }
 
 .button {
   -webkit-box-orient: vertical;
