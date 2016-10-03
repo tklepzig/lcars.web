@@ -12066,10 +12066,31 @@ h4 {
   -ms-grid-row-align: flex-start;
   align-items: flex-start;
   cursor: pointer;
-  min-height: 54px; }
+  min-height: 54px;
+  margin: 8px; }
+  .button.round-r {
+    border-top-right-radius: 54px;
+    border-bottom-right-radius: 54px;
+    padding-right: 27px; }
+  .button.round-l {
+    border-top-left-radius: 54px;
+    border-bottom-left-radius: 54px;
+    padding-left: 27px; }
   @media only screen and (max-width: 959px) {
     .button {
-      min-height: 42px; } }
+      min-height: 48px;
+      margin: 6px; }
+      .button.round-r {
+        border-top-right-radius: 48px;
+        border-bottom-right-radius: 48px;
+        padding-right: 24px; }
+      .button.round-l {
+        border-top-left-radius: 48px;
+        border-bottom-left-radius: 48px;
+        padding-left: 24px; } }
+  .panel > .column > .button,
+  .panel > .row > .button {
+    margin: 0; }
   .button.disabled, .button[disabled] {
     background-color: #9e9993 !important;
     color: rgba(13, 13, 13, 0.6) !important; }
