@@ -1,0 +1,116 @@
+@import "variables";
+
+%areaButtonCommon {
+    border: $areaBorderWidth solid $bgDefault;
+    text-decoration: none;
+    cursor: default;
+    margin: 0;
+    outline: none;
+    user-select: none;
+    font-family: inherit;
+    font-weight: normal;
+    padding: $areaPadding;
+    font-size: 1.1em;
+    overflow: hidden;
+    position: relative;
+    white-space: normal;
+    vertical-align: top;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    background-color: $fgDefault;
+    color: $bgDefault;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border-color: transparent;
+    }
+
+    &.flex {
+        flex: 1;
+    }
+
+    &.label {
+        background-color: $bgDefault;
+        color: $fgDefault;
+        font-weight: 500;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: auto;
+        //hide text until js logic has been executed
+        // font-size: 0;
+        // line-height: 0;
+    }
+    @include mobile {
+        border: $areaBorderWidth_mobile solid $bgDefault;
+        padding: $areaPadding_mobile;
+        font-size: 0.9em;
+    }
+}
+
+.area {
+    @extend %areaButtonCommon;
+}
+
+.btn {
+    @extend %areaButtonCommon;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    cursor: pointer;
+    min-width: 220px;
+    min-height: 54px;
+    margin: 8px;
+    
+    &.round-r {
+        border-top-right-radius: 54px;
+        border-bottom-right-radius: 54px;
+        padding-right: 27px;
+    }
+
+    &.round-l {
+        border-top-left-radius: 54px;
+        border-bottom-left-radius: 54px;
+        padding-left: 27px;
+    }
+
+    @include mobile {
+        min-width: 180px;
+        min-height: 48px;
+        margin: 6px;
+
+        &.round-r {
+            border-top-right-radius: 48px;
+            border-bottom-right-radius: 48px;
+            padding-right: 24px;
+        }
+
+        &.round-l {
+            border-top-left-radius: 48px;
+            border-bottom-left-radius: 48px;
+            padding-left: 24px;
+        }
+    }
+
+    .panel > .column > &,
+    .panel > .row > & {
+        margin: 0;
+    }
+
+    &.disabled,
+    &[disabled] {
+        background-color: map-get($colors, grey) !important;
+        color: fade-out($bgDefault, 0.4) !important;
+    }
+
+    &:active {
+        background-color: lighten($fgDefault, 10%);
+    }
+}

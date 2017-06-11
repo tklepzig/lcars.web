@@ -1,0 +1,253 @@
+@import "variables";
+
+%panel-child {
+    background-color: $bgDefault;
+    color: $fgDefault;
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    top: $zero;
+    left: $zero;
+    right: $zero;
+    bottom: $zero;
+    margin: 0;
+}
+
+.panel {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    background-color: $fgDefault;
+    margin: $areaBorderWidth * 2;
+    @include mobile {
+        margin: $areaBorderWidth_mobile * 2;
+    }
+
+    &:before {
+        @extend %panel-child;
+        content: "";
+        overflow: hidden;
+    }
+
+    &.flex {
+        flex: 1;
+    }
+
+    > .content {
+        @extend %panel-child;
+        margin: 16px;
+    }
+
+    > .column {
+        @extend %panel-child;
+        display: flex;
+        flex-direction: column;
+
+         > .btn,
+        > .area {
+            border-left-width: 0;
+            border-right-width: 0;
+            min-width: 0;
+        }
+    }
+
+    > .row {
+        @extend %panel-child;
+        display: flex;
+        flex-direction: row;
+
+         > .btn,
+        > .area {
+            border-top-width: 0;
+            border-bottom-width: 0;
+            min-height: 0;
+        }
+    }
+
+    &.top {
+        > .column {
+            margin-top: 40px;
+            padding-top: $areaBorderWidth;
+            @include mobile {
+                padding-top: $areaBorderWidth_mobile;
+            }
+        }
+
+        > .row {
+            bottom: auto;
+
+            &.top {
+                //in case of panel with three sides (e.g. top left bottom),
+                //override rule for explicit class row.top
+                top: $zero !important;
+            }
+        }
+    }
+
+    &.left {
+        > .column {
+            right: auto;
+
+            &.left {
+                //see above
+                left: $zero !important;
+            }
+        }
+
+        > .row {
+            margin-left: 40px;
+            padding-left: $areaBorderWidth;
+            @include mobile {
+                padding-left: $areaBorderWidth_mobile;
+            }
+        }
+    }
+
+    &.bottom {
+        > .column {
+            margin-bottom: 40px;
+            padding-bottom: $areaBorderWidth;
+            @include mobile {
+                padding-bottom: $areaBorderWidth_mobile;
+            }
+        }
+
+        > .row {
+            top: auto;
+
+            &.bottom {
+                //see above
+                bottom: $zero !important;
+            }
+        }
+    }
+
+    &.right {
+        > .column {
+            left: auto;
+
+            &.right {
+                //see above
+                right: $zero !important;
+            }
+        }
+
+        > .row {
+            margin-right: 40px;
+            padding-right: $areaBorderWidth;
+            @include mobile {
+                padding-right: $areaBorderWidth_mobile;
+            }
+        }
+    }
+
+    &.top.left {
+        border-top-left-radius: $radiusOuter;
+
+        &:before {
+            border-top-left-radius: $radiusInner;
+        }
+    }
+
+    &.top.right {
+        border-top-right-radius: $radiusOuter;
+
+        &:before {
+            border-top-right-radius: $radiusInner;
+        }
+    }
+
+    &.bottom.left {
+        border-bottom-left-radius: $radiusOuter;
+
+        &:before {
+            border-bottom-left-radius: $radiusInner;
+        }
+    }
+
+    &.bottom.right {
+        border-bottom-right-radius: $radiusOuter;
+
+        &:before {
+            border-bottom-right-radius: $radiusInner;
+        }
+    }
+}
+@mixin createPanelSizes($sizesDefinition) {
+     @each $name, $value in $sizesDefinition{
+        .panel.top.top-#{$name} {
+             > .column,
+             > .content,
+            &:before {
+                top: $value;
+            }
+
+            > .row {
+                height: $value;
+
+                &.top {
+                    //see above
+                    height: $value !important;
+                }
+            }
+        }
+
+        .panel.bottom.bottom-#{$name} {
+             > .column,
+             > .content,
+            &:before {
+                bottom: $value;
+            }
+
+            > .row {
+                height: $value;
+
+                &.bottom {
+                    //see above
+                    height: $value !important;
+                }
+            }
+        }
+
+        .panel.left.left-#{$name} {
+             > .content,
+             > .row,
+            &:before {
+                left: $value;
+            }
+
+            > .column {
+                width: $value;
+
+                &.left {
+                    //see above
+                    width: $value !important;
+                }
+            }
+        }
+
+        .panel.right.right-#{$name} {
+             > .content,
+             > .row,
+            &:before {
+                right: $value;
+            }
+
+            > .column {
+                width: $value;
+
+                &.right {
+                    //see above
+                    width: $value !important;
+                }
+            }
+        }
+    }
+}
+@include createPanelSizes($panelSizes);
+
+@include mobile {
+    @include createPanelSizes($panelSizes_mobile);
+}

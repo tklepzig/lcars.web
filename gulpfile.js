@@ -13,10 +13,10 @@ gulp.task('scss', function () {
             cascade: false
         }))
         .pipe(plugins.rename('lcars.web.css'))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(plugins.cssnano())
         .pipe(plugins.rename('lcars.web.min.css'))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/css'));
 });
 gulp.task('scss:static', function () {
     return gulp.src(["scss/**/*"])
@@ -27,4 +27,4 @@ gulp.task('scss:watch', function () {
 });
 
 gulp.task('dev', ['scss', 'scss:watch', 'scss:static']);
-gulp.task('default', ['scss']);
+gulp.task('default', ['scss', 'scss:static']);

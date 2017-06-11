@@ -1,0 +1,85 @@
+@import "variables";
+
+.bgDefault {
+    background-color: $bgDefault;
+    color: $fgDefault;
+}
+
+.fgDefault {
+    color: $fgDefault;
+}
+@each $colorname, $color in $colors {
+    .#{$colorname} {
+        background-color: $color;
+        color: $bgDefault;
+
+        &.btn:active {
+            background-color: lighten($color, 10%);
+        }
+
+        &.area.label,
+        &.text {
+            background-color: $bgDefault;
+            color: $color;
+        }
+        @each $toneName, $baseColor in (light: white, dim: gray, dark: black) {
+            $toneColor: mix($baseColor, $color, 40%);
+
+            &.#{$toneName} {
+                background-color: $toneColor;
+
+                &.btn:active {
+                    background-color: lighten($toneColor, 10%);
+                }
+
+                &.area.label,
+                &.text {
+                    background-color: $bgDefault;
+                    color: $toneColor;
+                }
+            }
+        }
+    }
+}
+@each $colorname, $color in $colors {
+    .blink-#{$colorname} {
+        animation: blink-bg-#{$colorname} 1s steps(1) infinite;
+
+        &.area.label,
+        &.text {
+            animation: blink-fg-#{$colorname} 1s steps(1) infinite;
+        }
+    }
+    @keyframes blink-bg-#{$colorname} {
+        50% {
+            background: $color;
+        }
+    }
+    @keyframes blink-fg-#{$colorname} {
+        50% {
+            color: $color;
+        }
+    }
+    @each $toneName, $baseColor in (light: white, dim: gray, dark: black) {
+        $toneColor: mix($baseColor, $color, 40%);
+
+        .blink-#{$toneName}-#{$colorname} {
+            animation: blink-bg-#{$toneName}-#{$colorname} 1s steps(1) infinite;
+
+            &.area.label,
+            &.text {
+                animation: blink-fg-#{$toneName}-#{$colorname} 1s steps(1) infinite;
+            }
+        }
+        @keyframes blink-bg-#{$toneName}-#{$colorname} {
+            50% {
+                background: $toneColor;
+            }
+        }
+        @keyframes blink-fg-#{$toneName}-#{$colorname} {
+            50% {
+                color: $toneColor;
+            }
+        }
+    }
+}
