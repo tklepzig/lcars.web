@@ -1,6 +1,6 @@
 {
   "name": "lcars.web",
-  "version": "0.3.13",
+  "version": "1.0.0",
   "scripts": {
     "gulp": "gulp"
   },
@@ -11,7 +11,6 @@
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
-    "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7"
   },
   "repository": {
@@ -21,9 +20,5 @@
   "author": "Thomas Klepzig",
   "bugs": {
     "url": "https://github.com/tklepzig/lcars.web/issues"
-  },
-  "dependencies": {
-    "flex-layout": "github:tklepzig/flex-layout",
-    "jquery": "^3.0.0"
   }
 }

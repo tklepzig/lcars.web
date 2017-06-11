@@ -6,7 +6,7 @@ var plugins = require('gulp-load-plugins')({
     scope: ['dependencies', 'devDependencies']
 });
 
-gulp.task('sass', function() {
+gulp.task('scss', function () {
     return gulp.src('scss/lcars.web.scss')
         .pipe(plugins.sass().on('error', plugins.util.log))
         .pipe(plugins.autoprefixer({
@@ -18,21 +18,13 @@ gulp.task('sass', function() {
         .pipe(plugins.rename('lcars.web.min.css'))
         .pipe(gulp.dest('./dist'));
 });
-gulp.task('watch:sass', function() {
+gulp.task('scss:static', function () {
+    return gulp.src(["scss/**/*"])
+        .pipe(gulp.dest("dist/scss"));
+});
+gulp.task('scss:watch', function () {
     gulp.watch('scss/*.scss', ['sass']);
 });
 
-
-gulp.task('js', function() {
-    return gulp.src('js/lcars.web.js')
-        .pipe(gulp.dest('./dist'))
-        .pipe(plugins.uglify().on('error', plugins.util.log))
-        .pipe(plugins.rename('lcars.web.min.js'))
-        .pipe(gulp.dest('./dist'));
-});
-gulp.task('watch:js', function() {
-    gulp.watch('js/lcars.web.js', ['js']);
-});
-
-gulp.task('dev', ['sass', 'watch:sass']);
-gulp.task('default', ['sass']);
+gulp.task('dev', ['scss', 'scss:watch', 'scss:static']);
+gulp.task('default', ['scss']);
