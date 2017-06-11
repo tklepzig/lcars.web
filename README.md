@@ -1,13 +1,16 @@
-#lcars.web
+# lcars.web
 
-##Install
-
-```bash
-bower install lcars.web --save
-```
-
-CSS Framework for creating LCARS-like websites. [Check out the live demo.](http://tklepzig.github.io/lcars.web/)
-
+A set of css classes for creating LCARS-like websites.
 LCARS stands for "Library Computer Access and Retrieval System" (see [Wikipedia: LCARS](https://en.wikipedia.org/wiki/LCARS)).
 
-The docs and the live demo will be completed soon...
+## Install
+
+~~~
+TODO
+~~~
+
+## CDN
+
+~~~
+https://rawgit.com/tklepzig/lcars.web/master/dist/css/lcars.web.min.css
+~~~
