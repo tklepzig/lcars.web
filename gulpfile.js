@@ -34,5 +34,5 @@ gulp.task('watch:js', function() {
     gulp.watch('js/lcars.web.js', ['js']);
 });
 
-gulp.task('dev', ['sass', 'js', 'watch:sass', 'watch:js']);
-gulp.task('default', ['sass', 'js']);
+gulp.task('dev', ['sass', 'watch:sass']);
+gulp.task('default', ['sass']);

@@ -31,6 +31,10 @@
         border-color: transparent;
     }
 
+    &.flex {
+        flex: 1;
+    }
+
     &.label {
         background-color: $bgDefault;
         color: $fgDefault;
@@ -41,8 +45,8 @@
         display: inline-block;
         width: auto;
         //hide text until js logic has been executed
-        font-size: 0;
-        line-height: 0;
+        // font-size: 0;
+        // line-height: 0;
     }
     @include mobile {
         border: $areaBorderWidth_mobile solid $bgDefault;
@@ -55,12 +59,13 @@
     @extend %areaButtonCommon;
 }
 
-.button {
+.btn {
     @extend %areaButtonCommon;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     cursor: pointer;
+    min-width: 220px;
     min-height: 54px;
     margin: 8px;
     
@@ -77,6 +82,7 @@
     }
 
     @include mobile {
+        min-width: 180px;
         min-height: 48px;
         margin: 6px;
 

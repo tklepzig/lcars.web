@@ -13,7 +13,7 @@
         background-color: $color;
         color: $bgDefault;
 
-        &.button:active {
+        &.btn:active {
             background-color: lighten($color, 10%);
         }
 
@@ -28,7 +28,7 @@
             &.#{$toneName} {
                 background-color: $toneColor;
 
-                &.button:active {
+                &.btn:active {
                     background-color: lighten($toneColor, 10%);
                 }
 

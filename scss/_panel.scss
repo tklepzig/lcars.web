@@ -31,6 +31,10 @@
         overflow: hidden;
     }
 
+    &.flex {
+        flex: 1;
+    }
+
     > .content {
         @extend %panel-child;
         margin: 16px;
@@ -38,20 +42,23 @@
 
     > .column {
         @extend %panel-child;
-        @extend .layout-v;
+        display: flex;
+        flex-direction: column;
 
-         > .button,
+         > .btn,
         > .area {
             border-left-width: 0;
             border-right-width: 0;
+            min-width: 0;
         }
     }
 
     > .row {
         @extend %panel-child;
-        @extend .layout-h;
+        display: flex;
+        flex-direction: row;
 
-         > .button,
+         > .btn,
         > .area {
             border-top-width: 0;
             border-bottom-width: 0;
@@ -170,7 +177,7 @@
 }
 @mixin createPanelSizes($sizesDefinition) {
      @each $name, $value in $sizesDefinition{
-        .panel.top.row-top-#{$name} {
+        .panel.top.top-#{$name} {
              > .column,
              > .content,
             &:before {
@@ -187,7 +194,7 @@
             }
         }
 
-        .panel.bottom.row-bottom-#{$name} {
+        .panel.bottom.bottom-#{$name} {
              > .column,
              > .content,
             &:before {
@@ -204,7 +211,7 @@
             }
         }
 
-        .panel.left.col-left-#{$name} {
+        .panel.left.left-#{$name} {
              > .content,
              > .row,
             &:before {
@@ -221,7 +228,7 @@
             }
         }
 
-        .panel.right.col-right-#{$name} {
+        .panel.right.right-#{$name} {
              > .content,
              > .row,
             &:before {
