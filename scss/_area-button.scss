@@ -1,32 +1,25 @@
 @import "variables";
 %areaButtonCommon {
     border: $areaBorderWidth solid $bgDefault;
-    text-decoration: none;
-    cursor: default;
-    margin: 0;
-    outline: none;
     user-select: none;
     font-family: inherit;
     font-weight: normal;
     padding: $areaPadding;
-    font-size: 1.1em;
     overflow: hidden;
-    position: relative;
     white-space: normal;
     vertical-align: top;
     box-sizing: border-box;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     text-align: left;
     background-color: $fgDefault;
     color: $bgDefault;
-    &:focus {
-        outline: none;
+    margin: 8px;
+    @include mobile {
+        margin: 6px;
     }
-    &::-moz-focus-inner {
-        border-color: transparent;
-    }
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     &.flex {
         flex: 1;
     }
@@ -39,35 +32,23 @@
 
 .area {
     @extend %areaButtonCommon;
-}
-
-.label {
-    @extend %areaButtonCommon;
-    background-color: $bgDefault;
-    color: $fgDefault;
-    font-weight: 500;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: auto;
+    cursor: default;
 }
 
 .btn {
     @extend %areaButtonCommon;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
     cursor: pointer;
+    text-decoration: none;
+    outline: none;
     min-width: 220px;
-    margin: 8px;
     @include mobile {
         min-width: 180px;
-        margin: 6px;
     }
-    .panel>.column>&,
-    .panel>.row>& {
-        margin: 0;
+    &:focus {
+        outline: none;
+    }
+    &::-moz-focus-inner {
+        border-color: transparent;
     }
     &.disabled,
     &[disabled] {
@@ -79,31 +60,18 @@
     }
 }
 
-@mixin createButtons($sizesDefinition) {
+@mixin createAreasAndButtonsWithSuffix($sizesDefinition) {
     @each $name,
     $value in $sizesDefinition {
         $suffix: "-" + $name;
         @if ($name=="") {
             $suffix: "";
         }
-        .btn#{$suffix} {
-            min-height: $value;
-            font-size: $value / 2.5;
-            &.round-r {
-                border-top-right-radius: $value;
-                border-bottom-right-radius: $value;
-                padding-right: ($value / 2);
-            }
-            &.round-l {
-                border-top-left-radius: $value;
-                border-bottom-left-radius: $value;
-                padding-left: ($value / 2);
-            }
-        }
+        @include createAreasAndButtons($suffix, $value);
     }
 }
 
-@include createButtons($buttonSizes);
+@include createAreasAndButtonsWithSuffix($buttonSizes);
 @include mobile {
-    @include createButtons($buttonSizes_mobile);
+    @include createAreasAndButtonsWithSuffix($buttonSizes_mobile);
 }

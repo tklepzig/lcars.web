@@ -1,18 +1,28 @@
 @import "variables";
 .group {
     box-sizing: border-box;
-    border: $areaBorderWidth solid $bgDefault;
     display: flex;
-    margin: 8px;
     .btn,
     .area {
-        margin: 0;
-        border-width: 0;
         min-height: 100%;
     }
     .label {
-        margin: 0 2px;
-        border-width: 0;
+        background-color: $bgDefault;
+        color: $fgDefault;
+        font-weight: 500;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: auto;
+        user-select: none;
+        font-family: inherit;
+        padding: $areaPadding;
+        overflow: hidden;
+        vertical-align: top;
+        box-sizing: border-box;
+        text-align: left;
+        margin: 0 -2px;
     }
 }
 
@@ -25,25 +35,13 @@
         }
         .group#{$suffix} {
             height: $value;
-            .btn,
-            .area {
-                &.round-l {
-                    border-top-left-radius: $value;
-                    border-bottom-left-radius: $value;
-                    padding-left: ($value / 2);
-                }
-                &.round-r {
-                    border-top-right-radius: $value;
-                    border-bottom-right-radius: $value;
-                    padding-right: ($value / 2);
-                }
+            @include createAreasAndButtons("", $value) {
+                margin-top: 0;
+                margin-bottom: 0;
             }
             .label {
                 font-size: $value;
-                line-height: ($value - 16px);
-                @include mobile {
-                    line-height: ($value - 10px);
-                }
+                line-height: ($value - 8px);
             }
         }
     }

@@ -60,3 +60,23 @@ $buttonSizes_mobile: defineButtonSizes(0.8);
 {
     @media only screen and (max-width: 959px)  { @content; }
 }
+
+
+@mixin createAreasAndButtons($suffix, $value) {
+    .btn#{$suffix},
+    .area#{$suffix} {
+        @content;
+        min-height: $value;
+        font-size: $value / 2.6;
+        &.round-r {
+            border-top-right-radius: $value;
+            border-bottom-right-radius: $value;
+            padding-right: ($value / 2);
+        }
+        &.round-l {
+            border-top-left-radius: $value;
+            border-bottom-left-radius: $value;
+            padding-left: ($value / 2);
+        }
+    }
+}
