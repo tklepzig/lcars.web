@@ -1,5 +1,4 @@
 @import "variables";
-
 %areaButtonCommon {
     border: $areaBorderWidth solid $bgDefault;
     text-decoration: none;
@@ -22,19 +21,15 @@
     text-align: left;
     background-color: $fgDefault;
     color: $bgDefault;
-
     &:focus {
         outline: none;
     }
-
     &::-moz-focus-inner {
         border-color: transparent;
     }
-
     &.flex {
         flex: 1;
     }
-
     &.label {
         background-color: $bgDefault;
         color: $fgDefault;
@@ -44,9 +39,7 @@
         text-overflow: ellipsis;
         display: inline-block;
         width: auto;
-        //hide text until js logic has been executed
-        // font-size: 0;
-        // line-height: 0;
+        font-size: inherit;
     }
     @include mobile {
         border: $areaBorderWidth_mobile solid $bgDefault;
@@ -66,51 +59,84 @@
     align-items: flex-start;
     cursor: pointer;
     min-width: 220px;
-    min-height: 54px;
+    min-height: map-get($panelSizes, "s");
     margin: 8px;
-    
     &.round-r {
-        border-top-right-radius: 54px;
-        border-bottom-right-radius: 54px;
-        padding-right: 27px;
+        border-top-right-radius: map-get($panelSizes, "s");
+        border-bottom-right-radius: map-get($panelSizes, "s");
+        padding-right: (map-get($panelSizes, "s") / 2);
     }
-
     &.round-l {
-        border-top-left-radius: 54px;
-        border-bottom-left-radius: 54px;
-        padding-left: 27px;
+        border-top-left-radius: map-get($panelSizes, "s");
+        border-bottom-left-radius: map-get($panelSizes, "s");
+        padding-left: (map-get($panelSizes, "s") / 2);
     }
-
     @include mobile {
         min-width: 180px;
-        min-height: 48px;
+        min-height: map-get($panelSizes_mobile, "s");
         margin: 6px;
-
         &.round-r {
-            border-top-right-radius: 48px;
-            border-bottom-right-radius: 48px;
-            padding-right: 24px;
+            border-top-right-radius: map-get($panelSizes_mobile, "s");
+            border-bottom-right-radius: map-get($panelSizes_mobile, "s");
+            padding-right: (map-get($panelSizes_mobile, "s") / 2);
         }
-
         &.round-l {
-            border-top-left-radius: 48px;
-            border-bottom-left-radius: 48px;
-            padding-left: 24px;
+            border-top-left-radius: map-get($panelSizes_mobile, "s");
+            border-bottom-left-radius: map-get($panelSizes_mobile, "s");
+            padding-left: (map-get($panelSizes_mobile, "s") / 2);
         }
     }
-
-    .panel > .column > &,
-    .panel > .row > & {
+    .panel>.column>&,
+    .panel>.row>& {
         margin: 0;
     }
-
     &.disabled,
     &[disabled] {
         background-color: map-get($colors, grey) !important;
         color: fade-out($bgDefault, 0.4) !important;
     }
-
     &:active {
         background-color: lighten($fgDefault, 10%);
     }
+}
+
+@mixin createGroups($sizesDefinition) {
+    @each $name,
+    $value in $sizesDefinition {
+        .group-#{$name} {
+            border: $areaBorderWidth solid $bgDefault;
+            display: flex;
+            height: $value;
+            margin: 8px;
+            .btn,
+            .area {
+                margin: 0;
+                border-width: 0;
+                min-height: $value;
+                height: $value;
+                &.round-l {
+                    border-top-left-radius: $value;
+                    border-bottom-left-radius: $value;
+                    padding-left: ($value / 2);
+                }
+                &.round-r {
+                    border-top-right-radius: $value;
+                    border-bottom-right-radius: $value;
+                    padding-right: ($value / 2);
+                }
+            }
+            .area.label {
+                font-size: $value;
+                line-height: ($value - 8px);
+                @include mobile {
+                    line-height: ($value - 4px);
+                }
+            }
+        }
+    }
+}
+
+@include createGroups($panelSizes);
+@include mobile {
+    @include createGroups($panelSizes_mobile);
 }

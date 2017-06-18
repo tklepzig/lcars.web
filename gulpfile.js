@@ -23,7 +23,7 @@ gulp.task('scss:static', function () {
         .pipe(gulp.dest("dist/scss"));
 });
 gulp.task('scss:watch', function () {
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('scss/*.scss', ['scss']);
 });
 
 gulp.task('dev', ['scss', 'scss:watch', 'scss:static']);

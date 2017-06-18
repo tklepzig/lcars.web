@@ -30,9 +30,9 @@ $areaBorderWidth_mobile: 2px;
     @return (
              "xxs":      15px * $factor,
              "xs":       25px * $factor,
-             "sm":       45px * $factor,
-             "md":       75px * $factor,
-             "lg":       140px * $factor,
+             "s":        45px * $factor,
+             "m":        75px * $factor,
+             "l":        140px * $factor,
              "xl":       210px * $factor,
              "xxl":      300px * $factor)
 }
