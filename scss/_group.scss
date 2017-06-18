@@ -1,0 +1,52 @@
+@import "variables";
+
+.group{
+            border: $areaBorderWidth solid $bgDefault;
+
+}
+@mixin createGroups($sizesDefinition) {
+    @each $name,
+    $value in $sizesDefinition {
+        $suffix: "-" + $name;
+        @if ($name=="") {
+            $suffix: "";
+        }
+        .group#{$suffix} {
+            display: flex;
+            height: $value;
+            margin: 8px;
+            .btn,
+            .area {
+                margin: 0;
+                border-left-width: 0;
+                border-right-width: 0;
+                min-height: $value;
+                height: $value;
+                &.round-l {
+                    border-top-left-radius: $value;
+                    border-bottom-left-radius: $value;
+                    padding-left: ($value / 2);
+                }
+                &.round-r {
+                    border-top-right-radius: $value;
+                    border-bottom-right-radius: $value;
+                    padding-right: ($value / 2);
+                }
+            }
+            .label {
+                margin: 0 2px;
+                border-width: 0;
+                font-size: $value;
+                line-height: ($value - 8px);
+                @include mobile {
+                    line-height: ($value - 4px);
+                }
+            }
+        }
+    }
+}
+
+@include createGroups($sizes);
+@include mobile {
+    @include createGroups($sizes_mobile);
+}

@@ -25,20 +25,20 @@ $areaPadding_mobile: 2px 4px;
 $areaBorderWidth: 4px;
 $areaBorderWidth_mobile: 2px;
 
-@function definePanelSizes($factor: 1)
+@function defineSizes($factor: 1)
 {
     @return (
              "xxs":      15px * $factor,
              "xs":       25px * $factor,
-             "s":        45px * $factor,
-             "m":         75px * $factor,
-             "l":        140px * $factor,
-             "xl":       210px * $factor,
-             "xxl":      300px * $factor)
+             "s":        40px * $factor,
+             "":         55px * $factor,
+             "l":        80px * $factor,
+             "xl":       160px * $factor,
+             "xxl":      280px * $factor)
 }
 
-$panelSizes: definePanelSizes();
-$panelSizes_mobile: definePanelSizes(0.8);
+$sizes: defineSizes();
+$sizes_mobile: defineSizes(0.8);
 
 
 @mixin mobile

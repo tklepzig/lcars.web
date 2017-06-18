@@ -30,17 +30,6 @@
     &.flex {
         flex: 1;
     }
-    &.label {
-        background-color: $bgDefault;
-        color: $fgDefault;
-        font-weight: 500;
-        text-transform: uppercase;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        display: inline-block;
-        width: auto;
-        font-size: inherit;
-    }
     @include mobile {
         border: $areaBorderWidth_mobile solid $bgDefault;
         padding: $areaPadding_mobile;
@@ -50,6 +39,18 @@
 
 .area {
     @extend %areaButtonCommon;
+}
+
+.label {
+    @extend %areaButtonCommon;
+    background-color: $bgDefault;
+    color: $fgDefault;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: auto;
 }
 
 .btn {
@@ -98,45 +99,4 @@
     &:active {
         background-color: lighten($fgDefault, 10%);
     }
-}
-
-@mixin createGroups($sizesDefinition) {
-    @each $name,
-    $value in $sizesDefinition {
-        .group-#{$name} {
-            border: $areaBorderWidth solid $bgDefault;
-            display: flex;
-            height: $value;
-            margin: 8px;
-            .btn,
-            .area {
-                margin: 0;
-                border-width: 0;
-                min-height: $value;
-                height: $value;
-                &.round-l {
-                    border-top-left-radius: $value;
-                    border-bottom-left-radius: $value;
-                    padding-left: ($value / 2);
-                }
-                &.round-r {
-                    border-top-right-radius: $value;
-                    border-bottom-right-radius: $value;
-                    padding-right: ($value / 2);
-                }
-            }
-            .area.label {
-                font-size: $value;
-                line-height: ($value - 8px);
-                @include mobile {
-                    line-height: ($value - 4px);
-                }
-            }
-        }
-    }
-}
-
-@include createGroups($panelSizes);
-@include mobile {
-    @include createGroups($panelSizes_mobile);
 }
