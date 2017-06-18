@@ -60,32 +60,10 @@
     align-items: flex-start;
     cursor: pointer;
     min-width: 220px;
-    min-height: 54px;
     margin: 8px;
-    &.round-r {
-        border-top-right-radius: 54px;
-        border-bottom-right-radius: 54px;
-        padding-right: 27px;
-    }
-    &.round-l {
-        border-top-left-radius: 54px;
-        border-bottom-left-radius: 54px;
-        padding-left: 27px;
-    }
     @include mobile {
         min-width: 180px;
-        min-height: 48px;
         margin: 6px;
-        &.round-r {
-            border-top-right-radius: 48px;
-            border-bottom-right-radius: 48px;
-            padding-right: 24px;
-        }
-        &.round-l {
-            border-top-left-radius: 48px;
-            border-bottom-left-radius: 48px;
-            padding-left: 24px;
-        }
     }
     .panel>.column>&,
     .panel>.row>& {
@@ -99,4 +77,33 @@
     &:active {
         background-color: lighten($fgDefault, 10%);
     }
+}
+
+@mixin createButtons($sizesDefinition) {
+    @each $name,
+    $value in $sizesDefinition {
+        $suffix: "-" + $name;
+        @if ($name=="") {
+            $suffix: "";
+        }
+        .btn#{$suffix} {
+            min-height: $value;
+            font-size: $value / 2.5;
+            &.round-r {
+                border-top-right-radius: $value;
+                border-bottom-right-radius: $value;
+                padding-right: ($value / 2);
+            }
+            &.round-l {
+                border-top-left-radius: $value;
+                border-bottom-left-radius: $value;
+                padding-left: ($value / 2);
+            }
+        }
+    }
+}
+
+@include createButtons($buttonSizes);
+@include mobile {
+    @include createButtons($buttonSizes_mobile);
 }

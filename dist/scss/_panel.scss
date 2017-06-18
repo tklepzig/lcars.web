@@ -177,7 +177,11 @@
 }
 @mixin createPanelSizes($sizesDefinition) {
      @each $name, $value in $sizesDefinition{
-        .panel.top.top-#{$name} {
+        $suffix: "-" + $name;
+        @if ($name=="") {
+            $suffix: "";
+        }
+        .panel.top.top#{$suffix} {
              > .column,
              > .content,
             &:before {
@@ -194,7 +198,7 @@
             }
         }
 
-        .panel.bottom.bottom-#{$name} {
+        .panel.bottom.bottom#{$suffix} {
              > .column,
              > .content,
             &:before {
@@ -211,7 +215,7 @@
             }
         }
 
-        .panel.left.left-#{$name} {
+        .panel.left.left#{$suffix} {
              > .content,
              > .row,
             &:before {
@@ -228,7 +232,7 @@
             }
         }
 
-        .panel.right.right-#{$name} {
+        .panel.right.right#{$suffix} {
              > .content,
              > .row,
             &:before {

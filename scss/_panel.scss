@@ -250,8 +250,8 @@
         }
     }
 }
-@include createPanelSizes($sizes);
+@include createPanelSizes($panelSizes);
 
 @include mobile {
-    @include createPanelSizes($sizes_mobile);
+    @include createPanelSizes($panelSizes_mobile);
 }

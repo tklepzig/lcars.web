@@ -30,17 +30,6 @@
     &.flex {
         flex: 1;
     }
-    &.label {
-        background-color: $bgDefault;
-        color: $fgDefault;
-        font-weight: 500;
-        text-transform: uppercase;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        display: inline-block;
-        width: auto;
-        font-size: inherit;
-    }
     @include mobile {
         border: $areaBorderWidth_mobile solid $bgDefault;
         padding: $areaPadding_mobile;
@@ -52,6 +41,18 @@
     @extend %areaButtonCommon;
 }
 
+.label {
+    @extend %areaButtonCommon;
+    background-color: $bgDefault;
+    color: $fgDefault;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: auto;
+}
+
 .btn {
     @extend %areaButtonCommon;
     flex-direction: column;
@@ -59,32 +60,10 @@
     align-items: flex-start;
     cursor: pointer;
     min-width: 220px;
-    min-height: map-get($panelSizes, "s");
     margin: 8px;
-    &.round-r {
-        border-top-right-radius: map-get($panelSizes, "s");
-        border-bottom-right-radius: map-get($panelSizes, "s");
-        padding-right: (map-get($panelSizes, "s") / 2);
-    }
-    &.round-l {
-        border-top-left-radius: map-get($panelSizes, "s");
-        border-bottom-left-radius: map-get($panelSizes, "s");
-        padding-left: (map-get($panelSizes, "s") / 2);
-    }
     @include mobile {
         min-width: 180px;
-        min-height: map-get($panelSizes_mobile, "s");
         margin: 6px;
-        &.round-r {
-            border-top-right-radius: map-get($panelSizes_mobile, "s");
-            border-bottom-right-radius: map-get($panelSizes_mobile, "s");
-            padding-right: (map-get($panelSizes_mobile, "s") / 2);
-        }
-        &.round-l {
-            border-top-left-radius: map-get($panelSizes_mobile, "s");
-            border-bottom-left-radius: map-get($panelSizes_mobile, "s");
-            padding-left: (map-get($panelSizes_mobile, "s") / 2);
-        }
     }
     .panel>.column>&,
     .panel>.row>& {
@@ -100,43 +79,31 @@
     }
 }
 
-@mixin createGroups($sizesDefinition) {
+@mixin createButtons($sizesDefinition) {
     @each $name,
     $value in $sizesDefinition {
-        .group-#{$name} {
-            border: $areaBorderWidth solid $bgDefault;
-            display: flex;
-            height: $value;
-            margin: 8px;
-            .btn,
-            .area {
-                margin: 0;
-                border-width: 0;
-                min-height: $value;
-                height: $value;
-                &.round-l {
-                    border-top-left-radius: $value;
-                    border-bottom-left-radius: $value;
-                    padding-left: ($value / 2);
-                }
-                &.round-r {
-                    border-top-right-radius: $value;
-                    border-bottom-right-radius: $value;
-                    padding-right: ($value / 2);
-                }
+        $suffix: "-" + $name;
+        @if ($name=="") {
+            $suffix: "";
+        }
+        .btn#{$suffix} {
+            min-height: $value;
+            font-size: $value / 2.5;
+            &.round-r {
+                border-top-right-radius: $value;
+                border-bottom-right-radius: $value;
+                padding-right: ($value / 2);
             }
-            .area.label {
-                font-size: $value;
-                line-height: ($value - 8px);
-                @include mobile {
-                    line-height: ($value - 4px);
-                }
+            &.round-l {
+                border-top-left-radius: $value;
+                border-bottom-left-radius: $value;
+                padding-left: ($value / 2);
             }
         }
     }
 }
 
-@include createGroups($panelSizes);
+@include createButtons($buttonSizes);
 @include mobile {
-    @include createGroups($panelSizes_mobile);
+    @include createButtons($buttonSizes_mobile);
 }

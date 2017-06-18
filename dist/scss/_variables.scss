@@ -25,13 +25,25 @@ $areaPadding_mobile: 2px 4px;
 $areaBorderWidth: 4px;
 $areaBorderWidth_mobile: 2px;
 
+@function defineButtonSizes($factor: 1)
+{
+    @return (
+             "":         55px * $factor,
+             "xxs":      15px * $factor,
+             "xs":       25px * $factor,
+             "s":        40px * $factor,
+             "l":        80px * $factor,
+             "xl":       120px * $factor,
+             "xxl":      180px * $factor)
+}
+
 @function definePanelSizes($factor: 1)
 {
     @return (
+             "":         75px * $factor,
              "xxs":      15px * $factor,
              "xs":       25px * $factor,
              "s":        45px * $factor,
-             "m":        75px * $factor,
              "l":        140px * $factor,
              "xl":       210px * $factor,
              "xxl":      300px * $factor)
@@ -39,6 +51,9 @@ $areaBorderWidth_mobile: 2px;
 
 $panelSizes: definePanelSizes();
 $panelSizes_mobile: definePanelSizes(0.8);
+
+$buttonSizes: defineButtonSizes();
+$buttonSizes_mobile: defineButtonSizes(0.8);
 
 
 @mixin mobile
