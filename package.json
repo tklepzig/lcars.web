@@ -2,16 +2,8 @@
   "name": "lcars.web",
   "version": "1.2.0",
   "scripts": {
-    "gulp": "gulp"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.1.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-util": "^3.0.7"
+    "dev": "node-sass scss/lcars.web.scss dist/css/lcars.web.css --source-map-embed -w",
+    "build": "rm -rf dist && node-sass scss/lcars.web.scss dist/css/lcars.web.min.css --output-style compressed && cp -R scss/ dist/"
   },
   "repository": {
     "type": "git",
@@ -20,5 +12,8 @@
   "author": "Thomas Klepzig",
   "bugs": {
     "url": "https://github.com/tklepzig/lcars.web/issues"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.3"
   }
 }
