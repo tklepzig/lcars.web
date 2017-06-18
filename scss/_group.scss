@@ -1,13 +1,14 @@
 @import "variables";
 .group {
+    box-sizing: border-box;
     border: $areaBorderWidth solid $bgDefault;
     display: flex;
     margin: 8px;
     .btn,
     .area {
         margin: 0;
-        border-left-width: 0;
-        border-right-width: 0;
+        border-width: 0;
+        min-height: 100%;
     }
     .label {
         margin: 0 2px;
@@ -26,8 +27,6 @@
             height: $value;
             .btn,
             .area {
-                min-height: $value;
-                height: $value;
                 &.round-l {
                     border-top-left-radius: $value;
                     border-bottom-left-radius: $value;
@@ -41,9 +40,9 @@
             }
             .label {
                 font-size: $value;
-                line-height: ($value - 8px);
+                line-height: ($value - 16px);
                 @include mobile {
-                    line-height: ($value - 4px);
+                    line-height: ($value - 10px);
                 }
             }
         }
