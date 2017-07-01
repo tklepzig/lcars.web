@@ -8,7 +8,11 @@ LCARS stands for "Library Computer Access and Retrieval System" (see [Wikipedia:
 ## Install
 
 ~~~
-npm install lcars.web
+npm install lcars.web --save
+~~~
+
+~~~
+yarn add lcars.web
 ~~~
 
 ## CDN
