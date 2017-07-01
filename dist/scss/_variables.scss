@@ -1,7 +1,9 @@
 $zero: 0; //only for development
 
-$font-path: "../fonts/" !default;
 $font-size: 12pt !default;
+$use-webfont: true !default;
+$font-family-header: "Michroma" !default;
+$font-family-body: "Play" !default;
 
 $radiusOuter: 25px;
 $radiusInner: 20px;

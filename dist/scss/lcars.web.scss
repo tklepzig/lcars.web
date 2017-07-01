@@ -1,19 +1,7 @@
 @import "variables";
-
-@font-face {
-    font-family: 'lcars-header';
-    src: url($font-path + 'Michroma.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'lcars-text';
-    src: url($font-path + 'Play-Bold.ttf') format('truetype');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'lcars-text';
-    src: url($font-path + 'Play-Regular.ttf') format('truetype');
+@if($use-webfont) {
+    @import url('https://fonts.googleapis.com/css?family=Michroma');
+    @import url('https://fonts.googleapis.com/css?family=Play');
 }
 
 html {
@@ -23,7 +11,7 @@ html {
 
 body {
     -webkit-tap-highlight-color: transparent;
-    font-family: "lcars-text";
+    font-family: $font-family-body;
     font-size: $font-size;
     color: $fgDefault;
     background: $bgDefault;
