@@ -20,3 +20,7 @@ yarn add lcars.web
 ~~~
 https://rawgit.com/tklepzig/lcars.web/master/dist/css/lcars.web.min.css
 ~~~
+
+## Usage
+
+There is currently no documentation yet but you can examine the sample site (https://tklepzig.github.io/lcars.web/) to see how to use it.
