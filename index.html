@@ -4,18 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
-    <link rel="stylesheet" href="dist/css/lcars.web.css">
+    <link rel="stylesheet" href="dist/css/lcars.web.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="panel top left top-xs left-xl" style="height: 100%; margin: 0;">
+    <div class="panel bottom left bottom-xxs left-xl dark blue" style="flex: 1">
+        <div class="column">
+            <button class="btn dim blue flex">Button</button>
+        </div>
+        <div class="content" style="display: flex; justify-content: flex-end; align-items: flex-start;">
+            <button class="btn blue round-l round-r">Button</button>
+            <button class="btn light blue round-l round-r">Button</button>
+        </div>
+    </div>
+    <div class="panel top left top-xxs left-xl dim yellow" style="flex: 4">
+        <div class="row group group-xxs">
+            <div class="area flex dark yellow"></div>
+            <div class="label text dark yellow">LCARS</div>
+            <div class="area round-r dark yellow"></div>
+        </div>
+        <div class="column">
+            <button class="btn dim tan flex">Button</button>
+            <div class="area dark tan flex"></div>
+        </div>
         <div class="content">
             <div class="group">
-                <button class="btn flex round-l">Button in Group</button>
-                <div class="label">42</div>
-                <div class="area round-r"></div>
+                <button class="btn flex round-l dark sea-blue">Button in Group</button>
+                <div class="label text dark sea-blue">LCARS</div>
+                <div class="area round-r dark sea-blue"></div>
             </div>
-            <button class="btn flex round-r round-l">Button</button>
+            <button class="btn flex round-r round-l">Another Button</button>
         </div>
     </div>
 </body>
