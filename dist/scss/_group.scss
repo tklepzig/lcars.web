@@ -2,6 +2,7 @@
 .group {
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
     .btn,
     .area {
         min-height: 100%;
