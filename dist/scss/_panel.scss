@@ -72,8 +72,22 @@
         > .column {
             margin-top: 40px;
             padding-top: $areaBorderWidth;
+
+              &.no-space {
+                padding-top: 0;
+
+                > .btn:first-child,
+                > .area:first-child {
+                    border-top-width: 0;
+                }
+            }
+
             @include mobile {
                 padding-top: $areaBorderWidth_mobile;
+
+                  &.no-space {
+                    padding-top: 0;
+                }
             }
         }
 
@@ -101,8 +115,23 @@
         > .row {
             margin-left: 40px;
             padding-left: $areaBorderWidth;
+
+            &.no-space {
+                padding-left: 0;
+
+                > .btn:first-child,
+                > .area:first-child {
+                    border-left-width: 0;
+                }
+            }
+
             @include mobile {
                 padding-left: $areaBorderWidth_mobile;
+
+                &.no-space {
+                    padding-left: 0;
+                }
+
             }
         }
     }
@@ -111,8 +140,22 @@
         > .column {
             margin-bottom: 40px;
             padding-bottom: $areaBorderWidth;
+
+            &.no-space {
+                padding-bottom: 0;
+
+                > .btn:first-child,
+                > .area:first-child {
+                    border-bottom-width: 0;
+                }
+            }
+
             @include mobile {
                 padding-bottom: $areaBorderWidth_mobile;
+
+                &.no-space {
+                    padding-bottom: 0;
+                }
             }
         }
 
@@ -139,8 +182,21 @@
         > .row {
             margin-right: 40px;
             padding-right: $areaBorderWidth;
+
+            &.no-space {
+                padding-right: 0;
+
+                > .btn:first-child,
+                > .area:first-child {
+                    border-right-width: 0;
+                }
+            }
             @include mobile {
                 padding-right: $areaBorderWidth_mobile;
+
+                &.no-space {
+                    padding-right: 0;
+                }
             }
         }
     }
