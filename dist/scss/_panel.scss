@@ -144,8 +144,8 @@
             &.no-space {
                 padding-bottom: 0;
 
-                > .btn:first-child,
-                > .area:first-child {
+                > .btn:last-child,
+                > .area:last-child {
                     border-bottom-width: 0;
                 }
             }
@@ -186,8 +186,8 @@
             &.no-space {
                 padding-right: 0;
 
-                > .btn:first-child,
-                > .area:first-child {
+                > .btn:last-child,
+                > .area:last-child {
                     border-right-width: 0;
                 }
             }
