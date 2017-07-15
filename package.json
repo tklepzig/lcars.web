@@ -1,6 +1,6 @@
 {
   "name": "lcars.web",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "scripts": {
     "dev": "node-sass scss/lcars.web.scss dist/css/lcars.web.css --source-map-embed -w",
     "build": "rm -rf dist && node-sass scss/lcars.web.scss dist/css/lcars.web.min.css --output-style compressed && cp -R scss/ dist/"
